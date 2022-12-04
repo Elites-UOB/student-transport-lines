@@ -1,16 +1,17 @@
-# student_transport_lines
+![cover](https://user-images.githubusercontent.com/5357529/204332967-033f1514-d373-4cdb-a600-b5d28c6a0dca.jpg)
 
-A new Flutter project.
 
-## Getting Started
+# Student Transport Lines
+It is an open source project. You can request to communicate with the owners of the transport lines.
 
-This project is a starting point for a Flutter application.
+Feel free to open pull request.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Using Flutter 3 & Supabase.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+With ❤️.
+
+# Team
+1. Flutter (Hassan Kadhim, Shahad Jawad).
+2. Backend (Hassan Kadhim).
+3. UX/UI (UmAlBanin Dhia, Hassan K. Alkhalidi).
