@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'app/modules/home/binding.dart';
 import 'app/modules/home/page.dart';
 import 'routes/pages.dart';
 import 'routes/routes.dart';
 
-void main() async {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   WidgetsFlutterBinding.ensureInitialized();
+  await Supabase.initialize(
+    url: dotenv.get('SUPABASE_URL', fallback: ''),
+    anonKey: dotenv.get('SUPABASE_ANON_KEY', fallback: ''),
+  );
 
   runApp(GetMaterialApp(
     getPages: AppPages.pages,
