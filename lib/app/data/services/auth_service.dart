@@ -8,26 +8,26 @@ class AuthService extends GetxService {
   static final _supabase = Supabase.instance;
   static final error = false;
 
-  static Future<void> signIn(AuthModel authUserForm) async {
+  Future<void> signUp() async {
     try {
-      final result = await _supabase.client.auth.signInWithOtp(
-        email: authUserForm.email!,
-        emailRedirectTo:
-            kIsWeb ? null : 'io.supabase.flutter://signin-callback/',
+      final AuthResponse res = await _supabase.client.auth.signUp(
+        email: 'hassan@email.com',
+        password: '123456',
       );
-      if (error != null) {
-        // throw SupabaseException(
-        //     "error_db_unknown_title".tr, result.error!.message);
-      }
-      if (error == null) {
-        throw SupabaseException(
-            "error_db_unknown_title".tr, "auth_aas_es_m_error_sign_in".tr);
-      }
-    } catch (e) {
-      if (kDebugMode) {
-        print("AuthApiService - signIn - e : $e");
-      }
-      rethrow;
-    }
+      final Session? session = res.session;
+      final User? user = res.user;
+    } catch (e) {}
+  }
+
+  Future<void> signIn(String email, String password) async {
+    final response = await _supabase.client.auth
+        .signInWithPassword(email: email, password: password);
+    final Session? session = response.session;
+    final User? user = response.user;
+  }
+
+  //signOut
+  Future<void> signOut() async {
+    final response = await _supabase.client.auth.signOut();
   }
 }
