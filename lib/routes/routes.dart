@@ -14,9 +14,6 @@ abstract class AppPages {
         name: Routes.SPLASH,
         page: () => SplashPage(),
         binding: SplashBinding()),
-    GetPage(
-        name: Routes.HOME,
-        page: () => const HomePage(),
-        binding: HomeBinding()),
+    GetPage(name: Routes.HOME, page: () => HomePage(), binding: HomeBinding()),
   ];
 }
