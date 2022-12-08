@@ -7,6 +7,7 @@ import 'app/modules/home/binding.dart';
 import 'app/modules/home/page.dart';
 import 'routes/pages.dart';
 import 'routes/routes.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 Future<void> main() async {
   await dotenv.load(fileName: ".env");
@@ -20,6 +21,14 @@ Future<void> main() async {
   runApp(GetMaterialApp(
     getPages: AppPages.pages,
     home: AuthPage(),
+    localizationsDelegates:const [
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
+    ],
+    supportedLocales: const [
+      Locale('ar', 'AE'), // English, no country code
+    ],
     theme: ThemeData(
       fontFamily: "Tajawal",
       //     colorScheme: ColorScheme.fromSwatch().copyWith(

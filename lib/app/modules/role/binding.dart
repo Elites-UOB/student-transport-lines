@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'controller.dart';
 
-class HomeBinding implements Bindings {
+class RoleBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<HomeController>(() => HomeController());
+    Get.lazyPut<RoleController>(() => RoleController());
   }
 }
