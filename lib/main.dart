@@ -35,6 +35,14 @@ Future main() async {
       initialBinding: RoleBinding(),
       initialRoute: Routes.Role,
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('ar', 'AE'), // English, no country code
+      ],
     ),
   ));
 }
