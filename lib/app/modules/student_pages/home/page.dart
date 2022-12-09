@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 
-import '../../utils/helper_controller.dart';
+import '../../../utils/helper_controller.dart';
 
 class HomePage extends StatefulWidget {
   HelperController controller = Get.put(HelperController());
@@ -22,7 +22,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff212936),
-      
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: SafeArea(

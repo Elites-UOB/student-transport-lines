@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/theme/color_theme.dart';
+import '../../../../../core/theme/color_theme.dart';
 
 class driverPic extends StatelessWidget {
   const driverPic({
@@ -17,24 +17,22 @@ class driverPic extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           // driver image
-         const CircleAvatar(
+          const CircleAvatar(
             backgroundImage: AssetImage("assets/images/driver.png"),
           ),
 
           //icon
-           Positioned(
+          Positioned(
             left: -8,
             bottom: 0,
             child: InkWell(
-              onTap: (){},
-              child:const CircleAvatar(
-                radius: 18,
-                backgroundColor:Palette.blueColor ,
-                child:Icon(Icons.recycling)),
+              onTap: () {},
+              child: const CircleAvatar(
+                  radius: 18,
+                  backgroundColor: Palette.blueColor,
+                  child: Icon(Icons.recycling)),
             ),
-            ),
-
-
+          ),
         ],
       ),
     );
