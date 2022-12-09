@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'color_theme.dart';
+
 class Styles {
   static const boldBlack =
-      TextStyle(color: Colors.black, fontWeight: FontWeight.w900, fontSize: 18);
+      TextStyle(color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16);
+  static const boldblue =
+  TextStyle(color: Palette.blueColor, fontWeight: FontWeight.w900, fontSize: 15);
   static const normalBlack =
       TextStyle(color: Colors.black, fontWeight: FontWeight.w700);
   static const smallBlack =

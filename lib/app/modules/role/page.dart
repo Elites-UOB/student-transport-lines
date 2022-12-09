@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:student_transport_lines/app/modules/driver_pages/register/page.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
-
 import 'controller.dart';
 import 'widgets/card_driver_stud.dart';
-import '../student_pages/home/page.dart';
 
 class RolePage extends GetView<RoleController> {
   const RolePage({super.key});
