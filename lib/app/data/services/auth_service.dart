@@ -8,14 +8,15 @@ class AuthService extends GetxService {
   static final _supabase = Supabase.instance;
   static final error = false;
 
-  Future<void> signUp() async {
+  Future signUp(String email, String password) async {
     try {
       final AuthResponse res = await _supabase.client.auth.signUp(
-        email: 'hassan@email.com',
-        password: '123456',
+        email: email,
+        password: password,
       );
       final Session? session = res.session;
       final User? user = res.user;
+      return user;
     } catch (e) {}
   }
 
@@ -24,6 +25,20 @@ class AuthService extends GetxService {
         .signInWithPassword(email: email, password: password);
     final Session? session = response.session;
     final User? user = response.user;
+  }
+
+  //Update Porfile
+
+  Future<void> updatePorfile(String id, String name, String phone, String role,
+      String cityId, String provinceId, String telegram) async {
+    final data = await _supabase.client.from('porfiles').update({
+      'full_name': name,
+      'phone': phone,
+      'role': role,
+      'city_id': cityId,
+      'province_id': provinceId,
+      'telegarm': telegram,
+    }).eq('id', id);
   }
 
   //signOut

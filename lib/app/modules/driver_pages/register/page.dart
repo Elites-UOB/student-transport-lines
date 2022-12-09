@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/driver_pages/register/widgets/dropdown.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
@@ -24,95 +25,124 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                 children: [
                   const Text(
                     'تسجيل السائق',
-                    style: TextStyle(
-                        fontFamily: 'Tajawal',
-                        fontSize: 25,
-                        color: Palette.blueColor),
+                    style: TextStyle(fontSize: 25, color: Palette.blueColor),
                   ),
 
                   const SizedBox(height: 18),
 
                   //
                   Container(
-                    height: 566,
-                    width: 345,
+                    height: 650.h,
+                    width: 345.w,
                     decoration: BoxDecoration(
                         color: Palette.whiteColor,
                         borderRadius: BorderRadius.circular(10)),
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        const driverPic(),
+                    child: Form(
+                      key: controller.authKey,
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          const driverPic(),
 
-                        const SizedBox(
-                          height: 15,
-                        ),
+                          const SizedBox(
+                            height: 15,
+                          ),
 
-                        //name filed
-                        const textFiled(
-                          headtext: 'الأسم',
-                          hinttext: 'حسن خالد ابو الخط',
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                          //name filed
+                          textFiled(
+                            controller: controller.name,
+                            headtext: 'الأسم',
+                            hinttext: 'حسن خالد ابو الخط',
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          //name filed
+                          textFiled(
+                            controller: controller.email,
+                            headtext: 'البريد الالكتروني',
+                            hinttext: 'example@gmail.com',
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
 
-                        // drop down
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: const [
-                            dropdown(headtext:'المحافظة', hinttext: 'البصرة', ),
-                            dropdown(headtext: 'المدينة', hinttext: 'شط العرب',),
-                          ],
-                        ),
+                          // drop down
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: const [
+                              dropdown(
+                                headtext: 'المحافظة',
+                                hinttext: 'البصرة',
+                              ),
+                              dropdown(
+                                headtext: 'المدينة',
+                                hinttext: 'شط العرب',
+                              ),
+                            ],
+                          ),
 
-                        const SizedBox(
-                          height: 20,
-                        ),
+                          const SizedBox(
+                            height: 20,
+                          ),
 
-                        //phone number filed
-                        const textFiled(
-                            headtext: 'رقم الهاتف', hinttext: '07712345678'),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                          //phone number filed
+                          textFiled(
+                              controller: controller.phone,
+                              headtext: 'رقم الهاتف',
+                              hinttext: '07712345678'),
+                          const SizedBox(
+                            height: 20,
+                          ),
 
-                        //tele user name filed
-                        const textFiled(
-                            headtext: 'معرّف التلكرام',
-                            hinttext: 'khaltk.3mtk'),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                          //tele user name filed
+                          textFiled(
+                              controller: controller.telegarm,
+                              headtext: 'معرّف التلكرام',
+                              hinttext: 'khaltk.3mtk'),
+                          const SizedBox(
+                            height: 20,
+                          ),
 
-                        //password filed
-                        const textFiled(headtext: 'كلمة المرور', hinttext: 'خالتك'),
+                          //password filed
+                          textFiled(
+                              controller: controller.password,
+                              headtext: 'كلمة المرور',
+                              hinttext: 'password'),
 
-                        InkWell(
-                          onTap: (){
-                            Get.toNamed('/driver/home');
-                          },
-                          child: Container(
-                            alignment: Alignment.bottomCenter,
-                            margin: EdgeInsets.only(top:10),
-                            height: 34, width: 118,
-                            decoration: BoxDecoration(
-                              color: Palette.blueColor,
-                              borderRadius: BorderRadius.circular(20)
-                            ),
-                            child:const Center(
-                              child: Text('تسجيل',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Palette.whiteColor,
-                                ),
+                          InkWell(
+                            onTap: () {
+                              controller.register(
+                                  email: controller.email.text,
+                                  password: controller.password.text);
+                            },
+                            child: Container(
+                              alignment: Alignment.bottomCenter,
+                              margin: EdgeInsets.only(top: 10),
+                              height: 34.h,
+                              width: 118.w,
+                              decoration: BoxDecoration(
+                                  color: Palette.blueColor,
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: Center(
+                                child: controller.isLoading.value
+                                    ? const CircularProgressIndicator(
+                                        color: Palette.whiteColor,
+                                      )
+                                    : const Text(
+                                        'تسجيل',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Palette.whiteColor,
+                                        ),
+                                      ),
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],

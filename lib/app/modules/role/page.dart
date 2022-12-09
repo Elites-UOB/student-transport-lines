@@ -48,7 +48,7 @@ class RolePage extends GetView<RoleController> {
                 onPressed: () {},
                 destext: 'ايجاد خطوط النقل المناسبة\n حسب المتطلبات الخاصة',
                 headtext: 'طالب',
-                myimg: '',
+                myimg: 'assets/images/img_1.png',
                 backroundCard: Palette.whiteColor,
                 backroundImg: Palette.blueColor,
                 destextColor: Palette.blueColor,
