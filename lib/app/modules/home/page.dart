@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff212936),
+      
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: SafeArea(

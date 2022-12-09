@@ -8,6 +8,7 @@ import 'app/modules/home/binding.dart';
 import 'app/modules/home/page.dart';
 import 'routes/pages.dart';
 import 'routes/routes.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 Future main() async {
   await dotenv.load(fileName: ".env");

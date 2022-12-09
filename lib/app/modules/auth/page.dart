@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/auth/controller.dart';
+import 'package:student_transport_lines/app/modules/role/page.dart';
 
 class AuthPage extends StatelessWidget {
   AuthController controller = Get.put(AuthController());
@@ -20,6 +21,15 @@ class AuthPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+
+
+                IconButton(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => RolePage(),));
+                },
+                    icon:const Icon(Icons.cancel_outlined,
+                      color: Colors.red,)),
+
+
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: DecoratedBox(
