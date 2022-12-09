@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import '../app/modules/auth/binding.dart';
 import '../app/modules/auth/page.dart';
+import '../app/modules/driver_pages/home/binding.dart';
+import '../app/modules/driver_pages/home/page.dart';
 import '../app/modules/driver_pages/register/binding.dart';
 import '../app/modules/driver_pages/register/page.dart';
 import '../app/modules/role/binding.dart';
@@ -27,6 +29,11 @@ abstract class AppPages {
         name: Routes.Driver_Register,
         page: () => DriverRegisterPage(),
         binding: DriverRigisterBinding()),
+
+    GetPage(
+        name: Routes.Driver_Home,
+        page: () => DriverHomePage(),
+        binding: DriverHomeBinding()),
 
     //Student Routes
   ];

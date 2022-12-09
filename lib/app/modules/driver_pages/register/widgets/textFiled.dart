@@ -24,6 +24,7 @@ class textFiled extends StatelessWidget {
             ),
           ),
           Container(
+            height: 40,
             padding: EdgeInsets.only(left: 5),
             decoration: BoxDecoration(
               color: Palette.greyColor,
@@ -32,7 +33,7 @@ class textFiled extends StatelessWidget {
             child: TextFormField(
               decoration:
                   InputDecoration(hintText: hinttext, border: InputBorder.none),
-              keyboardType: TextInputType.emailAddress,
+              //keyboardType: TextInputType.numberWithOptions(),
             ),
           ),
         ],

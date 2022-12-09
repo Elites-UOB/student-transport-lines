@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/theme/color_theme.dart';
 
 class driverPic extends StatelessWidget {
+
   const driverPic({
     Key? key,
   }) : super(key: key);
@@ -10,8 +11,8 @@ class driverPic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
-      width: 100,
+      height: 75,
+      width: 75,
       child: Stack(
         fit: StackFit.expand,
         clipBehavior: Clip.none,
@@ -23,12 +24,12 @@ class driverPic extends StatelessWidget {
 
           //icon
           Positioned(
-            left: -8,
+            left: -5,
             bottom: 0,
             child: InkWell(
               onTap: () {},
               child: const CircleAvatar(
-                  radius: 18,
+                  radius: 13,
                   backgroundColor: Palette.blueColor,
                   child: Icon(Icons.recycling)),
             ),

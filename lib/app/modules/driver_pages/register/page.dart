@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/driver_pages/register/widgets/dropdown.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
-
 import 'widgets/ProfilePic.dart';
 import 'widgets/textFiled.dart';
 import 'controller.dart';
@@ -31,7 +30,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                         color: Palette.blueColor),
                   ),
 
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 18),
 
                   //
                   Container(
@@ -48,7 +47,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                         const driverPic(),
 
                         const SizedBox(
-                          height: 20,
+                          height: 15,
                         ),
 
                         //name filed
@@ -60,13 +59,17 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                           height: 20,
                         ),
 
-                        //
+                        // drop down
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: const [
-                            dropdown(),
-                            dropdown(),
+                            dropdown(headtext:'المحافظة', hinttext: 'البصرة', ),
+                            dropdown(headtext: 'المدينة', hinttext: 'شط العرب',),
                           ],
+                        ),
+
+                        const SizedBox(
+                          height: 20,
                         ),
 
                         //phone number filed
@@ -77,15 +80,38 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                         ),
 
                         //tele user name filed
-                        textFiled(
+                        const textFiled(
                             headtext: 'معرّف التلكرام',
                             hinttext: 'khaltk.3mtk'),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
 
                         //password filed
-                        textFiled(headtext: 'كلمة المرور', hinttext: 'خالتك'),
+                        const textFiled(headtext: 'كلمة المرور', hinttext: 'خالتك'),
+
+                        InkWell(
+                          onTap: (){
+                            Get.toNamed('/driver/home');
+                          },
+                          child: Container(
+                            alignment: Alignment.bottomCenter,
+                            margin: EdgeInsets.only(top:10),
+                            height: 34, width: 118,
+                            decoration: BoxDecoration(
+                              color: Palette.blueColor,
+                              borderRadius: BorderRadius.circular(20)
+                            ),
+                            child:const Center(
+                              child: Text('تسجيل',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Palette.whiteColor,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
