@@ -13,7 +13,6 @@ import 'routes/routes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 Future main() async {
-  await dotenv.load(fileName: ".env");
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
     url: Config.SUPABASE_URL,

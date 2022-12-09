@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theme/color_theme.dart';
 
@@ -41,25 +42,26 @@ class card_driver_stud extends StatelessWidget {
               children: [
                 Text(
                   headtext,
-                  style: TextStyle(
-                      fontFamily: 'Tajawal', fontSize: 20, color: destextColor),
+                  style: TextStyle(fontSize: 20.sp, color: destextColor),
                 ),
                 Text(
                   destext,
                   textDirection: TextDirection.rtl,
-                  style: TextStyle(
-                      fontFamily: 'Tajawal', fontSize: 14, color: destextColor),
+                  style: TextStyle(fontSize: 14.sp, color: destextColor),
                 ),
               ],
             ),
             Container(
-                height: 70,
-                width: 70,
-                margin: EdgeInsets.only(left: 10),
-                decoration: BoxDecoration(
-                    color: backroundImg,
-                    borderRadius: BorderRadius.circular(10)),
-                child: Image(image: AssetImage(myimg))),
+              height: 70.h,
+              width: 70.w,
+              margin: EdgeInsets.only(left: 10),
+              decoration: BoxDecoration(
+                  color: backroundImg, borderRadius: BorderRadius.circular(10)),
+              child: Text(
+                myimg,
+                style: TextStyle(fontSize: 20.sp, color: destextColor),
+              ),
+            ),
           ],
         ),
       ),

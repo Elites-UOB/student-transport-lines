@@ -24,10 +24,7 @@ class RolePage extends GetView<RoleController> {
               //ما هو دورك؟ text
               const Text(
                 'ما هو دورك؟',
-                style: TextStyle(
-                    fontFamily: 'Tajawal',
-                    fontSize: 30,
-                    color: Palette.blueColor),
+                style: TextStyle(fontSize: 30, color: Palette.blueColor),
               ),
 
               const SizedBox(height: 40),
@@ -35,7 +32,7 @@ class RolePage extends GetView<RoleController> {
               // driver card
               card_driver_stud(
                   onPressed: () {
-                    Get.toNamed('/driver_register');
+                    Get.toNamed('/driver/register');
                   },
                   destext:
                       'الأعلان عن خطوط  النقل الخاصة بك، \n لأعلان عن خطوط  النقل الخاصة بك،',
