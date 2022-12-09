@@ -57,10 +57,7 @@ class card_driver_stud extends StatelessWidget {
               margin: EdgeInsets.only(left: 10),
               decoration: BoxDecoration(
                   color: backroundImg, borderRadius: BorderRadius.circular(10)),
-              child: Text(
-                myimg,
-                style: TextStyle(fontSize: 20.sp, color: destextColor),
-              ),
+              child: Image.asset(myimg),
             ),
           ],
         ),
