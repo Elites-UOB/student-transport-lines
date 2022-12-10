@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '../../utils/supabase_exception.dart';
 import '../models/Auth.dart';
 
 class AuthService extends GetxService {

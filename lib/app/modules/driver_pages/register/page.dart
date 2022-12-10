@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/driver_pages/register/widgets/dropdown.dart';
+import 'package:student_transport_lines/app/utils/helper_controller.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
 import 'widgets/ProfilePic.dart';
 import 'widgets/textFiled.dart';
 import 'controller.dart';
 
 class DriverRegisterPage extends GetView<DriverRegisterController> {
-  const DriverRegisterPage({super.key});
+  final HelperController helperController = Get.put(HelperController());
+  DriverRegisterPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -72,14 +74,18 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                           // drop down
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: const [
+                            children: [
                               dropdown(
                                 headtext: 'المحافظة',
                                 hinttext: 'البصرة',
+                                item: helperController.cities.value,
+                                controller: controller.cityId,
                               ),
                               dropdown(
                                 headtext: 'المدينة',
                                 hinttext: 'شط العرب',
+                                item: helperController.cities.value,
+                                controller: controller.cityId,
                               ),
                             ],
                           ),

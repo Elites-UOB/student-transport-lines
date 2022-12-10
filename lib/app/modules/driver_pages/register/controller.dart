@@ -13,6 +13,8 @@ class DriverRegisterController extends GetxController {
   final phone = TextEditingController();
   final telegarm = TextEditingController();
   final password = TextEditingController();
+  final cityId = TextEditingController();
+  final provinceId = TextEditingController();
   final authKey = GlobalKey<FormState>();
   //bools
   RxBool showPassword = false.obs;
