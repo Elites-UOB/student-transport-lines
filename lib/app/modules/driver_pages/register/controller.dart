@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -40,19 +42,23 @@ class DriverRegisterController extends GetxController {
     super.onClose();
   }
 
-  String? valideateEmail(String value) {
-    if (!GetUtils.isEmail(value)) {
-      return 'البريد الالكتروني غير صالح';
+  validation() {
+    if (name.text.isEmpty) {
+      Get.snackbar('خطأ', 'الرجاء ادخال الاسم');
+    } else if (email.text.isEmpty && !GetUtils.isEmail(email.text)) {
+      Get.snackbar('خطأ', 'الرجاء ادخال البريد الالكتروني');
+    } else if (phone.text.isEmpty && phone.text.length < 11) {
+      Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
+    } else if (telegarm.text.isEmpty) {
+      Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
+    } else if (password.text.isEmpty && password.text.length < 6) {
+      Get.snackbar('خطأ', 'الرجاء ادخال كلمة المرور');
+      // } else if (cityId.text.isEmpty) {
+      //   Get.snackbar('خطأ', 'الرجاء اختيار المدينة');
+      // } else if (provinceId.text.isEmpty) {
+      //   Get.snackbar('خطأ', 'الرجاء اختيار المحافظة');
     } else {
-      return null;
-    }
-  }
-
-  String? valideatePassworde(String value) {
-    if (value.length < 6) {
-      return 'كلمة المرور غير صالحة';
-    } else {
-      return null;
+      return true;
     }
   }
 
@@ -66,14 +72,16 @@ class DriverRegisterController extends GetxController {
   register() async {
     try {
       isLoading.value = true;
-      if (authKey.currentState!.validate()) {
-        authKey.currentState!.save();
-        var user = await authService.signUp(email.text, password.text,
-            name.text, phone.text, 'driver', 1, 1, telegarm.text);
-        if (user != null) {
-          Get.offAllNamed('/driver/home');
-        } else {
-          Get.snackbar('خطأ', 'حدث خطأ ما');
+      if (validation() == true) {
+        if (authKey.currentState!.validate()) {
+          authKey.currentState!.save();
+          var user = await authService.signUp(email.text, password.text,
+              name.text, phone.text, 'driver', 1, 1, telegarm.text);
+          if (user != null) {
+            Get.offAllNamed('/driver/home');
+          } else {
+            Get.snackbar('خطأ', 'حدث خطأ ما');
+          }
         }
       }
     } finally {

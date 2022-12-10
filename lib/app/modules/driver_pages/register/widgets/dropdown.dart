@@ -21,7 +21,6 @@ class dropdown extends StatelessWidget {
         Text(
           headtext,
           style: const TextStyle(
-            fontFamily: 'Tajawal',
             color: Colors.grey,
             fontSize: 18,
           ),
