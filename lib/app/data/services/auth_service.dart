@@ -8,7 +8,7 @@ class AuthService extends GetxService {
   static final error = false;
 
   Future signUp(String email, String password, String name, String phone,
-      String role, String cityId, String provinceId, String telegram) async {
+      String role, cityId, provinceId, String telegram) async {
     try {
       final AuthResponse res = await _supabase.client.auth.signUp(
         email: email,

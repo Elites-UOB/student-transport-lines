@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import '../../../data/models/city.dart';
 import '../../../data/services/auth_service.dart';
+import '../../../data/services/helper_service.dart';
 
 class DriverRegisterController extends GetxController {
   final AuthService authService = AuthService();
@@ -20,8 +22,14 @@ class DriverRegisterController extends GetxController {
   RxBool showPassword = false.obs;
   RxBool isLoading = false.obs;
 
+  //List
+
+  RxList cities = [].obs;
+  RxList provinces = [].obs;
+
   @override
   void onInit() async {
+    await fatch();
     super.onInit();
   }
 
@@ -48,13 +56,20 @@ class DriverRegisterController extends GetxController {
     }
   }
 
+  fatch() async {
+    final citiesData = await HelperService().getCities();
+    final provincesData = await HelperService().getProvinces();
+    cities.value = citiesData;
+    provinces.value = provincesData;
+  }
+
   register() async {
     try {
-      isLoading == true;
+      isLoading.value = true;
       if (authKey.currentState!.validate()) {
         authKey.currentState!.save();
         var user = await authService.signUp(email.text, password.text,
-            name.text, phone.text, 'driver', '1', '1', telegarm.text);
+            name.text, phone.text, 'driver', 1, 1, telegarm.text);
         if (user != null) {
           Get.offAllNamed('/driver/home');
         } else {
@@ -62,7 +77,7 @@ class DriverRegisterController extends GetxController {
         }
       }
     } finally {
-      isLoading(false);
+      isLoading.value = false;
     }
   }
 }

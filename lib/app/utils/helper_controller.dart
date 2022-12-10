@@ -10,19 +10,12 @@ class HelperController extends GetxController {
 
   @override
   void onInit() async {
-    await getCities();
     super.onInit();
   }
 
   @override
   void onClose() {
     super.onClose();
-  }
-
-  getCities() async {
-    final data = await HelperService().fatch();
-    cities.value = data;
-    return data;
   }
 
   void showSnackBar(String message) {

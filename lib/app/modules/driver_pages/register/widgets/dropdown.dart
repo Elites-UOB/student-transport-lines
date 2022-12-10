@@ -51,18 +51,18 @@ class dropdown extends StatelessWidget {
               fillColor: Palette.greyColor,
             ),
             dropdownColor: Palette.whiteColor,
+            items: item
+                .map((element) => DropdownMenuItem(
+                    value: element['id'],
+                    child: Text(
+                      element['name'],
+                      textDirection: TextDirection.rtl,
+                    )))
+                .toList(),
             onChanged: (Object? element) {
               controller:
               controller.text = element.toString();
             },
-            items: item
-                .map((element) => DropdownMenuItem(
-                    value: element.id,
-                    child: Text(
-                      element.name,
-                      textDirection: TextDirection.rtl,
-                    )))
-                .toList(),
           ),
         ),
       ],
