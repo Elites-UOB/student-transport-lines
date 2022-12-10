@@ -34,7 +34,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
 
                   //
                   Container(
-                    height: 591.h,
+                    height: 700.h,
                     width: 345.w,
                     decoration: BoxDecoration(
                         color: Palette.whiteColor,
@@ -56,7 +56,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                           textFiled(
                             controller: controller.name,
                             headtext: 'الأسم',
-                            hinttext: 'حسن خالد ابو الخط',
+                            hinttext: 'أحمد علي',
                           ),
                           const SizedBox(
                             height: 20,
@@ -66,6 +66,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                             controller: controller.email,
                             headtext: 'البريد الالكتروني',
                             hinttext: 'example@gmail.com',
+                            isEmail: true,
                           ),
                           const SizedBox(
                             height: 20,
@@ -114,9 +115,12 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
 
                           //password filed
                           textFiled(
-                              controller: controller.password,
-                              headtext: 'كلمة المرور',
-                              hinttext: 'password'),
+                            controller: controller.password,
+                            headtext: 'كلمة المرور',
+                            hinttext: 'password',
+                            isPassword: true,
+                            icon: Icons.lock_outline,
+                          ),
 
                           InkWell(
                             onTap: () {
@@ -132,10 +136,10 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                                   borderRadius: BorderRadius.circular(20)),
                               child: Center(
                                 child: controller.isLoading.value
-                                    ?const CircularProgressIndicator(
+                                    ? const CircularProgressIndicator(
                                         color: Palette.whiteColor,
                                       )
-                                    :const Text(
+                                    : const Text(
                                         'تسجيل',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
