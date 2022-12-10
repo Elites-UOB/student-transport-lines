@@ -114,9 +114,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
 
                           InkWell(
                             onTap: () {
-                              controller.register(
-                                  email: controller.email.text,
-                                  password: controller.password.text);
+                              controller.register();
                             },
                             child: Container(
                               alignment: Alignment.bottomCenter,
@@ -128,10 +126,10 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                                   borderRadius: BorderRadius.circular(20)),
                               child: Center(
                                 child: controller.isLoading.value
-                                    ? const CircularProgressIndicator(
+                                    ? CircularProgressIndicator(
                                         color: Palette.whiteColor,
                                       )
-                                    : const Text(
+                                    : Text(
                                         'تسجيل',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(

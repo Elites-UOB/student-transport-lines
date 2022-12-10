@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
+import '../../data/services/auth_service.dart';
+import '../auth/controller.dart';
 import 'controller.dart';
 import 'widgets/card_driver_stud.dart';
 
 class RolePage extends GetView<RoleController> {
-  const RolePage({super.key});
+  AuthController data = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,9 @@ class RolePage extends GetView<RoleController> {
                 backroundCard: Palette.whiteColor,
                 backroundImg: Palette.blueColor,
                 destextColor: Palette.blueColor,
-              )
+              ),
+              TextButton(
+                  onPressed: (() => data.signOut()), child: Text('sinout'))
             ],
           ),
         ),

@@ -44,13 +44,23 @@ class AuthController extends GetxController {
     }
   }
 
-  login({required String email, required String password}) async {
+  login() async {
     try {
       isLoading(true);
       if (authKey.currentState!.validate()) {
         authKey.currentState!.save();
-        await authService.signIn(email, password);
+        await authService.signIn(email.text, password.text);
       }
+    } finally {
+      isLoading(false);
+    }
+  }
+
+  //signOut
+  signOut() async {
+    try {
+      isLoading(true);
+      await authService.signOut();
     } finally {
       isLoading(false);
     }

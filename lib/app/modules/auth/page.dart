@@ -21,15 +21,16 @@ class AuthPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-
-
-                IconButton(onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => RolePage(),));
-                },
-                    icon:const Icon(Icons.cancel_outlined,
-                      color: Colors.red,)),
-
-
+                IconButton(
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => RolePage(),
+                      ));
+                    },
+                    icon: const Icon(
+                      Icons.cancel_outlined,
+                      color: Colors.red,
+                    )),
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: DecoratedBox(
@@ -126,9 +127,7 @@ class AuthPage extends StatelessWidget {
                                       RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20.0),
                                   ))),
-                              onPressed: () => controller.login(
-                                  email: controller.email.text,
-                                  password: controller.password.text),
+                              onPressed: () => controller.login(),
                               child: Center(
                                 child: Obx(
                                   () => controller.isLoading.value == true
