@@ -19,5 +19,5 @@ class Styles {
   static const buttonText =
       TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.w600);
   static const hintText =
-      TextStyle(fontSize: 14, color: Colors.grey, fontWeight: FontWeight.w600);
+      TextStyle(fontSize: 14, color: Colors.grey);
 }

@@ -44,7 +44,9 @@ class RolePage extends GetView<RoleController> {
 
               // student card
               card_driver_stud(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed('/student/register');
+                },
                 destext: 'ايجاد خطوط النقل المناسبة\n حسب المتطلبات الخاصة',
                 headtext: 'طالب',
                 myimg: 'assets/images/img_1.png',

@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:student_transport_lines/app/modules/student_pages/register/page.dart';
 import '../app/modules/auth/binding.dart';
 import '../app/modules/auth/page.dart';
 import '../app/modules/driver_pages/home/binding.dart';
@@ -11,6 +12,7 @@ import '../app/modules/student_pages/home/binding.dart';
 import '../app/modules/student_pages/home/page.dart';
 import '../app/modules/splash/binding.dart';
 import '../app/modules/splash/page.dart';
+import '../app/modules/student_pages/register/binding.dart';
 import 'pages.dart';
 
 abstract class AppPages {
@@ -36,5 +38,10 @@ abstract class AppPages {
         binding: DriverHomeBinding()),
 
     //Student Routes
+    GetPage(
+        name: Routes.Student_Register,
+        page: ()=>StudentRegisterPage(),
+        binding: StudentRegisterBinding()
+    )
   ];
 }

@@ -5,7 +5,7 @@ import 'package:student_transport_lines/app/modules/driver_pages/register/widget
 import 'package:student_transport_lines/app/utils/helper_controller.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
 import 'widgets/ProfilePic.dart';
-import 'widgets/textFiled.dart';
+import '../../../utils/widgets/textFiled.dart';
 import 'controller.dart';
 
 class DriverRegisterPage extends GetView<DriverRegisterController> {
@@ -34,7 +34,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
 
                   //
                   Container(
-                    height: 650.h,
+                    height: 591.h,
                     width: 345.w,
                     decoration: BoxDecoration(
                         color: Palette.whiteColor,
@@ -132,10 +132,10 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                                   borderRadius: BorderRadius.circular(20)),
                               child: Center(
                                 child: controller.isLoading.value
-                                    ? CircularProgressIndicator(
+                                    ?const CircularProgressIndicator(
                                         color: Palette.whiteColor,
                                       )
-                                    : Text(
+                                    :const Text(
                                         'تسجيل',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(

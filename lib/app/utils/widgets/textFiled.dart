@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theme/color_theme.dart';
+import '../../../core/theme/color_theme.dart';
+import '../../../core/theme/text_theme.dart';
 
 class textFiled extends StatelessWidget {
   final String headtext;
@@ -25,7 +26,8 @@ class textFiled extends StatelessWidget {
         children: [
           Text(
             headtext,
-            style: TextStyle(
+            style:const TextStyle(
+              color: Colors.grey,
               fontFamily: 'Tajawal',
               fontSize: 18,
             ),
@@ -39,8 +41,10 @@ class textFiled extends StatelessWidget {
             ),
             child: TextFormField(
               decoration:
-                  InputDecoration(hintText: hinttext, border: InputBorder.none),
+                  InputDecoration(hintText: hinttext, border: InputBorder.none,
+                      hintStyle: Styles.hintText),
               controller: controller,
+
               //keyboardType: TextInputType.numberWithOptions(),
             ),
           ),
