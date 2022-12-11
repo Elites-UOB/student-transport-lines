@@ -4,6 +4,8 @@ import '../app/modules/auth/binding.dart';
 import '../app/modules/auth/page.dart';
 import '../app/modules/driver_pages/home/binding.dart';
 import '../app/modules/driver_pages/home/page.dart';
+import '../app/modules/driver_pages/lineInformation/binding.dart';
+import '../app/modules/driver_pages/lineInformation/page.dart';
 import '../app/modules/driver_pages/register/binding.dart';
 import '../app/modules/driver_pages/register/page.dart';
 import '../app/modules/role/binding.dart';
@@ -23,7 +25,6 @@ abstract class AppPages {
         name: Routes.SPLASH,
         page: () => SplashPage(),
         binding: SplashBinding()),
-    GetPage(name: Routes.HOME, page: () => HomePage(), binding: HomeBinding()),
     GetPage(name: Routes.Role, page: () => RolePage(), binding: RoleBinding()),
 
     //Driver Routes
@@ -37,11 +38,21 @@ abstract class AppPages {
         page: () => DriverHomePage(),
         binding: DriverHomeBinding()),
 
+    GetPage(
+        name: Routes.Line_Information,
+        page: () =>  LineInformationPage(),
+        binding: LineInformationBinding()),
+
     //Student Routes
     GetPage(
         name: Routes.Student_Register,
         page: ()=>StudentRegisterPage(),
-        binding: StudentRegisterBinding()
+        binding: StudentRegisterBinding()),
+
+    GetPage(
+        name: Routes.Student_Home,
+        page: ()=>StudentHomePage(),
+        binding: StudentHomeBinding()
     )
   ];
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:student_transport_lines/core/theme/color_theme.dart';
 import 'package:student_transport_lines/core/theme/text_theme.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 class addNewLine extends StatelessWidget {
   const addNewLine({Key? key}) : super(key: key);
@@ -19,8 +20,8 @@ class addNewLine extends StatelessWidget {
                   color: Colors.grey,
                 borderRadius: BorderRadius.circular(10)
               ),
-              child:const Image(image: AssetImage(''),
-              ) ),
+              child: SvgPicture.asset('assets/images/taxi.svg'),
+              ),
           //collage name
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

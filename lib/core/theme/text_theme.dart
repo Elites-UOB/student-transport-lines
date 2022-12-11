@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'color_theme.dart';
 
 class Styles {
+
   static const boldBlack =
       TextStyle(color: Colors.black, fontWeight: FontWeight.w900, fontSize: 16);
   static const boldblue =
@@ -20,4 +21,6 @@ class Styles {
       TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.w600);
   static const hintText =
       TextStyle(fontSize: 14, color: Colors.grey);
+  static const hintTextbold =
+  TextStyle(fontSize: 14, color: Colors.grey,fontWeight: FontWeight.w600);
 }

@@ -111,7 +111,9 @@ class StudentRegisterPage extends GetView<StudentRegisterController> {
                              width:19,),
 
                            InkWell(
-                             onTap: () { },
+                             onTap: () {
+                               Get.toNamed('/student/home');
+                             },
                              child: Container(
                                margin: EdgeInsets.only(top: 10),
                                height: 34.h,

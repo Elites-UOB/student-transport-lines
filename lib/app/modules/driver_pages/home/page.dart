@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:student_transport_lines/app/modules/driver_pages/register/widgets/ProfilePic.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
 import 'package:student_transport_lines/core/theme/text_theme.dart';
 
+import '../../../utils/widgets/profilePicS.dart';
 import 'controller.dart';
 import 'widgets/addNewLine.dart';
 
@@ -34,41 +34,39 @@ class DriverHomePage extends GetView<DriverHomeController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const[
                         Text('حسن خالد ابو الخط',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Tajawal',
-                          fontWeight: FontWeight.bold,
-                          color: Palette.blueColor
-                        ),
+                        style: Styles.boldblue
                         ),
                         Text('2022/08/12',
                           textAlign:TextAlign.right ,
-                          style: TextStyle(
-                              fontSize: 10,
-                              fontFamily: 'Tajawal',
-                              color: Colors.grey
-                            //  color: Palette.
-                          ),
+                          style: Styles.hintText
                         )
                       ],
                     ),
 
                     //pic
-                    driverPic(),
+                   ProfilePicS(
+                       img: Image.asset('assets/images/person.png',height: 30,width: 30,),
+                       ImgRadius: 25,
+                       IconRadius: 9,
+                     myColor:Palette.blueColor ,
+                     myIcon: Icon(Icons.edit,size: 12,)
+                     ),
                   ],
                 ),
 
                 //  خطوطي && خط جديد
                 Padding(
-                  padding:  EdgeInsets.only(top: 50.sp),
+                  padding:  EdgeInsets.only(top: 50.h),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                     const Text('خطوطي',style: Styles.hintText,),
+                     const Text('خطوطي',style: Styles.hintTextbold,),
 
                       // خط جديد icon and text
                     InkWell(
-                      onTap: (){},
+                      onTap: (){
+                        Get.toNamed('/driver/LineInformation');
+                      },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children:const [

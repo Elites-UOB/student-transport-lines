@@ -4,8 +4,8 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/driver_pages/register/widgets/dropdown.dart';
 import 'package:student_transport_lines/app/utils/helper_controller.dart';
+import 'package:student_transport_lines/app/utils/widgets/profilePicS.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
-import 'widgets/ProfilePic.dart';
 import '../../../utils/widgets/textFiled.dart';
 import 'controller.dart';
 
@@ -15,6 +15,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
 
   @override
   Widget build(BuildContext context) {
+    final h =MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Palette.backgroundColor,
@@ -23,16 +24,20 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
           child: SingleChildScrollView(
             child: Center(
               child: Padding(
-                padding: EdgeInsets.only(top: 40),
+                padding: EdgeInsets.only(top: h/35.sp),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
-                      'تسجيل السائق',
-                      style: TextStyle(fontSize: 25, color: Palette.blueColor),
+                     TextButton(
+                      onPressed:(){Get.toNamed('/driver/home');},
+                      child:const Text(
+                        'تسجيل السائق',
+                        style: TextStyle(fontSize: 25, color: Palette.blueColor),
+                      ) ,
+
                     ),
 
-                    const SizedBox(height: 18),
+                  //  const SizedBox(height: 12),
 
                     //
                     Container(
@@ -49,7 +54,12 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                               const SizedBox(
                                 height: 20,
                               ),
-                              const driverPic(),
+                              const ProfilePicS(
+                                  img: Image(image: AssetImage('assets/images/person.png')),
+                                  ImgRadius: 35,
+                                  IconRadius: 15,
+                                  myIcon: Icon(Icons.recycling),
+                                  myColor: Palette.blueColor),
 
                               const SizedBox(
                                 height: 15,

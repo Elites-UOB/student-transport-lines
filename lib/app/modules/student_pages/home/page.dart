@@ -6,72 +6,97 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 
-import '../../../utils/helper_controller.dart';
+import '../../../../core/theme/color_theme.dart';
+import '../../../../core/theme/text_theme.dart';
+import '../../../utils/widgets/profilePicS.dart';
 
-class HomePage extends StatefulWidget {
-  HelperController controller = Get.put(HelperController());
+class StudentHomePage extends StatefulWidget {
 
-  HomePage({super.key});
+  StudentHomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<StudentHomePage> createState() => _StudentHomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _StudentHomePageState extends State<StudentHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff212936),
+      backgroundColor:Palette.backgroundColor,
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 18, horizontal: 16),
-            child: Obx(() => widget.controller.cities.isEmpty
-                ? Center(
-                    child: SpinKitFadingCircle(
-                      color: Colors.white,
-                      size: 50.0,
+            padding:const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            child: Column(
+
+              children: [
+                //appar
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+
+                    //name and date
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const[
+                        Text('حسن خالد المستخدم',
+                            style: Styles.boldblue
+                        ),
+                        Text('2022/08/12',
+                            textAlign:TextAlign.right ,
+                            style: Styles.hintText
+                        )
+                      ],
                     ),
-                  )
-                : ListView.builder(
-                    itemCount: widget.controller.cities.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        margin: EdgeInsets.only(bottom: 16),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
+
+                  //user img
+                  const  ProfilePicS(
+                      img: Image(image: AssetImage('assets/images/person.png'),height: 30,width: 30,),
+                      ImgRadius: 25,
+                      IconRadius:9 ,
+                      myColor:Palette.blueColor ,
+                      myIcon: Icon(Icons.edit,size: 12,),
+                    )
+                  ],
+                ),
+
+                //الخطوط && فلتر text
+                Container(
+                  padding: EdgeInsets.only(top: 50.h),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                     const Text('الخطوط',style: Styles.hintTextbold,),
+
+                      InkWell(
+                        onTap: (){},
+                        child: Row(
+                          children:const [
+                            Icon(Icons.filter_list_alt,color: Palette.blueColor,size: 18,),
+                            Text('فلتر',style: Styles.boldblue,)
+                          ],
                         ),
-                        child: ListTile(
-                          title: Text(
-                            widget.controller.cities[index]['provinces']
-                                ['name'],
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18.sp,
-                            ),
-                          ),
-                          subtitle: Text(
-                            widget.controller.cities[index]['name'],
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18.sp,
-                            ),
-                          ),
-                          trailing: Icon(
-                            Icons.arrow_forward_ios,
-                            color: Colors.black,
-                          ),
-                          onTap: () {
-                            widget.controller.selectedCity.value =
-                                widget.controller.cities[index]['name'];
-                            Get.toNamed('/home');
-                          },
-                        ),
-                      );
-                    },
-                  )),
+                      )
+                    ],
+                  ),
+                ),
+
+                Container(
+                  margin: EdgeInsets.only(top: 10),
+                  height:489.h ,
+                  width: 345.w,
+                  decoration: BoxDecoration(
+                    color:Palette.whiteColor ,
+                    borderRadius: BorderRadius.circular(16),
+
+                  ),
+                )
+
+              ],
+
+            )
           ),
         ),
       ),
