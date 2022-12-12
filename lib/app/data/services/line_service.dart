@@ -44,7 +44,11 @@ class LineService extends GetxService {
 
   //Get All Lines
   Future getLines() async {
-    final data = await _supabase.client.from('lines').select("*");
+    final data = await _supabase.client
+        .from('lines')
+        .select(
+            "car_model,stete,type,price,pass_count,car_pass_count,cities(name),provinces(name),profiles(id,full_name,avatar_url,phone,telegarm)")
+        .eq('stete', 'true');
     return data;
   }
 }

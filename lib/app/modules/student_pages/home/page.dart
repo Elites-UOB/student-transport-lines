@@ -115,7 +115,10 @@ class StudentHomePage extends GetView<StudentHomeController> {
                                     color: Colors.white,
                                     child: Center(
                                       child: Text(
-                                          'This is the modal bottom sheet. Tap anywhere to dismiss.'),
+                                        controller.lines[index]['type'] == 1
+                                            ? 'صباحي'
+                                            : 'مسائي',
+                                      ),
                                     ),
                                   ),
                                 );
@@ -134,6 +137,29 @@ class StudentHomePage extends GetView<StudentHomeController> {
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
                                             children: [
+                                              Image.network(
+                                                controller.lines[index]
+                                                            ['profiles']
+                                                        ['avatar_url'] ??
+                                                    'https://ccemdata.mcmaster.ca/media/avatars/default.png',
+                                                height: 60,
+                                                width: 60,
+                                              ),
+                                              Text(
+                                                controller.lines[index]
+                                                    ['profiles']['full_name'],
+                                                style: Styles.hintTextbold,
+                                              ),
+                                              Text(
+                                                controller.lines[index]
+                                                    ['provinces']['name'],
+                                                style: Styles.hintTextbold,
+                                              ),
+                                              Text(
+                                                controller.lines[index]
+                                                    ['cities']['name'],
+                                                style: Styles.hintTextbold,
+                                              ),
                                               Text(
                                                 controller.lines[index]
                                                     ['car_model'],
