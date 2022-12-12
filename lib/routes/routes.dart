@@ -40,19 +40,17 @@ abstract class AppPages {
 
     GetPage(
         name: Routes.Line_Information,
-        page: () =>  LineInformationPage(),
+        page: () => LineInformationPage(),
         binding: LineInformationBinding()),
 
     //Student Routes
     GetPage(
-        name: Routes.Student_Register,
-        page: ()=>StudentRegisterPage(),
-        binding: StudentRegisterBinding()),
-
-    GetPage(
         name: Routes.Student_Home,
-        page: ()=>StudentHomePage(),
-        binding: StudentHomeBinding()
-    )
+        page: () => StudentHomePage(),
+        binding: StudentHomeBinding()),
+    GetPage(
+        name: Routes.Student_Register,
+        page: () => StudentRegisterPage(),
+        binding: StudentRegisterBinding()),
   ];
 }

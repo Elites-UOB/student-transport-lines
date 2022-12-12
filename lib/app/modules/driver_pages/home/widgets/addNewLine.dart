@@ -14,13 +14,14 @@ class addNewLine extends StatelessWidget {
       //image
       leading: Container(
         height: 60.h,
-        width: 42.52.w,
+        width: 50.w,
         decoration: BoxDecoration(
-            color: Colors.grey, borderRadius: BorderRadius.circular(10)),
-        child: SvgPicture.asset(
-          'assets/images/taxi.svg',
-          fit: BoxFit.cover,
-          width: 42.52.w,
+            color: Color(0xFFF6F7F9), borderRadius: BorderRadius.circular(20)),
+        child: Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: SvgPicture.asset(
+            'assets/images/taxi.svg',
+          ),
         ),
       ),
       //collage name
