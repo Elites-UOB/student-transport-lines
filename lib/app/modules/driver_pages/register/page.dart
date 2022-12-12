@@ -15,7 +15,7 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
 
   @override
   Widget build(BuildContext context) {
-    final h =MediaQuery.of(context).size.height;
+    final h = MediaQuery.of(context).size.height;
     return SafeArea(
       child: Scaffold(
         backgroundColor: Palette.backgroundColor,
@@ -24,20 +24,22 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
           child: SingleChildScrollView(
             child: Center(
               child: Padding(
-                padding: EdgeInsets.only(top: h/35.sp),
+                padding: EdgeInsets.only(top: h / 35.sp),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                     TextButton(
-                      onPressed:(){Get.toNamed('/driver/home');},
-                      child:const Text(
+                    TextButton(
+                      onPressed: () {
+                        Get.toNamed('/driver/home');
+                      },
+                      child: const Text(
                         'تسجيل السائق',
-                        style: TextStyle(fontSize: 25, color: Palette.blueColor),
-                      ) ,
-
+                        style:
+                            TextStyle(fontSize: 25, color: Palette.blueColor),
+                      ),
                     ),
 
-                  //  const SizedBox(height: 12),
+                    //  const SizedBox(height: 12),
 
                     //
                     Container(
@@ -55,7 +57,9 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
                                 height: 20,
                               ),
                               const ProfilePicS(
-                                  img: Image(image: AssetImage('assets/images/person.png')),
+                                  img: Image(
+                                      image: AssetImage(
+                                          'assets/images/person.png')),
                                   ImgRadius: 35,
                                   IconRadius: 15,
                                   myIcon: Icon(Icons.recycling),
@@ -138,7 +142,8 @@ class DriverRegisterPage extends GetView<DriverRegisterController> {
 
                               InkWell(
                                 onTap: () {
-                                  controller.register();
+                                  // controller.register();
+                                  Get.offAllNamed('/driver/home');
                                 },
                                 child: Container(
                                   alignment: Alignment.bottomCenter,
