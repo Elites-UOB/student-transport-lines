@@ -11,6 +11,8 @@ import '../../../data/services/helper_service.dart';
 class DriverRegisterController extends GetxController {
   final AuthService authService = AuthService();
 
+  final currentRoute = Get.currentRoute;
+
   //Form Controllers
   final name = TextEditingController();
   final email = TextEditingController();

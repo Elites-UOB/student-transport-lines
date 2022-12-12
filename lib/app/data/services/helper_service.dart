@@ -16,4 +16,14 @@ class HelperService extends GetxService {
     final data = await _supabase.client.from('provinces').select('id,name');
     return data;
   }
+
+  Future getUniversities() async {
+    final data = await _supabase.client.from('universities').select('id,name');
+    return data;
+  }
+
+  Future getColleges() async {
+    final data = await _supabase.client.from('colleges').select('id,name');
+    return data;
+  }
 }

@@ -31,7 +31,7 @@ abstract class AppPages {
     GetPage(
         name: Routes.Driver_Register,
         page: () => DriverRegisterPage(),
-        binding: DriverRigisterBinding()),
+        binding: AuthBinding()),
 
     GetPage(
         name: Routes.Driver_Home,
@@ -51,6 +51,6 @@ abstract class AppPages {
     GetPage(
         name: Routes.Student_Register,
         page: () => StudentRegisterPage(),
-        binding: StudentRegisterBinding()),
+        binding: AuthBinding()),
   ];
 }
