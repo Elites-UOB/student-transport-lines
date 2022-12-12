@@ -47,7 +47,7 @@ class LineService extends GetxService {
     final data = await _supabase.client
         .from('lines')
         .select(
-            "car_model,stete,type,price,pass_count,car_pass_count,cities(name),provinces(name),profiles(id,full_name,avatar_url,phone,telegarm)")
+            "car_model,stete,type,price,pass_count,car_pass_count,cities(name),provinces(name),profiles(id,full_name,avatar_url,phone,telegarm),colleges(name),universities(name))")
         .eq('stete', 'true');
     return data;
   }

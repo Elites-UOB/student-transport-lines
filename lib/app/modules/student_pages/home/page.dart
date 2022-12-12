@@ -114,10 +114,27 @@ class StudentHomePage extends GetView<StudentHomeController> {
                                     height: 200,
                                     color: Colors.white,
                                     child: Center(
-                                      child: Text(
-                                        controller.lines[index]['type'] == 1
-                                            ? 'صباحي'
-                                            : 'مسائي',
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            controller.lines[index]['type'] == 1
+                                                ? 'صباحي'
+                                                : 'مسائي',
+                                          ),
+                                          Text(
+                                            controller.lines[index]
+                                                ['universities']['name'],
+                                          ),
+                                          Text(
+                                            controller.lines[index]['colleges']
+                                                ['name'],
+                                          ),
+                                          Text(
+                                            controller.lines[index]
+                                                    ['car_pass_count']
+                                                .toString(),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
