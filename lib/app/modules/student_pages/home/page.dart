@@ -105,116 +105,154 @@ class StudentHomePage extends GetView<StudentHomeController> {
                           borderRadius: BorderRadius.circular(16),
                         ),
                         child: ListView.builder(
+                          shrinkWrap: true,
                           itemCount: controller.lines.length,
                           itemBuilder: (BuildContext context, int index) {
-                            return GestureDetector(
-                              onTap: () {
-                                Get.bottomSheet(
-                                  Container(
-                                    height: 200,
-                                    color: Colors.white,
-                                    child: Center(
-                                      child: Column(
-                                        children: [
-                                          Text(
-                                            controller.lines[index]['type'] == 1
-                                                ? 'صباحي'
-                                                : 'مسائي',
-                                          ),
-                                          Text(
-                                            controller.lines[index]
-                                                ['universities']['name'],
-                                          ),
-                                          Text(
-                                            controller.lines[index]['colleges']
-                                                ['name'],
-                                          ),
-                                          Text(
-                                            controller.lines[index]
-                                                    ['car_pass_count']
-                                                .toString(),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
+                            return Dismissible(
+                              key: Key(controller.lines[index]['car_pass_count']
+                                  .toString()),
+                              confirmDismiss:
+                                  (DismissDirection direction) async {
+                                return await showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return AlertDialog(
+                                      title: const Text("حذف "),
+                                      content:
+                                          const Text("هل أنت متأكد من حذف "),
+                                      actions: <Widget>[
+                                        TextButton(
+                                            onPressed: () {
+                                              Navigator.of(context).pop(true);
+                                            },
+                                            child: const Text("حذف")),
+                                        TextButton(
+                                          onPressed: () =>
+                                              Navigator.of(context).pop(false),
+                                          child: const Text("الغاء"),
+                                        ),
+                                      ],
+                                    );
+                                  },
                                 );
                               },
-                              child: Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Container(
-                                          margin: EdgeInsets.only(
-                                              top: 10, left: 10),
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Image.network(
-                                                controller.lines[index]
-                                                            ['profiles']
-                                                        ['avatar_url'] ??
-                                                    'https://ccemdata.mcmaster.ca/media/avatars/default.png',
-                                                height: 60,
-                                                width: 60,
-                                              ),
-                                              Text(
-                                                controller.lines[index]
-                                                    ['profiles']['full_name'],
-                                                style: Styles.hintTextbold,
-                                              ),
-                                              Text(
-                                                controller.lines[index]
-                                                    ['provinces']['name'],
-                                                style: Styles.hintTextbold,
-                                              ),
-                                              Text(
-                                                controller.lines[index]
-                                                    ['cities']['name'],
-                                                style: Styles.hintTextbold,
-                                              ),
-                                              Text(
-                                                controller.lines[index]
-                                                    ['car_model'],
-                                                style: Styles.hintTextbold,
-                                              ),
-                                              Text(
-                                                controller.lines[index]['price']
-                                                    .toString(),
-                                                style: Styles.hintText,
-                                              ),
-                                            ],
-                                          ),
+                              background: Container(
+                                  margin: const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(10),
+                                  alignment: Alignment.centerRight,
+                                  child: const Icon(Icons.remove_circle),
+                                  color: Colors.red),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Get.bottomSheet(
+                                    Container(
+                                      height: 200,
+                                      color: Colors.white,
+                                      child: Center(
+                                        child: Column(
+                                          children: [
+                                            Text(
+                                              controller.lines[index]['type'] ==
+                                                      1
+                                                  ? 'صباحي'
+                                                  : 'مسائي',
+                                            ),
+                                            Text(
+                                              controller.lines[index]
+                                                  ['universities']['name'],
+                                            ),
+                                            Text(
+                                              controller.lines[index]
+                                                  ['colleges']['name'],
+                                            ),
+                                            Text(
+                                              controller.lines[index]
+                                                      ['car_pass_count']
+                                                  .toString(),
+                                            ),
+                                          ],
                                         ),
-                                        Container(
-                                          margin: EdgeInsets.only(top: 10),
-                                          child: Row(
-                                            children: [
-                                              Text(
-                                                controller.lines[index]
-                                                        ['pass_count']
-                                                    .toString(),
-                                                style: Styles.hintTextbold,
-                                              ),
-                                              const Icon(
-                                                Icons.arrow_forward_ios,
-                                                size: 12,
-                                                color: Palette.blueColor,
-                                              )
-                                            ],
-                                          ),
-                                        )
-                                      ],
+                                      ),
                                     ),
-                                    const Divider(
-                                      color: Palette.blueColor,
-                                      thickness: 1,
-                                    )
-                                  ],
+                                  );
+                                },
+                                child: Container(
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            margin: EdgeInsets.only(
+                                                top: 10, left: 10),
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Image.network(
+                                                  controller.lines[index]
+                                                              ['profiles']
+                                                          ['avatar_url'] ??
+                                                      'https://ccemdata.mcmaster.ca/media/avatars/default.png',
+                                                  height: 60,
+                                                  width: 60,
+                                                ),
+                                                Text(
+                                                  controller.lines[index]
+                                                      ['profiles']['full_name'],
+                                                  style: Styles.hintTextbold,
+                                                ),
+                                                Text(
+                                                  controller.lines[index]
+                                                      ['provinces']['name'],
+                                                  style: Styles.hintTextbold,
+                                                ),
+                                                Text(
+                                                  controller.lines[index]
+                                                      ['cities']['name'],
+                                                  style: Styles.hintTextbold,
+                                                ),
+                                                Text(
+                                                  controller.lines[index]
+                                                      ['car_model'],
+                                                  style: Styles.hintTextbold,
+                                                ),
+                                                Text(
+                                                  controller.lines[index]
+                                                          ['price']
+                                                      .toString(),
+                                                  style: Styles.hintText,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Container(
+                                            margin: EdgeInsets.only(top: 10),
+                                            child: Row(
+                                              children: [
+                                                Text(
+                                                  controller.lines[index]
+                                                          ['pass_count']
+                                                      .toString(),
+                                                  style: Styles.hintTextbold,
+                                                ),
+                                                const Icon(
+                                                  Icons.arrow_forward_ios,
+                                                  size: 12,
+                                                  color: Palette.blueColor,
+                                                )
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      const Divider(
+                                        color: Palette.blueColor,
+                                        thickness: 1,
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             );
