@@ -6,6 +6,8 @@ import '../app/modules/driver_pages/home/binding.dart';
 import '../app/modules/driver_pages/home/page.dart';
 import '../app/modules/driver_pages/lineInformation/binding.dart';
 import '../app/modules/driver_pages/lineInformation/page.dart';
+import '../app/modules/driver_pages/profile/binding.dart';
+import '../app/modules/driver_pages/profile/page.dart';
 import '../app/modules/driver_pages/register/binding.dart';
 import '../app/modules/driver_pages/register/page.dart';
 import '../app/modules/role/binding.dart';
@@ -42,6 +44,11 @@ abstract class AppPages {
         name: Routes.Line_Information,
         page: () => LineInformationPage(),
         binding: LineInformationBinding()),
+
+    GetPage(
+        name: Routes.Driver_Profile,
+        page: () => DriverProfilePage(),
+        binding: DriverProfileBinding()),
 
     //Student Routes
     GetPage(

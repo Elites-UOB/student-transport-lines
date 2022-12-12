@@ -52,7 +52,7 @@ class dropdownstud extends StatelessWidget {
               enabledBorder: InputBorder.none,
               border: OutlineInputBorder(
                 borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(10),
               ),
               filled: true,
               fillColor: Palette.greyColor,

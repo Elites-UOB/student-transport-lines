@@ -41,19 +41,25 @@ class DriverHomePage extends GetView<DriverHomeController> {
                     ),
 
                     //pic
-                    ProfilePicS(
-                        img: Image.asset(
-                          'assets/images/person.png',
-                          height: 30,
-                          width: 30,
-                        ),
-                        ImgRadius: 25,
-                        IconRadius: 9,
-                        myColor: Palette.blueColor,
-                        myIcon: Icon(
-                          Icons.edit,
-                          size: 12,
-                        )),
+                    InkWell(
+                      onTap: (){
+                        Get.toNamed('/driver/DriverProfile');
+                      },
+
+                      child: ProfilePicS(
+                          img: Image.asset(
+                            'assets/images/person.png',
+                            height: 30,
+                            width: 30,
+                          ),
+                          ImgRadius: 25,
+                          IconRadius: 9,
+                          myColor: Palette.blueColor,
+                          myIcon: Icon(
+                            Icons.edit,
+                            size: 12,
+                          )),
+                    ),
                   ],
                 ),
 

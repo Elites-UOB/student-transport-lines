@@ -12,6 +12,7 @@ class textFiled extends StatelessWidget {
   final bool isEmail;
   final IconData? icon;
 
+
   const textFiled({
     super.key,
     required this.controller,
@@ -20,6 +21,7 @@ class textFiled extends StatelessWidget {
     this.isPassword = false,
     this.isEmail = false,
     this.icon,
+
   });
 
   @override
@@ -34,12 +36,13 @@ class textFiled extends StatelessWidget {
             headtext,
             style: TextStyle(
               color: Colors.grey,
-              fontSize: 18.sp,
+              fontSize: 14.sp,
             ),
           ),
           Container(
             height: 40.h,
             padding: EdgeInsets.only(left: 5),
+           // margin: EdgeInsets.symmetric(horizontal: width),
             decoration: BoxDecoration(
               color: Palette.greyColor,
               borderRadius: BorderRadius.circular(10),

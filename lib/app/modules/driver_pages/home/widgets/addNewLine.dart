@@ -24,6 +24,7 @@ class addNewLine extends StatelessWidget {
           ),
         ),
       ),
+
       //collage name
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

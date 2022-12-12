@@ -44,7 +44,7 @@ class DriverRegisterPage extends GetView<AuthController> {
 
                     //
                     Container(
-                      height: 700.h,
+                      height: 591.h,
                       width: 345.w,
                       decoration: BoxDecoration(
                           color: Palette.whiteColor,
@@ -75,16 +75,6 @@ class DriverRegisterPage extends GetView<AuthController> {
                                 controller: controller.name,
                                 headtext: 'الأسم',
                                 hinttext: 'أحمد علي',
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              //name filed
-                              textFiled(
-                                controller: controller.email,
-                                headtext: 'البريد الالكتروني',
-                                hinttext: 'example@gmail.com',
-                                isEmail: true,
                               ),
                               const SizedBox(
                                 height: 20,
@@ -139,6 +129,10 @@ class DriverRegisterPage extends GetView<AuthController> {
                                 hinttext: 'password',
                                 isPassword: true,
                                 icon: Icons.lock_outline,
+                              ),
+
+                              const SizedBox(
+                                height: 20,
                               ),
 
                               InkWell(

@@ -48,6 +48,7 @@ class StudentRegisterPage extends GetView<AuthController> {
                           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             textFiled(
+
                               controller: controller.name,
                               headtext: 'الأسم',
                               hinttext: 'حسن خالد الطالب',
@@ -76,6 +77,7 @@ class StudentRegisterPage extends GetView<AuthController> {
                               height: 20,
                             ),
                             textFiled(
+
                                 controller: controller.telegarm,
                                 headtext: 'معرّف التلكرام',
                                 hinttext: 'khaltk.3mtk'),
@@ -83,6 +85,7 @@ class StudentRegisterPage extends GetView<AuthController> {
                               height: 20,
                             ),
                             textFiled(
+
                               controller: controller.password,
                               headtext: 'كلمة المرور',
                               hinttext: 'خالتك',
