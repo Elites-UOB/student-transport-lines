@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:student_transport_lines/app/modules/auth/page.dart';
 import 'package:student_transport_lines/app/modules/role/binding.dart';
 import 'package:student_transport_lines/core/values/config.dart';

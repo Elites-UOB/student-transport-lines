@@ -37,7 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   supabase_flutter: ^1.0.0
-  flutter_dotenv: ^5.0.2
+  # flutter_dotenv: ^5.0.2
   flutter_spinkit:
   flutter_screenutil: ^5.6.0
   flutter_svg:
@@ -70,7 +70,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - .env
     - assets/images/taxi.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
