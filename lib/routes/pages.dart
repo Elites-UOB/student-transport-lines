@@ -6,7 +6,7 @@ abstract class Routes {
   //Driver Routes
   static const Driver_Register = '/driver/register';
   static const Driver_Home = '/driver/home';
-  static const New_Line = '/driver/new/line';
+  static const New_Line = '/new/line';
   static const Driver_Profile = '/driver/profile';
 
   //Student Routes
