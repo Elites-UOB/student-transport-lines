@@ -48,7 +48,6 @@ class StudentRegisterPage extends GetView<AuthController> {
                           //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             textFiled(
-
                               controller: controller.name,
                               headtext: 'الأسم',
                               hinttext: 'حسن خالد الطالب',
@@ -77,7 +76,6 @@ class StudentRegisterPage extends GetView<AuthController> {
                               height: 20,
                             ),
                             textFiled(
-
                                 controller: controller.telegarm,
                                 headtext: 'معرّف التلكرام',
                                 hinttext: 'khaltk.3mtk'),
@@ -85,7 +83,6 @@ class StudentRegisterPage extends GetView<AuthController> {
                               height: 20,
                             ),
                             textFiled(
-
                               controller: controller.password,
                               headtext: 'كلمة المرور',
                               hinttext: 'خالتك',
@@ -126,8 +123,8 @@ class StudentRegisterPage extends GetView<AuthController> {
                             ),
                             InkWell(
                               onTap: () {
-                                controller.register();
-                                // Get.toNamed('/student/home');
+                                // controller.register();
+                                Get.toNamed('/student/home');
                               },
                               child: Container(
                                 margin: EdgeInsets.only(top: 10),

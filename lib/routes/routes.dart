@@ -14,8 +14,7 @@ import '../app/modules/role/binding.dart';
 import '../app/modules/role/page.dart';
 import '../app/modules/student_pages/home/binding.dart';
 import '../app/modules/student_pages/home/page.dart';
-import '../app/modules/splash/binding.dart';
-import '../app/modules/splash/page.dart';
+
 import '../app/modules/student_pages/register/binding.dart';
 import 'pages.dart';
 
@@ -23,10 +22,11 @@ abstract class AppPages {
   static final pages = [
     //General Routes
     GetPage(name: Routes.Auth, page: () => AuthPage(), binding: AuthBinding()),
-    GetPage(
-        name: Routes.SPLASH,
-        page: () => SplashPage(),
-        binding: SplashBinding()),
+    // GetPage(
+    //   name: Routes.SPLASH,
+    //   page: () => SplashPage(),
+    //   binding: SplashBinding(),
+    // ),
     GetPage(name: Routes.Role, page: () => RolePage(), binding: RoleBinding()),
 
     //Driver Routes

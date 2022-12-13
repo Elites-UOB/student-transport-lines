@@ -42,10 +42,9 @@ class DriverHomePage extends GetView<DriverHomeController> {
 
                     //pic
                     InkWell(
-                      onTap: (){
-                        Get.toNamed('/driver/DriverProfile');
+                      onTap: () {
+                        Get.toNamed('/driver/profile');
                       },
-
                       child: ProfilePicS(
                           img: Image.asset(
                             'assets/images/person.png',

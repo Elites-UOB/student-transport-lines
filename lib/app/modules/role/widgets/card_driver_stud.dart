@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import '../../../../core/theme/color_theme.dart';
 
-class card_driver_stud extends StatelessWidget {
+class card_driver_stud extends GetWidget {
   final String myimg;
   final String headtext;
   final String destext;

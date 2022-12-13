@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../core/theme/color_theme.dart';
 
-class ProfilePicS extends StatelessWidget {
- final Image img;
- final double ImgRadius;
- final double IconRadius;
- final Icon myIcon ;
- final Color myColor;
-   final  PosR ;
-  const ProfilePicS({
-    required this.img,
-    required this.ImgRadius,
-    required this.IconRadius,
-    required this.myIcon,
-    required this.myColor,
-    this.PosR
-
-  }) ;
+class ProfilePicS extends GetWidget {
+  final Image img;
+  final double ImgRadius;
+  final double IconRadius;
+  final Icon myIcon;
+  final Color myColor;
+  final PosR;
+  const ProfilePicS(
+      {required this.img,
+      required this.ImgRadius,
+      required this.IconRadius,
+      required this.myIcon,
+      required this.myColor,
+      this.PosR});
 
   @override
   Widget build(BuildContext context) {
@@ -36,14 +35,11 @@ class ProfilePicS extends StatelessWidget {
             bottom: 0,
             child: InkWell(
               onTap: () {},
-              child:  CircleAvatar(
-                  radius: IconRadius,
-                  backgroundColor:myColor,
-                  child:myIcon),
+              child: CircleAvatar(
+                  radius: IconRadius, backgroundColor: myColor, child: myIcon),
             ),
           ),
         ],
-
       ),
     );
   }

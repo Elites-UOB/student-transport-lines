@@ -73,6 +73,21 @@ class AuthController extends GetxController {
     colleges.value = collegesData;
   }
 
+  //signIn
+  login() async {
+    try {
+      isLoading.value = true;
+      var user = await authService.signIn(email.text, password.text);
+      if (user != null) {
+        currentRoute == '/driver/register'
+            ? Get.offAllNamed('/driver/home')
+            : Get.offAllNamed('/student/home');
+      }
+    } finally {
+      isLoading.value = false;
+    }
+  }
+
   register() async {
     try {
       isLoading.value = true;
