@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -22,14 +24,14 @@ class LineService extends GetxService {
     final data = await _supabase.client.from('lines').insert({
       'profile_id': userId,
       'car_model': carModel,
-      'university_id': universityId ?? 1,
-      'college_id': collageId ?? 1,
-      'city_id': cityId ?? 1,
-      'province_id': provinceId ?? 1,
+      'university_id': 1,
+      'college_id': 1,
+      'city_id': 1,
+      'province_id': 1,
       'price': price,
-      'pass_count': passCount,
-      'car_pass_count': carPassCount,
-      'type': type ?? 1,
+      'pass_count': 6,
+      'car_pass_count': 8,
+      'type': 1,
     }).select('*');
     return data;
   }
