@@ -8,7 +8,6 @@ import 'package:student_transport_lines/app/utils/widgets/profilePicS.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
 import '../../../utils/widgets/textFiled.dart';
 import '../../auth/controller.dart';
-import 'controller.dart';
 
 class DriverRegisterPage extends GetView<AuthController> {
   final HelperController helperController = Get.put(HelperController());

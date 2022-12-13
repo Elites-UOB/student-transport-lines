@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import 'controller.dart';
 
-class LineInformationBinding implements Bindings {
+class NewLineBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<LineNewController>(() => LineNewController());
+    Get.lazyPut<NewLineController>(() => NewLineController());
   }
 }

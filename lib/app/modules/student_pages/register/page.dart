@@ -6,7 +6,6 @@ import '../../../../core/theme/color_theme.dart';
 import '../../../utils/widgets/textFiled.dart';
 import '../../auth/controller.dart';
 import '../../driver_pages/register/widgets/dropdown.dart';
-import 'controller.dart';
 import 'widgets/dropdown.dart';
 
 class StudentRegisterPage extends GetView<AuthController> {
