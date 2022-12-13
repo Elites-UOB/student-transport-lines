@@ -5,8 +5,8 @@ import '../app/modules/auth/binding.dart';
 import '../app/modules/auth/page.dart';
 import '../app/modules/driver_pages/home/binding.dart';
 import '../app/modules/driver_pages/home/page.dart';
-import '../app/modules/driver_pages/lineInformation/binding.dart';
-import '../app/modules/driver_pages/lineInformation/page.dart';
+import '../app/modules/driver_pages/new_line/binding.dart';
+import '../app/modules/driver_pages/new_line/page.dart';
 import '../app/modules/driver_pages/profile/binding.dart';
 import '../app/modules/driver_pages/profile/page.dart';
 import '../app/modules/driver_pages/register/binding.dart';
@@ -46,8 +46,8 @@ abstract class AppPages {
         binding: DriverHomeBinding()),
 
     GetPage(
-        name: Routes.Line_Information,
-        page: () => LineInformationPage(),
+        name: Routes.New_Line,
+        page: () => NewLinePage(),
         binding: LineInformationBinding()),
 
     GetPage(

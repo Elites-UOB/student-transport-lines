@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:student_transport_lines/app/modules/driver_pages/lineInformation/controller.dart';
+import 'package:student_transport_lines/app/modules/driver_pages/new_line/controller.dart';
 import 'package:student_transport_lines/app/modules/student_pages/register/widgets/dropdown.dart';
 import 'package:student_transport_lines/app/utils/widgets/textFiled.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
@@ -10,8 +10,8 @@ import '../../../../core/theme/text_theme.dart';
 import '../../../utils/widgets/profilePicS.dart';
 import '../register/widgets/dropdown.dart';
 
-class LineInformationPage extends GetView<LineInformationController> {
-  const LineInformationPage({super.key});
+class NewLinePage extends GetView<LineNewController> {
+  const NewLinePage({super.key});
 
   @override
   Widget build(BuildContext context) {
