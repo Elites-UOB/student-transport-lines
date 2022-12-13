@@ -6,13 +6,14 @@ import '../../../../core/theme/text_theme.dart';
 import '../../../utils/widgets/profilePicS.dart';
 import '../../../utils/widgets/textFiled.dart';
 import '../../auth/controller.dart';
+import '../../driver_pages/register/widgets/dropdown.dart';
 import '../register/widgets/dropdown.dart';
 import 'controller.dart';
 
-class DriverProfilePage extends GetView<DriverProfileController> {
+class StudentProfilePage extends GetView<StudentProfileController> {
   AuthController authController = Get.put(AuthController());
 
-  DriverProfilePage({super.key});
+  StudentProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {

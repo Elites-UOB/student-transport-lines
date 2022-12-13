@@ -76,7 +76,8 @@ class DriverHomePage extends GetView<DriverHomeController> {
                       // خط جديد icon and text
                       InkWell(
                         onTap: () {
-                          Get.toNamed('/driver/LineInformation');
+                          // Get.toNamed('/driver/LineInformation');
+                          Get.toNamed('/driver/profile');
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,

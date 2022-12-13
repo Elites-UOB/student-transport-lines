@@ -52,7 +52,7 @@ class AuthPage extends GetView<AuthController> {
                                 hintText: 'Email',
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Obx(
@@ -71,8 +71,9 @@ class AuthPage extends GetView<AuthController> {
                                     onTap: () => controller.showPassword.value =
                                         !controller.showPassword.value,
                                     child: controller.showPassword.value
-                                        ? Icon(Icons.remove_red_eye)
-                                        : Icon(Icons.remove_red_eye_outlined),
+                                        ? const Icon(Icons.remove_red_eye)
+                                        : const Icon(
+                                            Icons.remove_red_eye_outlined),
                                   ),
                                   // hintTextDirection: TextDirection.ltr,
                                   hintText: 'Password ',

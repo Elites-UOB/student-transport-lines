@@ -47,18 +47,23 @@ class StudentHomePage extends GetView<StudentHomeController> {
                           ),
 
                           //user img
-                          const ProfilePicS(
-                            img: Image(
-                              image: AssetImage('assets/images/person.png'),
-                              height: 30,
-                              width: 30,
-                            ),
-                            ImgRadius: 25,
-                            IconRadius: 9,
-                            myColor: Palette.blueColor,
-                            myIcon: Icon(
-                              Icons.edit,
-                              size: 12,
+                          GestureDetector(
+                            onTap: () {
+                              Get.toNamed('/student/profile');
+                            },
+                            child: const ProfilePicS(
+                              img: Image(
+                                image: AssetImage('assets/images/person.png'),
+                                height: 30,
+                                width: 30,
+                              ),
+                              ImgRadius: 25,
+                              IconRadius: 9,
+                              myColor: Palette.blueColor,
+                              myIcon: Icon(
+                                Icons.edit,
+                                size: 12,
+                              ),
                             ),
                           )
                         ],
@@ -76,7 +81,7 @@ class StudentHomePage extends GetView<StudentHomeController> {
                             ),
                             InkWell(
                               onTap: () {
-                                controller.facth();
+                                Get.toNamed('/student/profile');
                               },
                               child: Row(
                                 children: const [

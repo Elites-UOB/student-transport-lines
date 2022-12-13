@@ -12,4 +12,5 @@ abstract class Routes {
   //Student Routes
   static const Student_Register = '/student/register';
   static const Student_Home = '/student/home';
+  static const Student_Profile = '/student/profile';
 }

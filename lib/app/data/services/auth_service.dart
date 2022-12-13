@@ -4,8 +4,35 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/Auth.dart';
 
 class AuthService extends GetxService {
+  Future<AuthService> init() async => this;
+  final RxBool isAuthenticated = false.obs;
+
   static final _supabase = Supabase.instance;
   static final error = false;
+
+  //check if user is authenticated
+
+  void setIsAuthenticated(bool value) {
+    isAuthenticated.value = value;
+  }
+
+  checkAuthentication() async {
+    final user = _supabase.client.auth.currentUser;
+    final session = _supabase.client.auth.currentSession;
+    final role = user!.userMetadata!['role'];
+
+    if (user != null && session != null) {
+      setIsAuthenticated(true);
+      if (role == 'driver') {
+        Get.offNamed('/driver/home');
+      } else if (role == 'student') {
+        Get.offNamed('/student/home');
+      } else {
+        setIsAuthenticated(false);
+        Get.offNamed('/');
+      }
+    }
+  }
 
   Future signUp(String email, String password, String name, String phone,
       String role, cityId, provinceId, String telegram) async {
@@ -24,7 +51,6 @@ class AuthService extends GetxService {
       );
       final Session? session = res.session;
       final User? user = res.user;
-      final e = res.user;
       if (user != null) {
         return user.id;
       } else {
@@ -36,14 +62,20 @@ class AuthService extends GetxService {
   }
 
   Future signIn(String email, String password) async {
-    final response = await _supabase.client.auth
-        .signInWithPassword(email: email, password: password);
-    final Session? session = response.session;
-    final User? user = response.user;
-    if (user != null) {
-      return user;
-    } else {
-      return null;
+    try {
+      final response = await _supabase.client.auth
+          .signInWithPassword(email: email, password: password);
+      final Session? session = response.session;
+      final User? user = response.user;
+      if (user != null) {
+        return user.userMetadata;
+      } else {
+        return null;
+      }
+    } on AuthException catch (error) {
+      return error;
+    } catch (_) {
+      return Exception('Error');
     }
   }
 

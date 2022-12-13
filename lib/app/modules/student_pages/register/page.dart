@@ -38,7 +38,7 @@ class StudentRegisterPage extends GetView<AuthController> {
                     Obx(
                       () => Container(
                         padding: EdgeInsets.symmetric(vertical: 10),
-                        height: 600.h,
+                        height: 700.h,
                         width: 345.w,
                         decoration: BoxDecoration(
                             color: Palette.whiteColor,
@@ -51,6 +51,16 @@ class StudentRegisterPage extends GetView<AuthController> {
                               controller: controller.name,
                               headtext: 'الأسم',
                               hinttext: 'حسن خالد الطالب',
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            //name filed
+                            textFiled(
+                              controller: controller.email,
+                              headtext: 'البريد الالكتروني',
+                              hinttext: 'example@gmail.com',
+                              isEmail: true,
                             ),
                             const SizedBox(
                               height: 20,
@@ -123,8 +133,8 @@ class StudentRegisterPage extends GetView<AuthController> {
                             ),
                             InkWell(
                               onTap: () {
-                                // controller.register();
-                                Get.toNamed('/student/home');
+                                controller.register();
+                                // Get.toNamed('/student/home');
                               },
                               child: Container(
                                 margin: EdgeInsets.only(top: 10),

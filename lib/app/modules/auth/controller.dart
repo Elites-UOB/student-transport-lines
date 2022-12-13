@@ -30,6 +30,9 @@ class AuthController extends GetxController {
 
   @override
   void onInit() async {
+    Future.delayed(Duration(seconds: 0), () async {
+      await authService.checkAuthentication();
+    });
     await fatch();
     print('currentRoute: $currentRoute');
     super.onInit();
@@ -46,8 +49,8 @@ class AuthController extends GetxController {
     if (name.text.isEmpty) {
       Get.snackbar('خطأ', 'الرجاء ادخال الاسم');
     } else if (email.text.isEmpty && !GetUtils.isEmail(email.text)) {
-      Get.snackbar('خطأ', 'الرجاء ادخال البريد الالكتروني');
-    } else if (phone.text.isEmpty && phone.text.length < 11) {
+      //   Get.snackbar('خطأ', 'الرجاء ادخال البريد الالكتروني');
+      // } else if (phone.text.isEmpty && phone.text.length < 11) {
       Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
     } else if (telegarm.text.isEmpty) {
       Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
@@ -77,27 +80,35 @@ class AuthController extends GetxController {
   login() async {
     try {
       isLoading.value = true;
-      var user = await authService.signIn(email.text, password.text);
-      if (user != null) {
-        currentRoute == '/driver/register'
-            ? Get.offAllNamed('/driver/home')
-            : Get.offAllNamed('/student/home');
+      var data = await authService.signIn(email.text, password.text);
+      if (data != null) {
+        late String role = data['role'];
+        if (role == 'driver') {
+          Get.offAllNamed('/driver/home');
+        } else if (role == 'student') {
+          Get.offAllNamed('/student/home');
+        } else {
+          Get.snackbar('خطأ', 'حدث خطأ ما');
+        }
       }
+    } catch (e) {
+      Get.snackbar('خطأ', e.toString());
     } finally {
       isLoading.value = false;
     }
   }
 
   register() async {
+    final role = currentRoute == '/driver/register' ? 'driver' : 'student';
     try {
       isLoading.value = true;
       if (validation() == true) {
         if (authKey.currentState!.validate()) {
           authKey.currentState!.save();
           var user = await authService.signUp(email.text, password.text,
-              name.text, phone.text, 'driver', 1, 1, telegarm.text);
+              name.text, phone.text, role, 1, 1, telegarm.text);
           if (user != null) {
-            currentRoute == '/driver/register'
+            role == '/driver/register'
                 ? Get.offAllNamed('/driver/home')
                 : Get.offAllNamed('/student/home');
           } else {
@@ -111,10 +122,10 @@ class AuthController extends GetxController {
   }
 
   //signOut
-  signOut() async {
+  logout() async {
     try {
-      isLoading(true);
       await authService.signOut();
+      Get.offAllNamed('/');
     } finally {
       isLoading(false);
     }

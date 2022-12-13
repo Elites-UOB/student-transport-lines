@@ -80,6 +80,17 @@ class DriverRegisterPage extends GetView<AuthController> {
                                 height: 20,
                               ),
 
+                              //name filed
+                              textFiled(
+                                controller: controller.email,
+                                headtext: 'البريد الالكتروني',
+                                hinttext: 'example@gmail.com',
+                                isEmail: true,
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+
                               // drop down
                               Row(
                                 mainAxisAlignment:
@@ -137,8 +148,8 @@ class DriverRegisterPage extends GetView<AuthController> {
 
                               InkWell(
                                 onTap: () {
-                                  // controller.register();
-                                  Get.offAllNamed('/driver/home');
+                                  controller.register();
+                                  // Get.offAllNamed('/driver/home');
                                 },
                                 child: Container(
                                   alignment: Alignment.bottomCenter,
