@@ -28,7 +28,7 @@ class LineService extends GetxService {
       'college_id': 1,
       'city_id': 1,
       'province_id': 1,
-      'price': price,
+      'price': 8000,
       'pass_count': 6,
       'car_pass_count': 8,
       'type': 1,

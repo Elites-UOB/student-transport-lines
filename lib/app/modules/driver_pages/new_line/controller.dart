@@ -55,11 +55,14 @@ class NewLineController extends GetxController {
         type.text,
       );
       if (data) {
+        print('====================================');
+        print(data);
         Get.snackbar('تم', 'تم اضافة الخط بنجاح');
       } else {
         Get.snackbar('خطأ', 'حدث خطأ ما');
       }
     } catch (e) {
+      print('=================e===================');
       print(e);
       Get.snackbar('خطأ', 'حدث خطأ ما');
     } finally {
