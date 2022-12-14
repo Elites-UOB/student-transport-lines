@@ -19,18 +19,18 @@ class AuthService extends GetxService {
   checkAuthentication() async {
     final user = _supabase.client.auth.currentUser;
     final session = _supabase.client.auth.currentSession;
-    final role = user!.userMetadata!['role'];
 
     if (user != null && session != null) {
+      final role = user.userMetadata!['role'];
       setIsAuthenticated(true);
       if (role == 'driver') {
         Get.offNamed('/driver/home');
       } else if (role == 'student') {
         Get.offNamed('/student/home');
-      } else {
-        setIsAuthenticated(false);
-        Get.offNamed('/');
       }
+    } else {
+      setIsAuthenticated(false);
+      Get.offNamed('/auth');
     }
   }
 

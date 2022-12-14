@@ -1,7 +1,8 @@
 abstract class Routes {
   //General Routes
 
-  static const Auth = '/';
+  static const Splash = '/';
+  static const Auth = '/auth';
   static const Role = '/role';
   //Driver Routes
   static const Driver_Register = '/driver/register';
