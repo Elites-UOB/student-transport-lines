@@ -39,7 +39,7 @@ class SplashPage extends GetView<SplashController> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        'Power By',
+                        'Powered By',
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.black,
