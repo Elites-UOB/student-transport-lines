@@ -4,11 +4,38 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/Auth.dart';
 
 class AuthService extends GetxService {
+  Future<AuthService> init() async => this;
+  final RxBool isAuthenticated = false.obs;
+
   static final _supabase = Supabase.instance;
   static final error = false;
 
+  //check if user is authenticated
+
+  void setIsAuthenticated(bool value) {
+    isAuthenticated.value = value;
+  }
+
+  checkAuthentication() async {
+    final user = _supabase.client.auth.currentUser;
+    final session = _supabase.client.auth.currentSession;
+
+    if (user != null && session != null) {
+      final role = user.userMetadata!['role'];
+      setIsAuthenticated(true);
+      if (role == 'driver') {
+        Get.offNamed('/driver/home');
+      } else if (role == 'student') {
+        Get.offNamed('/student/home');
+      }
+    } else {
+      setIsAuthenticated(false);
+      Get.offNamed('/auth');
+    }
+  }
+
   Future signUp(String email, String password, String name, String phone,
-      String role, String cityId, String provinceId, String telegram) async {
+      String role, cityId, provinceId, String telegram) async {
     try {
       final AuthResponse res = await _supabase.client.auth.signUp(
         email: email,
@@ -24,7 +51,6 @@ class AuthService extends GetxService {
       );
       final Session? session = res.session;
       final User? user = res.user;
-      final e = res.user;
       if (user != null) {
         return user.id;
       } else {
@@ -35,11 +61,22 @@ class AuthService extends GetxService {
     }
   }
 
-  Future<void> signIn(String email, String password) async {
-    final response = await _supabase.client.auth
-        .signInWithPassword(email: email, password: password);
-    final Session? session = response.session;
-    final User? user = response.user;
+  Future signIn(String email, String password) async {
+    try {
+      final response = await _supabase.client.auth
+          .signInWithPassword(email: email, password: password);
+      final Session? session = response.session;
+      final User? user = response.user;
+      if (user != null) {
+        return user.userMetadata;
+      } else {
+        return null;
+      }
+    } on AuthException catch (error) {
+      return error;
+    } catch (_) {
+      return Exception('Error');
+    }
   }
 
   //Update Porfile

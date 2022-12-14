@@ -21,7 +21,7 @@ class dropdown extends StatelessWidget {
         Text(
           headtext,
           style: const TextStyle(
-            fontFamily: 'Tajawal',
+            color: Colors.grey,
             fontSize: 18,
           ),
         ),
@@ -35,6 +35,7 @@ class dropdown extends StatelessWidget {
                 textAlign: TextAlign.start,
                 style: const TextStyle(
                   fontFamily: 'Tajawal',
+                  color: Colors.grey,
                   fontSize: 15,
                 ),
               ),
@@ -49,18 +50,18 @@ class dropdown extends StatelessWidget {
               fillColor: Palette.greyColor,
             ),
             dropdownColor: Palette.whiteColor,
+            items: item
+                .map((element) => DropdownMenuItem(
+                    value: element['id'],
+                    child: Text(
+                      element['name'],
+                      textDirection: TextDirection.rtl,
+                    )))
+                .toList(),
             onChanged: (Object? element) {
               controller:
               controller.text = element.toString();
             },
-            items: item
-                .map((element) => DropdownMenuItem(
-                    value: element.id,
-                    child: Text(
-                      element.name,
-                      textDirection: TextDirection.rtl,
-                    )))
-                .toList(),
           ),
         ),
       ],

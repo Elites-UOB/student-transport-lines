@@ -1,0 +1,15 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../data/services/auth_service.dart';
+
+class AuthMiddleware extends GetMiddleware {
+  final authService = AuthService();
+
+  @override
+  RouteSettings? redirect(String? route) {
+    return authService.isAuthenticated.value
+        ? null
+        : const RouteSettings(name: '/');
+  }
+}

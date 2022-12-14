@@ -4,15 +4,15 @@ import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/auth/controller.dart';
 import 'package:student_transport_lines/app/modules/role/page.dart';
 
-class AuthPage extends StatelessWidget {
-  AuthController controller = Get.put(AuthController());
+import '../../../core/theme/color_theme.dart';
 
-  AuthPage({Key? key}) : super(key: key);
+class AuthPage extends GetView<AuthController> {
+  const AuthPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF2F2F2),
+      backgroundColor: Palette.backgroundColor,
       body: Directionality(
         textDirection: TextDirection.ltr,
         child: Center(
@@ -21,16 +21,6 @@ class AuthPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                IconButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => RolePage(),
-                      ));
-                    },
-                    icon: const Icon(
-                      Icons.cancel_outlined,
-                      color: Colors.red,
-                    )),
                 Padding(
                   padding: const EdgeInsets.all(30.0),
                   child: DecoratedBox(
@@ -49,28 +39,8 @@ class AuthPage extends StatelessWidget {
                             const SizedBox(
                               height: 20,
                             ),
-                            Obx(
-                              () => controller.isRegister.value == true
-                                  ? TextFormField(
-                                      controller: controller.name,
-                                      onSaved: (v) {},
-                                      keyboardType: TextInputType.text,
-                                      decoration: const InputDecoration(
-                                        border: InputBorder.none,
-                                        icon: Icon(
-                                          Icons.person,
-                                          color: Colors.grey,
-                                        ),
-                                        hintText: 'Name ',
-                                      ),
-                                    )
-                                  : Container(),
-                            ),
                             TextFormField(
                               controller: controller.email,
-                              validator: (v) {
-                                return controller.valideateEmail(v!);
-                              },
                               onSaved: (v) {},
                               keyboardType: TextInputType.emailAddress,
                               decoration: const InputDecoration(
@@ -79,18 +49,15 @@ class AuthPage extends StatelessWidget {
                                   Icons.email,
                                   color: Colors.grey,
                                 ),
-                                hintText: 'Email ',
+                                hintText: 'Email',
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Obx(
                               () => TextFormField(
                                 controller: controller.password,
-                                validator: (v) {
-                                  return controller.valideatePassworde(v!);
-                                },
                                 onSaved: (v) {},
                                 keyboardType: TextInputType.visiblePassword,
                                 obscureText: !controller.showPassword.value,
@@ -104,8 +71,9 @@ class AuthPage extends StatelessWidget {
                                     onTap: () => controller.showPassword.value =
                                         !controller.showPassword.value,
                                     child: controller.showPassword.value
-                                        ? Icon(Icons.remove_red_eye)
-                                        : Icon(Icons.remove_red_eye_outlined),
+                                        ? const Icon(Icons.remove_red_eye)
+                                        : const Icon(
+                                            Icons.remove_red_eye_outlined),
                                   ),
                                   // hintTextDirection: TextDirection.ltr,
                                   hintText: 'Password ',
@@ -121,7 +89,7 @@ class AuthPage extends StatelessWidget {
                                       MaterialStateProperty.all<double>(0),
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Colors.black.withOpacity(.4)),
+                                          Palette.blueColor),
                                   shape: MaterialStateProperty.all<
                                           RoundedRectangleBorder>(
                                       RoundedRectangleBorder(
@@ -152,22 +120,13 @@ class AuthPage extends StatelessWidget {
                               height: 20,
                             ),
                             TextButton(
-                              onPressed: () => controller.isRegister.value =
-                                  !controller.isRegister.value,
-                              child: Obx(
-                                () => controller.isRegister.value
-                                    ? const Text(
-                                        "تسجيل الدخول",
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                        ),
-                                      )
-                                    : const Text(
-                                        "ليس لديك حساب؟",
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                        ),
-                                      ),
+                              onPressed: () => Get.toNamed('/role'),
+                              child: const Text(
+                                "ليس لديك حساب؟",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  color: Palette.blueColor,
+                                ),
                               ),
                             ),
                           ],

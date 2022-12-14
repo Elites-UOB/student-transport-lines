@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:student_transport_lines/app/modules/auth/page.dart';
-import 'package:student_transport_lines/app/modules/role/binding.dart';
 import 'package:student_transport_lines/core/values/config.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'app/modules/student_pages/home/binding.dart';
-import 'app/modules/student_pages/home/page.dart';
+import 'app/modules/splash/binding.dart';
+import 'app/modules/splash/page.dart';
 import 'routes/pages.dart';
 import 'routes/routes.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,24 +21,16 @@ Future main() async {
     splitScreenMode: true,
     builder: (context, child) => GetMaterialApp(
       getPages: AppPages.pages,
-      home: AuthPage(),
+      home: SplashPage(),
       theme: ThemeData(
         fontFamily: "Tajawal",
         //     colorScheme: ColorScheme.fromSwatch().copyWith(
         //       primary: Palette.primaryColor,
         //       secondary: Palette.secondaryColor,
       ),
-      initialBinding: RoleBinding(),
-      initialRoute: Routes.Role,
+      initialBinding: SplashBinding(),
+      initialRoute: Routes.Splash,
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('ar', 'AE'), // English, no country code
-      ],
     ),
   ));
 }
