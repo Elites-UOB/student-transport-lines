@@ -30,9 +30,6 @@ class AuthController extends GetxController {
 
   @override
   void onInit() async {
-    Future.delayed(Duration(seconds: 0), () async {
-      await authService.checkAuthentication();
-    });
     await fatch();
     print('currentRoute: $currentRoute');
     super.onInit();
