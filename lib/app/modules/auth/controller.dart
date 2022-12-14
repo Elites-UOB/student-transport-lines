@@ -125,7 +125,7 @@ class AuthController extends GetxController {
   logout() async {
     try {
       await authService.signOut();
-      Get.offAllNamed('/');
+      Get.offAllNamed('/auth');
     } finally {
       isLoading(false);
     }
