@@ -29,7 +29,7 @@ class card_driver_stud extends GetWidget {
       onTap: onPressed,
       child: Container(
         height: 118,
-        width: 345,
+        width: double.infinity,
         padding: EdgeInsets.only(right: 20),
         decoration: BoxDecoration(
             color: backroundCard, borderRadius: BorderRadius.circular(15)),
