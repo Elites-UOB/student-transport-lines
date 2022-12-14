@@ -45,7 +45,7 @@ class NewLinePage extends GetView<NewLineController> {
                       //pic
                       InkWell(
                         onTap: () {
-                          Get.toNamed('/driver/DriverProfile');
+                          Get.toNamed('/driver/profile');
                         },
                         child: ProfilePicS(
                           img: Image.asset('assets/images/person.png',
@@ -117,23 +117,26 @@ class NewLinePage extends GetView<NewLineController> {
                               SizedBox(
                                 width: 120,
                                 child: textFiled(
-                                    controller: controller.carPassCount,
-                                    headtext: 'عدد المقاعد',
-                                    hinttext: '4'),
+                                  controller: controller.carPassCount,
+                                  headtext: 'عدد المقاعد',
+                                  hinttext: '4',
+                                ),
                               ),
                               SizedBox(
                                 width: 120,
                                 child: textFiled(
-                                    controller: controller.passCount,
-                                    headtext: 'عدد الشاغر',
-                                    hinttext: '2'),
+                                  controller: controller.passCount,
+                                  headtext: 'عدد الشاغر',
+                                  hinttext: '2',
+                                ),
                               ),
                               SizedBox(
                                 width: 120,
                                 child: textFiled(
-                                    controller: controller.price,
-                                    headtext: 'الكلفة',
-                                    hinttext: '100'),
+                                  controller: controller.price,
+                                  headtext: 'الكلفة',
+                                  hinttext: '100',
+                                ),
                               ),
                             ],
                           ),

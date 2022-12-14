@@ -36,9 +36,11 @@ class DriverProfilePage extends GetView<DriverProfileController> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
                           Text('حسن خالد ابو الخط', style: Styles.boldblue),
-                          Text('2022/08/12',
-                              textAlign: TextAlign.right,
-                              style: Styles.hintText)
+                          Text(
+                            '2022/08/12',
+                            textAlign: TextAlign.right,
+                            style: Styles.hintText,
+                          ),
                         ],
                       ),
 
@@ -68,8 +70,8 @@ class DriverProfilePage extends GetView<DriverProfileController> {
                           ),
                           const ProfilePicS(
                               img: Image(
-                                  image:
-                                      AssetImage('assets/images/person.png')),
+                                image: AssetImage('assets/images/person.png'),
+                              ),
                               ImgRadius: 35,
                               IconRadius: 15,
                               myIcon: Icon(Icons.recycling),
