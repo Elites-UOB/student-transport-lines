@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/auth/page.dart';
-import 'package:student_transport_lines/app/modules/role/binding.dart';
 import 'package:student_transport_lines/core/values/config.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'app/modules/auth/binding.dart';
-import 'app/modules/student_pages/home/binding.dart';
-import 'app/modules/student_pages/home/page.dart';
 import 'routes/pages.dart';
 import 'routes/routes.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,14 +31,6 @@ Future main() async {
       initialBinding: AuthBinding(),
       initialRoute: Routes.Auth,
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('ar', 'AE'), // English, no country code
-      ],
     ),
   ));
 }
