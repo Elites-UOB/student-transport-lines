@@ -3,6 +3,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/auth/controller.dart';
 import 'package:student_transport_lines/app/modules/role/page.dart';
+import 'package:student_transport_lines/core/theme/app_theme.dart';
 
 import '../../../core/theme/color_theme.dart';
 
@@ -12,7 +13,6 @@ class AuthPage extends GetView<AuthController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Palette.backgroundColor,
       body: Directionality(
         textDirection: TextDirection.ltr,
         child: Center(
@@ -128,6 +128,10 @@ class AuthPage extends GetView<AuthController> {
                                   color: Palette.blueColor,
                                 ),
                               ),
+                            ),
+                            IconButton(
+                              onPressed: (() => Themes().changeTheme()),
+                              icon: const Icon(Icons.lightbulb_outline),
                             ),
                           ],
                         ),
