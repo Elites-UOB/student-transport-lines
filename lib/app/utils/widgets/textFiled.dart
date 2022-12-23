@@ -31,8 +31,9 @@ class textFiled extends StatelessWidget {
         Text(
           headtext,
           style: TextStyle(
+            fontFamily: 'Tajawal',
             color: Colors.grey,
-            fontSize: 14.sp,
+            fontSize: 18.sp,
           ),
         ),
         Container(
@@ -40,14 +41,16 @@ class textFiled extends StatelessWidget {
           padding: EdgeInsets.only(left: 5),
           // margin: EdgeInsets.symmetric(horizontal: width),
           decoration: BoxDecoration(
-            color: Palette.greyColor,
+            color: Palette.whiteColor,
             borderRadius: BorderRadius.circular(10),
           ),
           child: TextFormField(
             decoration: InputDecoration(
               icon: icon != null ? Icon(icon) : null,
               hintText: hinttext,
-              border: InputBorder.none,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
               hintStyle: Styles.hintText,
             ),
             controller: controller,

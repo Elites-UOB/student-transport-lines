@@ -18,170 +18,156 @@ class DriverProfilePage extends GetView<DriverProfileController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        backgroundColor: Palette.backgroundColor,
-        body: Padding(
-          padding:  EdgeInsets.symmetric(horizontal:  MyPadding.KPadding),
-          child: Directionality(
-            textDirection: TextDirection.rtl,
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+      child: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Scaffold(
+          backgroundColor: Palette.backgroundColor,
+
+          appBar: AppBar(
+            backgroundColor: Palette.yellowColor,
+
+            leading:Container(
+              padding: EdgeInsets.only(right: 30),
+              child: IconButton(onPressed: (){
+                Navigator.pop(context);
+              },
+                  icon:const Icon(Icons.arrow_back_sharp,
+                    color: Palette.blackColor,
+                    size: 22,
+                  ) ),
+            ),
+
+            title:const Text(
+              'الملف الشخصي',
+              style: Styles.normalBlack,
+            ),
+
+          ),
+
+          body: Padding(
+            padding: const EdgeInsets.symmetric(horizontal:  MyPadding.KPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+
+                    // IconButton(
+                    //     onPressed: (() => authController.logout()),
+                    //     icon: Icon(Icons.logout))
+
+                const SizedBox(
+                  height: 20,
+                ),
+                Flexible(
+                  child: Column(
+                    children: [
+                      const ProfilePicS(
+                          img: Image(
+                            image: AssetImage('assets/images/person.png'),
+                          ),
+                          ImgRadius: 35,
+                          IconRadius: 15,
+                          myIcon: Icon(Icons.swap_horiz_sharp),
+                          myColor: Palette.blueColor),
+
+                      const SizedBox(
+                        height: 15,
+                      ),
+
+                      //name filed
+                      textFiled(
+                        controller: TextEditingController(),
+                        headtext: 'الأسم',
+                        hinttext: 'أحمد علي',
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+
+
+
+
+                      //phone number filed
+                      textFiled(
+                          controller: TextEditingController(),
+                          headtext: 'رقم الهاتف',
+                          hinttext: '07xxxxxx'),
+                      const SizedBox(
+                        height: 20,
+                      ),
+
+                      //tele user name filed
+                      textFiled(
+                          controller: TextEditingController(),
+                          headtext: 'معرّف التلكرام',
+                          hinttext: '@CsitElites'),
+
+                      // drop down
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Flexible(
+                            child: dropdownstud(
+                              headtext: 'المحافظة',
+                              hinttext: 'البصرة',
+                              item: [],
+                              controller: TextEditingController(),
+                            ),
+                          ),
+                          Flexible(
+                            child: dropdownstud(
+                              headtext: 'المدينة',
+                              hinttext: 'شط العرب',
+                              item: [],
+                              controller: TextEditingController(),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+
+
+                const SizedBox(
+                  height: 20,
+                ),
+
+                //
+                Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        //name and date
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text('حسن خالد ابو الخط', style: Styles.boldblue),
-                            Text(
-                              '2022/08/12',
-                              textAlign: TextAlign.right,
-                              style: Styles.hintText,
-                            ),
-                          ],
-                        ),
-
-
-                        IconButton(
-                            onPressed: (() => authController.logout()),
-                            icon: Icon(Icons.logout))
-                      ],
-                    ),
-                    const SizedBox(height: 40),
-                    const Text(
-                      'الملف الشخصي',
-                      style: Styles.hintTextbold,
-                    ),
-                    Container(
-                      padding:const EdgeInsets.symmetric(horizontal: 15),
-                      height: 528.h,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Palette.whiteColor,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Form(
-                        key: key,
-                        child: Column(
-                          children: [
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            const ProfilePicS(
-                                img: Image(
-                                  image: AssetImage('assets/images/person.png'),
-                                ),
-                                ImgRadius: 35,
-                                IconRadius: 15,
-                                myIcon: Icon(Icons.swap_horiz_sharp),
-                                myColor: Palette.blueColor),
-
-                            const SizedBox(
-                              height: 15,
-                            ),
-
-                            //name filed
-                            textFiled(
-                              controller: TextEditingController(),
-                              headtext: 'الأسم',
-                              hinttext: 'أحمد علي',
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            // drop down
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Flexible(
-                                  child: dropdownstud(
-                                    headtext: 'المحافظة',
-                                    hinttext: 'البصرة',
-                                    item: [],
-                                    controller: TextEditingController(),
-                                  ),
-                                ),
-                                Flexible(
-                                  child: dropdownstud(
-                                  headtext: 'المدينة',
-                                  hinttext: 'شط العرب',
-                                  item: [],
-                                  controller: TextEditingController(),
-                                ),
-                                ),
-
-                              ],
-                            ),
-
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            //phone number filed
-                            textFiled(
-                                controller: TextEditingController(),
-                                headtext: 'رقم الهاتف',
-                                hinttext: '07xxxxxx'),
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            //tele user name filed
-                            textFiled(
-                                controller: TextEditingController(),
-                                headtext: 'معرّف التلكرام',
-                                hinttext: '@CsitElites'),
-                            const SizedBox(
-                              height: 20,
-                            ),
-
-                            //password filed
-                            textFiled(
-                              controller: TextEditingController(),
-                              headtext: 'كلمة المرور',
-                              hinttext: 'password',
-                              isPassword: true,
-                              icon: Icons.lock_outline,
-                            ),
-
-                            const SizedBox(
-                              height: 15,
-                            ),
-
-                            InkWell(
-                              onTap: () {},
-                              child: Container(
-                                alignment: Alignment.bottomCenter,
-                                margin: EdgeInsets.only(top: 10),
-                                height: 34.h,
-                                width: 118.w,
-                                decoration: BoxDecoration(
-                                    color: Palette.blueColor,
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: const Center(
-                                  child: Text(
-                                    'حفظ التعديلات',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Palette.whiteColor,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        alignment: Alignment.bottomCenter,
+                        margin: EdgeInsets.only(top: 10),
+                        padding: EdgeInsets.symmetric(vertical: 4),
+                        // height: 34.h,
+                        // width: 118.w,
+                        decoration: BoxDecoration(
+                            color: Palette.yellowColor,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Center(
+                          child: Text(
+                            'حفظ التعديلات',
+                            textAlign: TextAlign.center,
+                            style:Styles.normalBlack,
+                          ),
                         ),
                       ),
                     ),
+                    TextButton(onPressed: (){},
+                        child:const Text(
+                          'تسجيل الخروج',
+                          style: TextStyle(color: Color(0xffFF6969),fontWeight: FontWeight.w800),
+                        ))
                   ],
-                ),
-              ),
+                )
+
+
+
+              ],
             ),
           ),
         ),

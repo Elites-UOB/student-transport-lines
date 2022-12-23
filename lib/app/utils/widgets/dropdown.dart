@@ -50,13 +50,12 @@ class dropdownstud extends StatelessWidget {
               ),
             ),
             decoration: InputDecoration(
-              enabledBorder: InputBorder.none,
+
               border: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(8),
               ),
               filled: true,
-              fillColor: Palette.greyColor,
+              fillColor: Palette.whiteColor,
             ),
             dropdownColor: Palette.whiteColor,
             onChanged: (Object? element) {

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/driver_pages/new_line/controller.dart';
 import 'package:student_transport_lines/app/utils/widgets/dropdown.dart';
 import 'package:student_transport_lines/app/utils/widgets/textFiled.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
-
 import '../../../../core/theme/padding.dart';
 import '../../../../core/theme/text_theme.dart';
 import '../../../utils/widgets/profilePicS.dart';
@@ -17,181 +15,164 @@ class NewLinePage extends GetView<NewLineController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        backgroundColor: Palette.backgroundColor,
-        body: Padding(
-          padding:  EdgeInsets.symmetric(horizontal:  MyPadding.KPadding),
-          child: Directionality(
-            textDirection: TextDirection.rtl,
+      child: Directionality(
+        textDirection:TextDirection.rtl,
+        child: Scaffold(
+          backgroundColor: Palette.backgroundColor,
+          appBar: AppBar(
+            backgroundColor: Palette.yellowColor,
+
+            leading:Container(
+              padding: EdgeInsets.only(right: 30),
+              child: IconButton(onPressed: (){
+                Navigator.pop(context);
+              },
+                  icon:const Icon(Icons.arrow_back_sharp,
+                    color: Palette.blackColor,
+                    size: 22,
+                  ) ),
+            ),
+
+            title:const Text(
+                'اضافة خط جديد',
+              style: Styles.normalBlack,
+
+            ),
+
+          ),
+          body: Padding(
+            padding:const  EdgeInsets.symmetric(horizontal:  MyPadding.KPadding,vertical: 10),
             child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              child: Obx(
+                () => Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        //name and date
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text('حسن خالد ابو الخط', style: Styles.boldblue),
-                            Text('2022/08/12',
-                                textAlign: TextAlign.right,
-                                style: Styles.hintText)
-                          ],
-                        ),
 
-                        //pic
-                        InkWell(
-                          onTap: () {
-                            Get.toNamed('/driver/profile');
-                          },
-                          child: ProfilePicS(
-                            img: Image.asset('assets/images/person.png',
-                                height: 30, width: 30),
-                            ImgRadius: 25,
-                            IconRadius: 9,
-                            myColor: Palette.blueColor,
-                            myIcon: Icon(
-                              Icons.edit,
-                              size: 12,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 40),
-                    const Text(
-                      'اضافة الخط',
-                      style: Styles.hintTextbold,
-                    ),
-                    Obx(
-                      () => Container(
-                        margin: EdgeInsets.only(top: 10),
-                       padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
-                       // height: 489.h,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Palette.whiteColor,
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            dropdownstud(
-                                headtext: 'الجامعة',
-                                hinttext: 'جامعة البصرة',
-                                item: controller.universities.value,
-                                controller: TextEditingController(),
-                               // width: 20
-                            ),
+                   Column(
+                     children: [
+                       dropdownstud(
+                         headtext: 'الجامعة',
+                         hinttext: 'جامعة البصرة',
+                         item: controller.universities.value,
+                         controller: TextEditingController(),
+                         // width: 20
+                       ),
 
-                           const SizedBox(height: 20,),
+                       const SizedBox(height: 20,),
 
-                            dropdownstud(
-                                headtext: 'الكلية',
-                                hinttext: 'مجمع كليات الكرمة',
-                                item: controller.colleges.value,
-                                controller: TextEditingController(),
-                               // width: 20
-                            ),
+                       dropdownstud(
+                         headtext: 'الكلية',
+                         hinttext: 'مجمع كليات الكرمة',
+                         item: controller.colleges.value,
+                         controller: TextEditingController(),
+                         // width: 20
+                       ),
 
-                            SizedBox(height: 20,),
+                       SizedBox(height: 20,),
 
-                            dropdownstud(
-                                headtext: 'الدراسة',
-                                hinttext: 'مسائي',
-                                item:const [
-                                  {'id': 1, 'name': 'صباحي'},
-                                  {'id': 2, 'name': 'مسائي'}
-                                ],
-                                controller: TextEditingController(),
-                               // width: 20
-                            ),
+                       dropdownstud(
+                         headtext: 'الدراسة',
+                         hinttext: 'مسائي',
+                         item:const [
+                           {'id': 1, 'name': 'صباحي'},
+                           {'id': 2, 'name': 'مسائي'}
+                         ],
+                         controller: TextEditingController(),
+                         // width: 20
+                       ),
 
-                            SizedBox(height: 20,),
+                       SizedBox(height: 20,),
 
-                            textFiled(
-                                controller: TextEditingController(),
-                                headtext: 'نوع السيارة',
-                                hinttext: 'تكسي'),
+                       //نوع السيارة
+                       dropdownstud(
+                         headtext: 'نوع السيارة',
+                         hinttext: 'تكسي',
+                         item:const [],
+                         controller: TextEditingController(),
+                         // width: 20
+                       ),
 
-                            SizedBox(height: 20,),
+                       SizedBox(height: 20,),
 
-                            textFiled(
-                                controller: controller.carModel,
-                                headtext: 'موديل السيارة',
-                                hinttext: 'سوناتا'),
+                       //موديل السيارة
+                       dropdownstud(
+                         headtext: 'موديل السيارة',
+                         hinttext: 'سوناتا',
+                         item:const [],
+                         controller: TextEditingController(),
+                         // width: 20
+                       ),
 
-                            SizedBox(height: 20,),
 
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                SizedBox(
-                                  width: 100,
-                                  child: textFiled(
-                                    controller: controller.carPassCount,
-                                    headtext: 'عدد المقاعد',
-                                    hinttext: '4',
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 100,
-                                  child: textFiled(
-                                    controller: controller.passCount,
-                                    headtext: 'عدد الشاغر',
-                                    hinttext: '2',
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 100,
-                                  child: textFiled(
-                                    controller: controller.price,
-                                    headtext: 'الكلفة',
-                                    hinttext: '100',
-                                  ),
-                                ),
-                              ],
-                            ),
+                       SizedBox(height: 20,),
 
-                           const SizedBox(height: 10,),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                         children: [
+                           SizedBox(
+                             width: 100,
+                             child: textFiled(
+                               controller: controller.carPassCount,
+                               headtext: 'عدد المقاعد',
+                               hinttext: '4',
+                             ),
+                           ),
+                           SizedBox(
+                             width: 100,
+                             child: textFiled(
+                               controller: controller.passCount,
+                               headtext: 'عدد الشاغر',
+                               hinttext: '2',
+                             ),
+                           ),
+                           SizedBox(
+                             width: 100,
+                             child: textFiled(
+                               controller: controller.price,
+                               headtext: 'الكلفة',
+                               hinttext: '100',
+                             ),
+                           ),
+                         ],
+                       ),
 
-                            //البحث عن ركاب
-                            //حفظ التعديلات
-                            InkWell(
-                              onTap: () {
-                                controller.addNewLine();
-                              },
-                              child: Container(
-                                margin: EdgeInsets.only(top: 10),
-                                height: 34.h,
-                                width: 118.w,
-                                decoration: BoxDecoration(
-                                    color: Palette.blueColor,
-                                    borderRadius: BorderRadius.circular(20)),
-                                child: Center(
-                                  child: controller.isLoading.value
-                                      ? const SpinKitThreeInOut(
-                                          size: 20,
-                                          color: Colors.white,
-                                        )
-                                      : const Text(
-                                          'حفظ ',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            color: Palette.whiteColor,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
+                     ],
+                   ),
+
+
+                   // SizedBox(height: ),
+                    //حفظ التعديلات
+                    Padding(
+                      padding: EdgeInsets.only(
+                          top:MediaQuery.of(context).padding.top *5),
+                      child: Column(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              controller.addNewLine();
+                            },
+                            child: Container(
+                              padding: EdgeInsets.symmetric(vertical: 5),
+
+                              decoration: BoxDecoration(
+                                  color: Palette.yellowColor,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Center(
+                                child: controller.isLoading.value
+                                    ? const SpinKitThreeInOut(
+                                        size: 20,
+                                        color: Colors.white,
+                                      )
+                                    : const Text(
+                                        'اضافة ',
+                                        textAlign: TextAlign.center,
+                                        style:Styles.normalBlack,
+
                                 ),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
