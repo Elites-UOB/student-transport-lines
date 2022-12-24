@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.student_transport_lines">
+    package="tech.csitelites.transport.lines">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="student_transport_lines"
+        android:label="خطوط النقل الجامعية"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity

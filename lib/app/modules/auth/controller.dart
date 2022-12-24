@@ -77,8 +77,8 @@ class AuthController extends GetxController {
   login() async {
     try {
       isLoading.value = true;
-      // var data = await authService.signIn(email.text, password.text);
-      var data = await authService.signInWithGoogle();
+      var data = await authService.signIn(email.text, password.text);
+      // var data = await authService.signInWithGoogle();
       if (data != null) {
         late String role = data['role'];
         if (role == 'driver') {
