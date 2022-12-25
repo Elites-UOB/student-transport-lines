@@ -17,6 +17,20 @@ class AuthService extends GetxService {
     isAuthenticated.value = value;
   }
 
+  redarectToHome() async {
+    final authSubscription =
+        _supabase.client.auth.onAuthStateChange.listen((data) {
+      final AuthChangeEvent event = data.event;
+      if (event == AuthChangeEvent.signedIn) {
+        Get.offNamed('/');
+      }
+    });
+    ;
+
+    print('===========================================');
+    print(authSubscription);
+  }
+
   checkAuthentication() async {
     final user = _supabase.client.auth.currentUser;
     final session = _supabase.client.auth.currentSession;
@@ -29,7 +43,6 @@ class AuthService extends GetxService {
           .single();
 
       final role = data['role'];
-      print(role);
       setIsAuthenticated(true);
       if (role == null || role.isEmpty) {
         Get.offNamed('/role');

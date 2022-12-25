@@ -31,7 +31,7 @@ class AuthController extends GetxController {
   @override
   void onInit() async {
     await fatch();
-    print('currentRoute: $currentRoute');
+    await authService.redarectToHome();
     super.onInit();
   }
 
