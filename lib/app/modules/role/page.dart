@@ -66,6 +66,7 @@ class RolePage extends GetView<RoleController> {
           Expanded(
             flex: 8,
             child: Container(
+                alignment: Alignment.topRight,
                 color: Colors.amber,
                 child: Obx(() => AnimatedSwitcher(
                       duration: const Duration(milliseconds: 200),
@@ -74,7 +75,6 @@ class RolePage extends GetView<RoleController> {
                         return ScaleTransition(scale: animation, child: child);
                       },
                       child: Container(
-                        alignment: Alignment.topRight,
                         child: controller.steps[controller.currentStep.value],
                         key: ValueKey<int>(controller.currentStep.value),
                       ),
