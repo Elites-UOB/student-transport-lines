@@ -31,7 +31,7 @@ class AuthController extends GetxController {
   @override
   void onInit() async {
     await fatch();
-    await authService.redarectToHome();
+    authService.isLogin();
     super.onInit();
   }
 

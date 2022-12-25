@@ -7,6 +7,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 class AuthService extends GetxService {
   Future<AuthService> init() async => this;
   final RxBool isAuthenticated = false.obs;
+  final RxBool isLogin = false.obs;
 
   static final _supabase = Supabase.instance;
   static final error = false;
@@ -17,18 +18,20 @@ class AuthService extends GetxService {
     isAuthenticated.value = value;
   }
 
-  redarectToHome() async {
-    final authSubscription =
-        _supabase.client.auth.onAuthStateChange.listen((data) {
-      final AuthChangeEvent event = data.event;
-      if (event == AuthChangeEvent.signedIn) {
-        Get.offNamed('/');
-      }
-    });
-    ;
+  void setIsLogin(bool value) {
+    isLogin.value = value;
+  }
 
-    print('===========================================');
-    print(authSubscription);
+  checkLogin() async {
+    final user = _supabase.client.auth.currentUser;
+    final session = _supabase.client.auth.currentSession;
+    if (user != null && session != null) {
+      setIsLogin(true);
+      print('==================================')
+      Get.offNamed('/');
+    } else {
+      setIsLogin(false);
+    }
   }
 
   checkAuthentication() async {
@@ -113,6 +116,7 @@ class AuthService extends GetxService {
       print(response);
       final Session? session = _supabase.client.auth.currentSession;
       final User? user = _supabase.client.auth.currentUser;
+         Get.offNamed('/');
       if (user != null) {
         return user.userMetadata;
       } else {
