@@ -1,21 +1,25 @@
 import 'dart:collection';
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/role/widgets/step1.dart';
 import 'package:student_transport_lines/app/modules/role/widgets/step2.dart';
+import 'package:student_transport_lines/app/modules/role/widgets/step3.dart';
+import 'package:student_transport_lines/app/modules/role/widgets/step4.dart';
 
 class RoleController extends GetxController {
   RxList steps = [
     const Step1(),
     const Step2(),
-    const Step1(),
-    const Step2(),
-    const Step1(),
+    const Step3(),
+    const Step4(),
   ].obs;
 
   RxInt currentStep = 0.obs;
+
+  RxBool isLoading = false.obs;
 
   RxList plainCities = [].obs;
   List provinces = [
@@ -41,15 +45,17 @@ class RoleController extends GetxController {
   RxList cities = [].obs;
 
   RxInt role = 0.obs; // 0 => user, 1 => driver
-  RxString name = "".obs;
-  RxString mobile = "".obs;
-  RxString telegram = "".obs;
+  TextEditingController name = TextEditingController();
+  TextEditingController mobile = TextEditingController();
+  TextEditingController telegram = TextEditingController();
   RxString province = "البصرة".obs;
   RxString city = "مركز شط العرب".obs;
 
-  void nextStep() {
+  void nextStep() async {
     if (currentStep.value < steps.length - 1) {
       currentStep.value++;
+    } else {
+      await save();
     }
   }
 
@@ -84,5 +90,18 @@ class RoleController extends GetxController {
         .map((e) => e["city_ar"])
         .toList();
     city.value = cities.first;
+  }
+
+  Future<void> save() async {
+    // role.value == 0 => user , role.value == 1 => driver
+    // name.text => الاسم
+    // mobile.text => رقم الهاتف
+    // telegram.text => معرف التليجرام
+    // province.value => المحافظة
+    // city.value => المدينة
+    isLoading.value = true;
+    await Future.delayed(const Duration(seconds: 5));
+    print("Saved");
+    isLoading.value = false;
   }
 }

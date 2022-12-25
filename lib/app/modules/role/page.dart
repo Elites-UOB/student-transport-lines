@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
 import 'controller.dart';
@@ -37,8 +38,8 @@ class RolePage extends GetView<RoleController> {
                               child: Row(children: [
                                 Container(
                                   alignment: Alignment.center,
-                                  width: 12.0,
-                                  height: 3.0,
+                                  width: 12.0.w,
+                                  height: 3.0.w,
                                   decoration: BoxDecoration(
                                       color: (entry.key == 0 ||
                                               controller.currentStep.value <
@@ -47,8 +48,8 @@ class RolePage extends GetView<RoleController> {
                                           : Palette.yellowColor),
                                 ),
                                 Container(
-                                  width: 24,
-                                  height: 24,
+                                  width: 24.w,
+                                  height: 24.w,
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       color: controller.currentStep.value >=
@@ -97,18 +98,24 @@ class RolePage extends GetView<RoleController> {
                       MaterialStatePropertyAll<Color>(Palette.yellowColor),
                 ),
                 onPressed: () => controller.nextStep(),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'التالي',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            fontFamily: 'Tajawal'),
-                      )
-                    ])),
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Obx(() => !controller.isLoading.value
+                      ? Text(
+                          controller.currentStep.value ==
+                                  controller.steps.length - 1
+                              ? 'حفظ'
+                              : 'التالي',
+                          style: const TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              fontFamily: 'Tajawal'),
+                        )
+                      : const CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                              Palette.whiteColor))),
+                ])),
           ),
         ]),
       )),
