@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:student_transport_lines/app/modules/student_pages/register/page.dart';
 import '../app/middleware/auth_middleware.dart';
 import '../app/modules/auth/binding.dart';
 import '../app/modules/auth/page.dart';
@@ -9,7 +8,6 @@ import '../app/modules/driver_pages/new_line/binding.dart';
 import '../app/modules/driver_pages/new_line/page.dart';
 import '../app/modules/driver_pages/profile/binding.dart';
 import '../app/modules/driver_pages/profile/page.dart';
-import '../app/modules/driver_pages/register/page.dart';
 import '../app/modules/role/binding.dart';
 import '../app/modules/role/page.dart';
 import '../app/modules/splash/binding.dart';
@@ -37,11 +35,6 @@ abstract class AppPages {
         binding: RoleBinding()),
 
     //Driver Routes
-    GetPage(
-        name: Routes.Driver_Register,
-        page: () => DriverRegisterPage(),
-        // middlewares: [AuthMiddleware()],
-        binding: AuthBinding()),
 
     GetPage(
         name: Routes.Driver_Home,
@@ -66,10 +59,6 @@ abstract class AppPages {
         page: () => StudentHomePage(),
         // middlewares: [AuthMiddleware()],
         binding: StudentHomeBinding()),
-    GetPage(
-        name: Routes.Student_Register,
-        page: () => StudentRegisterPage(),
-        binding: AuthBinding()),
 
     GetPage(
         name: Routes.Student_Profile,

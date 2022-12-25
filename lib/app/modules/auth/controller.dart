@@ -8,17 +8,6 @@ class AuthController extends GetxController {
 
   final currentRoute = Get.currentRoute.obs;
 
-  //Form Controllers
-  final name = TextEditingController();
-  final email = TextEditingController();
-  final phone = TextEditingController();
-  final telegarm = TextEditingController();
-  final password = TextEditingController();
-  final cityId = TextEditingController();
-  final provinceId = TextEditingController();
-  final authKey = GlobalKey<FormState>();
-  //bools
-  RxBool showPassword = false.obs;
   RxBool isLoading = false.obs;
 
   //List
@@ -36,39 +25,32 @@ class AuthController extends GetxController {
   }
 
   void onClose() {
-    name.dispose();
-    email.dispose();
-    password.dispose();
     super.onClose();
   }
 
-  validation() {
-    if (name.text.isEmpty) {
-      Get.snackbar('خطأ', 'الرجاء ادخال الاسم');
-    } else if (email.text.isEmpty && !GetUtils.isEmail(email.text)) {
-      //   Get.snackbar('خطأ', 'الرجاء ادخال البريد الالكتروني');
-      // } else if (phone.text.isEmpty && phone.text.length < 11) {
-      Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
-    } else if (telegarm.text.isEmpty) {
-      Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
-    } else if (password.text.isEmpty && password.text.length < 6) {
-      Get.snackbar('خطأ', 'الرجاء ادخال كلمة المرور');
-      // } else if (cityId.text.isEmpty) {
-      //   Get.snackbar('خطأ', 'الرجاء اختيار المدينة');
-      // } else if (provinceId.text.isEmpty) {
-      //   Get.snackbar('خطأ', 'الرجاء اختيار المحافظة');
-    } else {
-      return true;
-    }
-  }
+  // validation() {
+  //   if (name.text.isEmpty) {
+  //     Get.snackbar('خطأ', 'الرجاء ادخال الاسم');
+  //   } else if (email.text.isEmpty && !GetUtils.isEmail(email.text)) {
+  //     //   Get.snackbar('خطأ', 'الرجاء ادخال البريد الالكتروني');
+  //     // } else if (phone.text.isEmpty && phone.text.length < 11) {
+  //     Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
+  //   } else if (telegarm.text.isEmpty) {
+  //     Get.snackbar('خطأ', 'الرجاء ادخال رقم الهاتف');
+  //   } else if (password.text.isEmpty && password.text.length < 6) {
+  //     Get.snackbar('خطأ', 'الرجاء ادخال كلمة المرور');
+  //     // } else if (cityId.text.isEmpty) {
+  //     //   Get.snackbar('خطأ', 'الرجاء اختيار المدينة');
+  //     // } else if (provinceId.text.isEmpty) {
+  //     //   Get.snackbar('خطأ', 'الرجاء اختيار المحافظة');
+  //   } else {
+  //     return true;
+  //   }
+  // }
 
   fatch() async {
-    final citiesData = await HelperService().getCities();
-    final provincesData = await HelperService().getProvinces();
     final universitiesData = await HelperService().getUniversities();
     final collegesData = await HelperService().getColleges();
-    cities.value = citiesData;
-    provinces.value = provincesData;
     universities.value = universitiesData;
     colleges.value = collegesData;
   }
@@ -77,7 +59,6 @@ class AuthController extends GetxController {
   login() async {
     try {
       isLoading.value = true;
-      // var data = await authService.signIn(email.text, password.text);
       var data = await authService.signInWithGoogle();
       if (data != null) {
         late String role = data['role'];
@@ -91,29 +72,6 @@ class AuthController extends GetxController {
       }
     } catch (e) {
       Get.snackbar('خطأ', e.toString());
-    } finally {
-      isLoading.value = false;
-    }
-  }
-
-  register() async {
-    final role = currentRoute == '/driver/register' ? 'driver' : 'student';
-    try {
-      isLoading.value = true;
-      if (validation() == true) {
-        if (authKey.currentState!.validate()) {
-          authKey.currentState!.save();
-          var user = await authService.signUp(email.text, password.text,
-              name.text, phone.text, role, 1, 1, telegarm.text);
-          if (user != null) {
-            role == '/driver/register'
-                ? Get.offAllNamed('/driver/home')
-                : Get.offAllNamed('/student/home');
-          } else {
-            Get.snackbar('خطأ', 'حدث خطأ ما');
-          }
-        }
-      }
     } finally {
       isLoading.value = false;
     }
