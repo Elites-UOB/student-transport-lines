@@ -53,7 +53,7 @@ class Step4 extends GetWidget<RoleController> {
                         controller.province.value = _!;
                         controller.getCities(controller.province.value);
                       },
-                      icon: Icon(Icons.arrow_drop_down_rounded, size: 30.w),
+                      icon: Icon(Icons.arrow_drop_down_rounded, size: 40.w),
                       iconEnabledColor: Palette.greyColor3, //Icon color
                       style: TextStyle(
                         color: Palette.greyColor3,
@@ -104,7 +104,7 @@ class Step4 extends GetWidget<RoleController> {
                       onChanged: (_) {
                         controller.city.value = _!;
                       },
-                      icon: Icon(Icons.arrow_drop_down_rounded, size: 30.w),
+                      icon: Icon(Icons.arrow_drop_down_rounded, size: 40.w),
                       iconEnabledColor: Palette.greyColor3, //Icon color
                       style: TextStyle(
                         color: Palette.greyColor3,
