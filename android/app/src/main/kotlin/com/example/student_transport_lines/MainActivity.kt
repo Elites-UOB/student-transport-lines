@@ -1,4 +1,4 @@
-package com.example.student_transport_lines
+package tech.csitelites.transport.lines
 
 import io.flutter.embedding.android.FlutterActivity
 

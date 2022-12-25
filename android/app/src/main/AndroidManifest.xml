@@ -1,9 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.student_transport_lines">
+    package="tech.csitelites.transport.lines">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="student_transport_lines"
+        android:label="خطوط النقل الجامعية"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -23,6 +24,9 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <data
+                    android:scheme="io.supabase.flutterquickstart"
+                    android:host="login-callback" />
             </intent-filter>
         </activity>
         <!-- Don't delete the meta-data below.

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:student_transport_lines/core/theme/padding.dart';
 import '../../../../core/theme/color_theme.dart';
 import '../../../../core/theme/text_theme.dart';
 import '../../../utils/widgets/profilePicS.dart';
 import '../../../utils/widgets/textFiled.dart';
 import '../../auth/controller.dart';
-import '../../driver_pages/register/widgets/dropdown.dart';
-import '../register/widgets/dropdown.dart';
+import '../../../utils/widgets/dropdown.dart';
 import 'controller.dart';
 
 class StudentProfilePage extends GetView<StudentProfileController> {
@@ -55,8 +55,9 @@ class StudentProfilePage extends GetView<StudentProfileController> {
                     style: Styles.hintTextbold,
                   ),
                   Container(
+                    padding: EdgeInsets.symmetric(horizontal:15),
                     height: 528.h,
-                    width: 345.w,
+                    width: double.infinity,
                     decoration: BoxDecoration(
                         color: Palette.whiteColor,
                         borderRadius: BorderRadius.circular(10)),
@@ -73,7 +74,7 @@ class StudentProfilePage extends GetView<StudentProfileController> {
                                       AssetImage('assets/images/person.png')),
                               ImgRadius: 35,
                               IconRadius: 15,
-                              myIcon: Icon(Icons.recycling),
+                              myIcon: Icon(Icons.swap_horiz_sharp),
                               myColor: Palette.blueColor),
 
                           const SizedBox(
@@ -92,19 +93,23 @@ class StudentProfilePage extends GetView<StudentProfileController> {
 
                           // drop down
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              dropdown(
-                                headtext: 'المحافظة',
-                                hinttext: 'البصرة',
-                                item: [],
-                                controller: TextEditingController(),
+                              Flexible(
+                                child: dropdownstud(
+                                  headtext: 'المحافظة',
+                                  hinttext: 'البصرة',
+                                  item: [],
+                                  controller: TextEditingController(),
+                                ),
                               ),
-                              dropdown(
-                                headtext: 'المدينة',
-                                hinttext: 'شط العرب',
-                                item: [],
-                                controller: TextEditingController(),
+                              Flexible(
+                                child: dropdownstud(
+                                  headtext: 'المدينة',
+                                  hinttext: 'شط العرب',
+                                  item: [],
+                                  controller: TextEditingController(),
+                                ),
                               ),
                             ],
                           ),

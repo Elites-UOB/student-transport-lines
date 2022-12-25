@@ -10,7 +10,8 @@ Feel free to open pull request.
 Using Flutter 3 & Supabase.
 
 With ❤️.
-
+# Project Manager
+    Hassan Kadhim
 # Team
 1. Flutter (Hassan Kadhim, Shahad Jawad).
 2. Backend (Hassan Kadhim).

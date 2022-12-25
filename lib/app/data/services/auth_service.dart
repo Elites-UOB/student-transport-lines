@@ -79,6 +79,24 @@ class AuthService extends GetxService {
     }
   }
 
+  Future signInWithGoogle() async {
+    try {
+      final response =
+          await _supabase.client.auth.signInWithOAuth(Provider.google);
+      final Session? session = _supabase.client.auth.currentSession;
+      final User? user = _supabase.client.auth.currentUser;
+      if (user != null) {
+        return user.userMetadata;
+      } else {
+        return null;
+      }
+    } on AuthException catch (error) {
+      return error;
+    } catch (_) {
+      return Exception('Error');
+    }
+  }
+
   //Update Porfile
 
   Future<void> updatePorfile(String name, String phone, String role,
