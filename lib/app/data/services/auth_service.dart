@@ -81,8 +81,13 @@ class AuthService extends GetxService {
 
   Future signInWithGoogle() async {
     try {
-      final response =
-          await _supabase.client.auth.signInWithOAuth(Provider.google);
+      final response = await _supabase.client.auth.signInWithOAuth(
+        Provider.google,
+        redirectTo: kIsWeb
+            ? 'http://localhost:3000'
+            : 'tech.csitelites.transport.lines://login-callback',
+      );
+      print(response);
       final Session? session = _supabase.client.auth.currentSession;
       final User? user = _supabase.client.auth.currentUser;
       if (user != null) {
