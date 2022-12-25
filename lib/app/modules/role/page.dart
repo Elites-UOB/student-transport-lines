@@ -12,52 +12,68 @@ class RolePage extends GetView<RoleController> {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Palette.backgroundColor,
-        body: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: MyPadding.KPadding),
+        
+        body: Container(
+          padding:  const EdgeInsets.symmetric(
+            horizontal: MyPadding.KPadding, vertical: 20),
+          decoration:const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/images/backround1.png'),
+            ),
+            color: Palette.yellowColor
+          ),
           child: Center(
             child: Container(
-              padding: EdgeInsets.only(top: sizeh / 3.5),
+              //padding: EdgeInsets.only(top: 20),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  //ما هو دورك؟ text
-                  const Text(
-                    'ما هو دورك؟',
-                    style: TextStyle(fontSize: 30, color: Palette.blueColor),
+
+                  //text
+                  Column(
+                    children: const[
+                      Text('تطبيق الخطوط',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                        fontFamily: 'Tajawal'
+                      ),
+                      ),
+                      SizedBox(height: 8),
+                      Text('تطبيقك الأول لإيجاد خطوط النقل',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: 'Tajawal'
+                        ),
+                      ),
+                    ],
                   ),
 
-                  const SizedBox(height: 40),
+                  ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll<Color>(Colors.white),
+                    ),
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const[
+                          Text('  Google دخول عبر ' ,
 
-                  // driver card
-                  card_driver_stud(
-                      onPressed: () {
-                        Get.toNamed('/driver/register');
-                      },
-                      destext:
-                          'الأعلان عن خطوط  النقل الخاصة بك، \n لأعلان عن خطوط  النقل الخاصة بك،',
-                      headtext: 'سائق',
-                      myimg: "assets/images/img_1.png",
-                      backroundCard: Palette.blueColor,
-                      backroundImg: Palette.whiteColor,
-                      destextColor: Palette.whiteColor),
-                  const SizedBox(height: 50),
+                              style: TextStyle(
 
-                  // student card
-                  card_driver_stud(
-                    onPressed: () {
-                      Get.toNamed('/student/register');
-                    },
-                    destext: 'ايجاد خطوط النقل المناسبة\n حسب المتطلبات الخاصة',
-                    headtext: 'طالب',
-                    myimg: 'assets/images/img_1.png',
-                    backroundCard: Palette.whiteColor,
-                    backroundImg: Palette.blueColor,
-                    destextColor: Palette.blueColor,
-                  ),
-                  TextButton(
-                    onPressed: (() => Get.back()),
-                    child: Text('امتلك حساب'),
-                  ),
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                  fontFamily: 'Tajawal'
+                              ),),
+                          Image(image: AssetImage('assets/images/google.png'),height: 22,)
+                        ],
+                      )),
+
+
                 ],
               ),
             ),
