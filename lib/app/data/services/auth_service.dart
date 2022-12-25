@@ -22,10 +22,17 @@ class AuthService extends GetxService {
     final session = _supabase.client.auth.currentSession;
 
     if (user != null && session != null) {
-      final role = user.userMetadata!['role'];
+      final data = await _supabase.client
+          .from('porfiles')
+          .select('id,full_name,phone,role,city_id,province_id,telegarm')
+          .eq('id', user.id)
+          .single();
+
+      final role = data['role'];
+      print(role);
       setIsAuthenticated(true);
-      if (role == null) {
-        Get.offNamed('/driver/home');
+      if (role == null || role.isEmpty) {
+        Get.offNamed('/role');
       } else if (role == 'driver') {
         Get.offNamed('/driver/home');
       } else if (role == 'student') {
