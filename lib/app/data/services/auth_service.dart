@@ -23,7 +23,9 @@ class AuthService extends GetxService {
     if (user != null && session != null) {
       final role = user.userMetadata!['role'];
       setIsAuthenticated(true);
-      if (role == 'driver') {
+      if (role == null) {
+        Get.offNamed('/driver/home');
+      } else if (role == 'driver') {
         Get.offNamed('/driver/home');
       } else if (role == 'student') {
         Get.offNamed('/student/home');
