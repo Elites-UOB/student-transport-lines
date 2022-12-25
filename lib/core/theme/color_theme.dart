@@ -9,6 +9,7 @@ class Palette {
   static const whiteColor = Color(0xffffffff);
   static const greyColor = Color(0x99F6F3F4); //
   static const greyColor2 = Color(0xffC6C6C6);
+  static const greyColor3 = Color(0xff878787);
   static const blackColor = Color(0xff000000);
   static const blueColor = Color(0xff113D6B);
   static const loginUp = Color(0xffedecf5);
