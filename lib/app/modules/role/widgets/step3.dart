@@ -7,8 +7,8 @@ import 'package:student_transport_lines/app/utils/widgets/textFiled.dart';
 import '../../../../core/theme/color_theme.dart';
 import '../controller.dart';
 
-class Step2 extends GetWidget<RoleController> {
-  const Step2({super.key});
+class Step3 extends GetWidget<RoleController> {
+  const Step3({super.key});
   @override
   Widget build(BuildContext context) {
     var sizeh = MediaQuery.of(context).size.height;
@@ -21,7 +21,7 @@ class Step2 extends GetWidget<RoleController> {
             Align(
               alignment: Alignment.centerRight,
               child: Text(
-                "الأسم",
+                "رقم الهاتف",
                 style: TextStyle(
                     color: Palette.greyColor3,
                     fontWeight: FontWeight.w600,
@@ -32,7 +32,25 @@ class Step2 extends GetWidget<RoleController> {
             SizedBox(
               height: 15.h,
             ),
-            textFiled(controller: controller.name),
+            textFiled(controller: controller.mobile),
+            SizedBox(
+              height: 20.h,
+            ),
+            Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                "معرف التيلغرام",
+                style: TextStyle(
+                    color: Palette.greyColor3,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: "Tajawal",
+                    fontSize: 20.w),
+              ),
+            ),
+            SizedBox(
+              height: 15.h,
+            ),
+            textFiled(controller: controller.telegram)
           ],
         ));
   }

@@ -15,8 +15,8 @@ class textFiled extends StatelessWidget {
   const textFiled({
     super.key,
     required this.controller,
-    required this.headtext,
-    required this.hinttext,
+    this.headtext = "",
+    this.hinttext = "",
     this.isPassword = false,
     this.isEmail = false,
     this.icon,
@@ -28,31 +28,34 @@ class textFiled extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          headtext,
-          style: TextStyle(
-            fontFamily: 'Tajawal',
-            color: Colors.grey,
-            fontSize: 18.sp,
-          ),
-        ),
+        headtext.isNotEmpty
+            ? Text(
+                headtext,
+                style: TextStyle(
+                  fontFamily: 'Tajawal',
+                  color: Colors.grey,
+                  fontSize: 18.sp,
+                ),
+              )
+            : Container(),
         Container(
-          height: 40.h,
+          // height: 40.h,
           padding: EdgeInsets.only(left: 5),
-          // margin: EdgeInsets.symmetric(horizontal: width),
-          decoration: BoxDecoration(
-            color: Palette.whiteColor,
-            borderRadius: BorderRadius.circular(10),
-          ),
           child: TextFormField(
+            style: TextStyle(fontSize: 20.w),
             decoration: InputDecoration(
               icon: icon != null ? Icon(icon) : null,
               hintText: hinttext,
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderSide: BorderSide(color: Palette.greyColor2),
+                borderRadius: BorderRadius.circular(12),
               ),
+              focusedBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(color: Palette.blackColor),
+                  borderRadius: BorderRadius.circular(12)),
               hintStyle: Styles.hintText,
             ),
+            cursorColor: Palette.greyColor3,
             controller: controller,
             obscureText: isPassword,
             keyboardType:
