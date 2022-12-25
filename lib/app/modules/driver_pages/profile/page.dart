@@ -65,9 +65,9 @@ class DriverProfilePage extends GetView<DriverProfileController> {
                             image: AssetImage('assets/images/person.png'),
                           ),
                           ImgRadius: 35,
-                          IconRadius: 15,
-                          myIcon: Icon(Icons.swap_horiz_sharp),
-                          myColor: Palette.blueColor),
+                          IconRadius: 13,
+                          myIcon: Icon(Icons.edit,size: 15),
+                          myColor: Palette.blackColor),
 
                       const SizedBox(
                         height: 15,
@@ -101,6 +101,9 @@ class DriverProfilePage extends GetView<DriverProfileController> {
                           headtext: 'معرّف التلكرام',
                           hinttext: '@CsitElites'),
 
+                      const SizedBox(
+                        height: 20,
+                      ),
                       // drop down
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -157,7 +160,8 @@ class DriverProfilePage extends GetView<DriverProfileController> {
                         ),
                       ),
                     ),
-                    TextButton(onPressed: (){},
+                    TextButton (
+                        onPressed: (() => authController.logout()),
                         child:const Text(
                           'تسجيل الخروج',
                           style: TextStyle(color: Color(0xffFF6969),fontWeight: FontWeight.w800),
