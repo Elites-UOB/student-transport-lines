@@ -55,11 +55,8 @@ class AuthService extends GetxService {
           ? 'http://localhost:24954'
           : 'tech.csitelites.transport.lines://login-callback',
     );
-    print('==================================');
-    print(response);
     if (response) {
-      final data = await getPorfile();
-      return data;
+      return response;
     } else {
       return false;
     }
@@ -77,10 +74,6 @@ class AuthService extends GetxService {
       'province': province,
       'telegarm': telegram,
     }).eq('id', userId);
-
-    print('==================================');
-    print(data);
-
     return data;
   }
 
