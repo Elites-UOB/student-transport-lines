@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/Auth.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class AuthService extends GetxService {
   Future<AuthService> init() async => this;
@@ -84,7 +85,7 @@ class AuthService extends GetxService {
       final response = await _supabase.client.auth.signInWithOAuth(
         Provider.google,
         redirectTo: kIsWeb
-            ? 'http://localhost:3000'
+            ? 'http://localhost:5975'
             : 'tech.csitelites.transport.lines://login-callback',
       );
       print(response);
