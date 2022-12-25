@@ -1,0 +1,2354 @@
+[
+    {
+        "city_en": "Balak",
+        "city_ar": "بالك",
+        "region_en": "Rawanduz",
+        "region_ar": "راوندوز",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Barzan",
+        "city_ar": "بارزان",
+        "region_en": "Al-Zibar",
+        "region_ar": "الزيبار",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Bradost",
+        "city_ar": "برادوست",
+        "region_en": "Rawanduz",
+        "region_ar": "راوندوز",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Diana",
+        "city_ar": "ديانا",
+        "region_en": "Rawanduz",
+        "region_ar": "راوندوز",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Dibaga",
+        "city_ar": "ديبكة",
+        "region_en": "Makhmour",
+        "region_ar": "مخمور",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Gwyer",
+        "city_ar": "الكوير",
+        "region_en": "Makhmour",
+        "region_ar": "مخمور",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Haji Omaran",
+        "city_ar": "الحج عمران",
+        "region_en": "Rawanduz",
+        "region_ar": "راوندوز",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Harir",
+        "city_ar": "ديرة حرير",
+        "region_en": "Shaqlawa",
+        "region_ar": "شقلاوة",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Khailfan",
+        "city_ar": "خليفان",
+        "region_en": "Rawanduz",
+        "region_ar": "راوندوز",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Khoshnaw",
+        "city_ar": "خوشناو",
+        "region_en": "Shaqlawa",
+        "region_ar": "شقلاوة",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Markaz Erbil",
+        "city_ar": "مركز اربيل",
+        "region_en": "Erbil",
+        "region_ar": "اربيل",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Markaz Koysinjaq",
+        "city_ar": "مركز كويسنجق",
+        "region_en": "Koysinjaq",
+        "region_ar": "كويسنجق",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Markaz Makhmour",
+        "city_ar": "مركز مخمور",
+        "region_en": "Makhmour",
+        "region_ar": "مخمور",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Markaz Rawanduz",
+        "city_ar": "مركز راوندوز",
+        "region_en": "Rawanduz",
+        "region_ar": "راوندوز",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Mazouri Bala",
+        "city_ar": "مزوري بالا",
+        "region_en": "Al-Zibar",
+        "region_ar": "الزيبار",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Mergasur",
+        "city_ar": "ميركة سور",
+        "region_en": "Rawanduz",
+        "region_ar": "راوندوز",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Qaraj",
+        "city_ar": "القرج",
+        "region_en": "Makhmour",
+        "region_ar": "مخمور",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Qushtappa",
+        "city_ar": "قوش تبه",
+        "region_en": "Erbil",
+        "region_ar": "اربيل",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Salah Al-Din",
+        "city_ar": "صلاح الدين",
+        "region_en": "Shaqlawa",
+        "region_ar": "شقلاوة",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Shorsh",
+        "city_ar": "سورش",
+        "region_en": "Koysinjaq",
+        "region_ar": "كويسنجق",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Taq Taq",
+        "city_ar": "طق طق",
+        "region_en": "Koysinjaq",
+        "region_ar": "كويسنجق",
+        "province_en": "Erbil",
+        "province_ar": "اربيل"
+    },
+    {
+        "city_en": "Al-Amirya",
+        "city_ar": "العامرية",
+        "region_en": "Al-Falluja",
+        "region_ar": "الفلوجة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Baghdady",
+        "city_ar": "البغدادي",
+        "region_en": "Heet",
+        "region_ar": "هيت",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Forat",
+        "city_ar": "الفرات",
+        "region_en": "Heet",
+        "region_ar": "هيت",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Garma",
+        "city_ar": "الكرمة",
+        "region_en": "Al-Falluja",
+        "region_ar": "الفلوجة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Habbaniya",
+        "city_ar": "الحبانية",
+        "region_en": "Al-Ramadi",
+        "region_ar": "الرمادي",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Haqlaniya",
+        "city_ar": "الحقلانية",
+        "region_en": "Haditha",
+        "region_ar": "حديثة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Karabla",
+        "city_ar": "الكرابلة",
+        "region_en": "Al-Kaim",
+        "region_ar": "القائم",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Nekhaeeb",
+        "city_ar": "النخيب",
+        "region_en": "Al-Rutba",
+        "region_ar": "الرطبة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Obiadi",
+        "city_ar": "العبيدي",
+        "region_en": "Al-Kaim",
+        "region_ar": "القائم",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Rahhaliya",
+        "city_ar": "الرحالية",
+        "region_en": "Al-Ramadi",
+        "region_ar": "الرمادي",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Rummaneh",
+        "city_ar": "الرمانة",
+        "region_en": "Al-Kaim",
+        "region_ar": "القائم",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Walid",
+        "city_ar": "الوليد",
+        "region_en": "Al-Rutba",
+        "region_ar": "الرطبة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Barwana",
+        "city_ar": "بروانه",
+        "region_en": "Haditha",
+        "region_ar": "حديثة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Kubaisa",
+        "city_ar": "كبيسة",
+        "region_en": "Heet",
+        "region_ar": "هيت",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Markaz Al-Falluja",
+        "city_ar": "مركز الفلوجة",
+        "region_en": "Al-Falluja",
+        "region_ar": "الفلوجة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Markaz Al-Ramadi",
+        "city_ar": "مركز الرمادي",
+        "region_en": "Al-Ramadi",
+        "region_ar": "الرمادي",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Markaz Al-Rutba",
+        "city_ar": "مركز الرطبة",
+        "region_en": "Al-Rutba",
+        "region_ar": "الرطبة",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Markaz Ana",
+        "city_ar": "مركز عنه",
+        "region_en": "Ana",
+        "region_ar": "عنه",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Markaz Heet",
+        "city_ar": "مركز هيت",
+        "region_en": "Heet",
+        "region_ar": "هيت",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Rawa",
+        "city_ar": "راوه",
+        "region_en": "Ana",
+        "region_ar": "عنه",
+        "province_en": "Al-Anbar",
+        "province_ar": "الانبار"
+    },
+    {
+        "city_en": "Al-Bahhar",
+        "city_ar": "البحار",
+        "region_en": "Al-Faw",
+        "region_ar": "الفاو",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Al-Dair",
+        "city_ar": "الدير",
+        "region_en": "Al-Qurna",
+        "region_ar": "القرنة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Al-Hartha",
+        "city_ar": "الهارثة",
+        "region_en": "Al-Basrah",
+        "region_ar": "البصرة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Al-Howweir",
+        "city_ar": "الهوير",
+        "region_en": "Al-Midaina",
+        "region_ar": "المدينة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Al-Nashwa",
+        "city_ar": "النشوة",
+        "region_en": "Shat Al-Arab",
+        "region_ar": "شط العرب",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Al-Siba",
+        "city_ar": "السيبة",
+        "region_en": "Abu Al-Khaseeb",
+        "region_ar": "ابي الخصيب",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Al-Thagar",
+        "city_ar": "الثغر",
+        "region_en": "Al-Qurna",
+        "region_ar": "القرنة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Markaz Abu Al-Khaseeb",
+        "city_ar": "مركز ابي الخصيب",
+        "region_en": "Abu Al-Khaseeb",
+        "region_ar": "ابي الخصيب",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Markaz Al-Basrah",
+        "city_ar": "مركز البصرة",
+        "region_en": "Al-Basrah",
+        "region_ar": "البصرة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Markaz Al-Faw",
+        "city_ar": "مركز الفاو",
+        "region_en": "Al-Faw",
+        "region_ar": "الفاو",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Markaz Al-Midaina",
+        "city_ar": "مركز المدينة",
+        "region_en": "Al-Midaina",
+        "region_ar": "المدينة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Markaz Al-Qurna",
+        "city_ar": "مركز القرنة",
+        "region_en": "Al-Qurna",
+        "region_ar": "القرنة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Markaz Al-Zubair",
+        "city_ar": "مركز الزبير",
+        "region_en": "Al-Zubair",
+        "region_ar": "الزبير",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Markaz Shat Al-Arab",
+        "city_ar": "مركز شط العرب",
+        "region_en": "Shat Al-Arab",
+        "region_ar": "شط العرب",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Outba",
+        "city_ar": "عتبة",
+        "region_en": "Shat Al-Arab",
+        "region_ar": "شط العرب",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Safwan",
+        "city_ar": "سفوان",
+        "region_en": "Al-Zubair",
+        "region_ar": "الزبير",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Talha",
+        "city_ar": "طلحة",
+        "region_en": "Al-Midaina",
+        "region_ar": "المدينة",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Um Qasr",
+        "city_ar": "ام قصر",
+        "region_en": "Al-Zubair",
+        "region_ar": "الزبير",
+        "province_en": "Al-Basrah",
+        "province_ar": "البصرة"
+    },
+    {
+        "city_en": "Agjalare",
+        "city_ar": "ئاغجة لةر",
+        "region_en": "Chamchamal",
+        "region_ar": "جمجمال",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Bazian",
+        "city_ar": "بازيان",
+        "region_en": "Al-Sulaymaniyah",
+        "region_ar": "السليمانية",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Bebaz",
+        "city_ar": "بيباز",
+        "region_en": "Kalar",
+        "region_ar": "كلار",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Beyara",
+        "city_ar": "بيارة",
+        "region_en": "Halabcha",
+        "region_ar": "حلبجة",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Bitwana",
+        "city_ar": "بتوانه",
+        "region_en": "Rania",
+        "region_ar": "رانية",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Cenkaw",
+        "city_ar": "سنكاو",
+        "region_en": "Chamchamal",
+        "region_ar": "جمجمال",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Gnareen",
+        "city_ar": "جنارين",
+        "region_en": "Dokan",
+        "region_ar": "دوكان",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Hero",
+        "city_ar": "هيرو",
+        "region_en": "Pshdar",
+        "region_ar": "بشدر",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Kadr Karam",
+        "city_ar": "قادر كرم",
+        "region_en": "Chamchamal",
+        "region_ar": "جمجمال",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Karmak",
+        "city_ar": "كرمك",
+        "region_en": "Panjwin",
+        "region_ar": "بنجوين",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Khourmal",
+        "city_ar": "خورمال",
+        "region_en": "Halabcha",
+        "region_ar": "حلبجة",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Chamchamal",
+        "city_ar": "مركز جمجمال",
+        "region_en": "Chamchamal",
+        "region_ar": "جمجمال",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Derbendikhan",
+        "city_ar": "مركز دربندخان",
+        "region_en": "Derbendikhan",
+        "region_ar": "دربندخان",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Halabja",
+        "city_ar": "مركز حلبجة",
+        "region_en": "Halabcha",
+        "region_ar": "حلبجة",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Kalar",
+        "city_ar": "مركز كلار",
+        "region_en": "Kalar",
+        "region_ar": "كلار",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Panjwin",
+        "city_ar": "مركز بنجوين",
+        "region_en": "Panjwin",
+        "region_ar": "بنجوين",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Pshdar",
+        "city_ar": "مركز بشدر",
+        "region_en": "Pshdar",
+        "region_ar": "بشدر",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Rania",
+        "city_ar": "مركز رانية",
+        "region_en": "Rania",
+        "region_ar": "رانية",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Markaz Sharbazher",
+        "city_ar": "مركز شهربازار",
+        "region_en": "Sharbazher",
+        "region_ar": "شهربازار",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Mawat",
+        "city_ar": "ماوت",
+        "region_en": "Sharbazher",
+        "region_ar": "شهربازار",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Mirka",
+        "city_ar": "ميركه",
+        "region_en": "Rania",
+        "region_ar": "رانية",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Nawdasht",
+        "city_ar": "ناودشت",
+        "region_en": "Pshdar",
+        "region_ar": "بشدر",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Qaradagh",
+        "city_ar": "قره داغ",
+        "region_en": "Al-Sulaymaniyah",
+        "region_ar": "السليمانية",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Sarchnar",
+        "city_ar": "سرجنار",
+        "region_en": "Al-Sulaymaniyah",
+        "region_ar": "السليمانية",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Saruchik",
+        "city_ar": "سروجك",
+        "region_en": "Sharbazher",
+        "region_ar": "شهربازار",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Shahrazur",
+        "city_ar": "شهرزور",
+        "region_en": "Halabcha",
+        "region_ar": "حلبجة",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Siwail",
+        "city_ar": "سويل",
+        "region_en": "Sharbazher",
+        "region_ar": "شهربازار",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Sourdash",
+        "city_ar": "سورداش",
+        "region_en": "Dokan",
+        "region_ar": "دوكان",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Tilako",
+        "city_ar": "تيلاكو",
+        "region_en": "Kalar",
+        "region_ar": "كلار",
+        "province_en": "Al-Sulaymaniyah",
+        "province_ar": "السليمانية"
+    },
+    {
+        "city_en": "Al-Bdair",
+        "city_ar": "البدير",
+        "region_en": "Afaq",
+        "region_ar": "عفك",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Daghara",
+        "city_ar": "الدغارة",
+        "region_en": "Al-Diwaniya",
+        "region_ar": "الديوانية",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Fawwar",
+        "city_ar": "الفوار",
+        "region_en": "Afaq",
+        "region_ar": "عفك",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Mihanawiya",
+        "city_ar": "المهناوية",
+        "region_en": "Al-Shamiya",
+        "region_ar": "الشامية",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Sadeer",
+        "city_ar": "السدير",
+        "region_en": "Al-Hamza",
+        "region_ar": "الحمزة",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Saniya",
+        "city_ar": "السنية",
+        "region_en": "Al-Diwaniya",
+        "region_ar": "الديوانية",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Shafeia",
+        "city_ar": "الشافعية",
+        "region_en": "Al-Diwaniya",
+        "region_ar": "الديوانية",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Shinafiya",
+        "city_ar": "الشنافية",
+        "region_en": "Al-Hamza",
+        "region_ar": "الحمزة",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Ghammas",
+        "city_ar": "غماس",
+        "region_en": "Al-Shamiya",
+        "region_ar": "الشامية",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Markaz Afaq",
+        "city_ar": "مركز عفك",
+        "region_en": "Afaq",
+        "region_ar": "عفك",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Markaz Al-Diwaniya",
+        "city_ar": "مركز الديوانية",
+        "region_en": "Al-Diwaniya",
+        "region_ar": "الديوانية",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Markaz Al-Hamza",
+        "city_ar": "مركز الحمزة",
+        "region_en": "Al-Hamza",
+        "region_ar": "الحمزة",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Sumer",
+        "city_ar": "سومر",
+        "region_en": "Afaq",
+        "region_ar": "عفك",
+        "province_en": "Al-Qadissiya",
+        "province_ar": "القادسية"
+    },
+    {
+        "city_en": "Al-Hilal",
+        "city_ar": "الهلال",
+        "region_en": "Al-Rumaitha",
+        "region_ar": "الرميثة",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Al-Majd",
+        "city_ar": "المجد",
+        "region_en": "Al-Rumaitha",
+        "region_ar": "الرميثة",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Al-Najmi",
+        "city_ar": "النجمي",
+        "region_en": "Al-Rumaitha",
+        "region_ar": "الرميثة",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Al-Sowair",
+        "city_ar": "السوير",
+        "region_en": "Al-Samawa",
+        "region_ar": "السماوة",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Al-Warka",
+        "city_ar": "الوركاء",
+        "region_en": "Al-Rumaitha",
+        "region_ar": "الرميثة",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Markaz Al-Khidhir",
+        "city_ar": "مركز الخضر",
+        "region_en": "Al-Khidhir",
+        "region_ar": "الخضر",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Markaz Al-Rumaitha",
+        "city_ar": "مركز الرميثة",
+        "region_en": "Al-Rumaitha",
+        "region_ar": "الرميثة",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Markaz Al-Salman",
+        "city_ar": "مركز السلمان",
+        "region_en": "Al-Salman",
+        "region_ar": "السلمان",
+        "province_en": "Al-Muthanna",
+        "province_ar": "المثنى"
+    },
+    {
+        "city_en": "Al-Haydariya",
+        "city_ar": "الحيدرية",
+        "region_en": "Al-Najaf",
+        "region_ar": "النجف",
+        "province_en": "Al-Najaf",
+        "province_ar": "النجف"
+    },
+    {
+        "city_en": "Al-Heera",
+        "city_ar": "الحيرة",
+        "region_en": "Al-Manathera",
+        "region_ar": " المناذرة",
+        "province_en": "Al-Najaf",
+        "province_ar": "النجف"
+    },
+    {
+        "city_en": "Al-Huriya",
+        "city_ar": "الحرية",
+        "region_en": "Al-Kufa",
+        "region_ar": "الكوفة",
+        "province_en": "Al-Najaf",
+        "province_ar": "النجف"
+    },
+    {
+        "city_en": "Al-Shabaka",
+        "city_ar": "الشبكة",
+        "region_en": "Al-Najaf",
+        "region_ar": "النجف",
+        "province_en": "Al-Najaf",
+        "province_ar": "النجف"
+    },
+    {
+        "city_en": "Markaz Al-Kufa",
+        "city_ar": "مركز الكوفة",
+        "region_en": "Al-Kufa",
+        "region_ar": "الكوفة",
+        "province_en": "Al-Najaf",
+        "province_ar": "النجف"
+    },
+    {
+        "city_en": "Markaz Al-Najaf",
+        "city_ar": "مركز النجف",
+        "region_en": "Al-Najaf",
+        "region_ar": "النجف",
+        "province_en": "Al-Najaf",
+        "province_ar": "النجف"
+    },
+    {
+        "city_en": "Abi Gharaq",
+        "city_ar": "ابي غرق",
+        "region_en": "Al-Hilla",
+        "region_ar": "الحلة",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Al-Emam",
+        "city_ar": "الامام",
+        "region_en": "Al-Mahaweel",
+        "region_ar": "المحاويل",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Al-Iskandaria",
+        "city_ar": "الاسكندرية",
+        "region_en": "Al-Mussyab",
+        "region_ar": "المسيب",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Al-Kifil",
+        "city_ar": "الكفل",
+        "region_en": "Al-Hilla",
+        "region_ar": "الحلة",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Al-Madhatiya",
+        "city_ar": "المدحتية",
+        "region_en": "Al-Hashimiya",
+        "region_ar": "الهاشمية",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Al-Mashroo",
+        "city_ar": "المشروع",
+        "region_en": "Al-Mahaweel",
+        "region_ar": "المحاويل",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Al-Qasim",
+        "city_ar": "القاسم",
+        "region_en": "Al-Hashimiya",
+        "region_ar": "الهاشمية",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Al-Shomaly",
+        "city_ar": "الشوملي",
+        "region_en": "Al-Hashimiya",
+        "region_ar": "الهاشمية",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Jurf Al-Sakhar",
+        "city_ar": "جرف الصخر",
+        "region_en": "Al-Mussyab",
+        "region_ar": "المسيب",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Markaz Al-Hilla",
+        "city_ar": "مركز الحلة",
+        "region_en": "Al-Hilla",
+        "region_ar": "الحلة",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Markaz Al-Mahawil",
+        "city_ar": "مركز المحاويل",
+        "region_en": "Al-Mahaweel",
+        "region_ar": "المحاويل",
+        "province_en": "Babil",
+        "province_ar": "بابل"
+    },
+    {
+        "city_en": "Abu Ghraib",
+        "city_ar": "ابي غريب",
+        "region_en": "Al-Kadhmiyah",
+        "region_ar": "الكاظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Fahama",
+        "city_ar": "الفحامة",
+        "region_en": "Al-Adhamiya",
+        "region_ar": "الاعظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Jisr",
+        "city_ar": "الجسر",
+        "region_en": "Al-Mada'in",
+        "region_ar": "المدائن",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Karrada Al-Sharqia",
+        "city_ar": "الكرادة الشرقية",
+        "region_en": "Al-Risafa",
+        "region_ar": "الرصافة",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Latifya",
+        "city_ar": "اللطيفية",
+        "region_en": "Al-Mahmoudiya",
+        "region_ar": "المحمودية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Mamoon",
+        "city_ar": "المأمون",
+        "region_en": "Al-Karkh",
+        "region_ar": "الكرخ",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Mansour",
+        "city_ar": "المنصور",
+        "region_en": "Al-Karkh",
+        "region_ar": "الكرخ",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Rashdia",
+        "city_ar": "الراشدية",
+        "region_en": "Al-Adhamiya",
+        "region_ar": "الاعظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Rasheed",
+        "city_ar": "الرشيد",
+        "region_en": "Al-Mahmoudiya",
+        "region_ar": "المحمودية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Taji",
+        "city_ar": "التاجي",
+        "region_en": "Al-Kadhmiyah",
+        "region_ar": "الكاظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Tarmiya",
+        "city_ar": "الطارمية",
+        "region_en": "Al-Kadhmiyah",
+        "region_ar": "الكاظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Wihda",
+        "city_ar": "الوحدة",
+        "region_en": "Al-Mada'in",
+        "region_ar": "المدائن",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Yousifya",
+        "city_ar": "اليوسفية",
+        "region_en": "Al-Mahmoudiya",
+        "region_ar": "المحمودية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Baghdad Al-Jedeeda",
+        "city_ar": "بغداد الجديدة",
+        "region_en": "Al-Risafa",
+        "region_ar": "الرصافة",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Markaz Al-Adhamiya",
+        "city_ar": "مركز الاعظمية",
+        "region_en": "Al-Adhamiya",
+        "region_ar": "الاعظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Markaz Al-Kadhimiya",
+        "city_ar": "مركز الكاظمية",
+        "region_en": "Al-Kadhmiyah",
+        "region_ar": "الكاظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Markaz Al-Karkh",
+        "city_ar": "مركز الكرخ",
+        "region_en": "Al-Karkh",
+        "region_ar": "الكرخ",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Markaz Al-Mada'in",
+        "city_ar": "مركز المدائن",
+        "region_en": "Al-Mada'in",
+        "region_ar": "المدائن",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Markaz Al-Mahmoudiya",
+        "city_ar": "مركز المحمودية",
+        "region_en": "Al-Mahmoudiya",
+        "region_ar": "المحمودية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Markaz Al-Thawra",
+        "city_ar": "مركز الثورة",
+        "region_en": "Al-Thawra",
+        "region_ar": "الثورة",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "That al Salasil",
+        "city_ar": "ذات السلاسل",
+        "region_en": "Al-Kadhmiyah",
+        "region_ar": "الكاظمية",
+        "province_en": "Baghdad",
+        "province_ar": "بغداد"
+    },
+    {
+        "city_en": "Al-Duski",
+        "city_ar": "الدوسكي",
+        "region_en": "Duhok",
+        "region_ar": "دهوك",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Barwari Bala",
+        "city_ar": "برواري بالا",
+        "region_en": "Al-Amadiya",
+        "region_ar": "العمادية",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Bateel",
+        "city_ar": "باتيل",
+        "region_en": "Sumail",
+        "region_ar": "سميل",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Batifa",
+        "city_ar": "باتيفا",
+        "region_en": "Zakho",
+        "region_ar": "زاخو",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Dercar",
+        "city_ar": "دركار",
+        "region_en": "Zakho",
+        "region_ar": "زاخو",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Fayde",
+        "city_ar": "فايدة",
+        "region_en": "Sumail",
+        "region_ar": "سميل",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Markaz Al-Amadiya",
+        "city_ar": "مركز العمادية",
+        "region_en": "Al-Amadiya",
+        "region_ar": "العمادية",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Markaz Duhok",
+        "city_ar": "مركز دهوك",
+        "region_en": "Duhok",
+        "region_ar": "دهوك",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Markaz Sumail",
+        "city_ar": "مركز سميل",
+        "region_en": "Sumail",
+        "region_ar": "سميل",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Markaz Zakho",
+        "city_ar": "مركز زاخو",
+        "region_en": "Zakho",
+        "region_ar": "زاخو",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Nerwa Rekan",
+        "city_ar": "نروة ريكان",
+        "region_en": "Al-Amadiya",
+        "region_ar": "العمادية",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Sarsank",
+        "city_ar": "سرسنك",
+        "region_en": "Al-Amadiya",
+        "region_ar": "العمادية",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Sindi",
+        "city_ar": "سندي",
+        "region_en": "Sumail",
+        "region_ar": "سميل",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Zawita",
+        "city_ar": "زاويتة",
+        "region_en": "Duhok",
+        "region_ar": "دهوك",
+        "province_en": "Duhok",
+        "province_ar": "دهوك"
+    },
+    {
+        "city_en": "Al-Atheem",
+        "city_ar": "العظيم",
+        "region_en": "Al-Khalis",
+        "region_ar": "الخالص",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Al-Mansouriyah",
+        "city_ar": "المنصورية",
+        "region_en": "Al-Khalis",
+        "region_ar": "الخالص",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Al-Saadiya",
+        "city_ar": "السعدية",
+        "region_en": "Khanaqin",
+        "region_ar": "خانقين",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Al-Wajihia",
+        "city_ar": "الوجيهية",
+        "region_en": "Al-Muqdadiya",
+        "region_ar": "المقدادية",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Beni Saad",
+        "city_ar": "بني سعد",
+        "region_en": "Baquba",
+        "region_ar": "بعقوبة",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Buhriz",
+        "city_ar": "بهرز",
+        "region_en": "Baquba",
+        "region_ar": "بعقوبة",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Hibhib",
+        "city_ar": "هبهب",
+        "region_en": "Al-Khalis",
+        "region_ar": "الخالص",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Jabarra",
+        "city_ar": "جبارة",
+        "region_en": "Kifri",
+        "region_ar": "كفري",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Jalawla",
+        "city_ar": "جلولاء",
+        "region_en": "Khanaqin",
+        "region_ar": "خانقين",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Kanan",
+        "city_ar": "كنعان",
+        "region_en": "Baquba",
+        "region_ar": "بعقوبة",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Mandali",
+        "city_ar": "مندلي",
+        "region_en": "Baladruz",
+        "region_ar": "مندلي",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Markaz Al-Khalis",
+        "city_ar": "مركز الخالص",
+        "region_en": "Al-Khalis",
+        "region_ar": "الخالص",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Markaz Al-Muqdadiya",
+        "city_ar": "مركز المقدادية",
+        "region_en": "Al-Muqdadiya",
+        "region_ar": "المقدادية",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Markaz Baladruz",
+        "city_ar": "مركز بلدروز",
+        "region_en": "Baladruz",
+        "region_ar": "مندلي",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Markaz Khanaqin",
+        "city_ar": "مركز خانقين",
+        "region_en": "Khanaqin",
+        "region_ar": "خانقين",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Markaz Kifri",
+        "city_ar": "مركز كفري",
+        "region_en": "Kifri",
+        "region_ar": "كفري",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Midan",
+        "city_ar": "ميدان",
+        "region_en": "Khanaqin",
+        "region_ar": "خانقين",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Qalaa't Ansab",
+        "city_ar": "قلعة انصاب",
+        "region_en": "Al-Khalis",
+        "region_ar": "الخالص",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Qara Tabe",
+        "city_ar": "قرة تبة",
+        "region_en": "Kifri",
+        "region_ar": "كفري",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Qaratu",
+        "city_ar": "قرة تو",
+        "region_en": "Khanaqin",
+        "region_ar": "خانقين",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Qazanya",
+        "city_ar": "قزانية",
+        "region_en": "Baladruz",
+        "region_ar": "مندلي",
+        "province_en": "Diyala",
+        "province_ar": "ديالى"
+    },
+    {
+        "city_en": "Akaika",
+        "city_ar": "عكيكة",
+        "region_en": "Suq Al-Shoyokh",
+        "region_ar": "سوق الشيوخ",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Battha'a",
+        "city_ar": "البطحاء",
+        "region_en": "Al-Nasiriya",
+        "region_ar": "الناصرية",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Dawaya",
+        "city_ar": "الدواية",
+        "region_en": "Al-Shatra",
+        "region_ar": "الشطرة",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Fadhliya",
+        "city_ar": "الفضلية",
+        "region_en": "Suq Al-Shoyokh",
+        "region_ar": "سوق الشيوخ",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Fajer",
+        "city_ar": "الفجر",
+        "region_en": "Al-Rifai",
+        "region_ar": "الرفاعي",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Fuhood",
+        "city_ar": "الفهود",
+        "region_en": "Al-Chibayish",
+        "region_ar": "الجبايش",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Gharraf",
+        "city_ar": "القراف",
+        "region_en": "Al-Shatra",
+        "region_ar": "الشطرة",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Hammar",
+        "city_ar": "الحمار",
+        "region_en": "Al-Chibayish",
+        "region_ar": "الجبايش",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Islah",
+        "city_ar": "الاصلاح",
+        "region_en": "Al-Nasiriya",
+        "region_ar": "الناصرية",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Nasr",
+        "city_ar": "النصر",
+        "region_en": "Al-Rifai",
+        "region_ar": "الرفاعي",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Al-Tar",
+        "city_ar": "الطار",
+        "region_en": "Suq Al-Shoyokh",
+        "region_ar": "سوق الشيوخ",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Garmat Beni Said",
+        "city_ar": "كرمة بني سعد",
+        "region_en": "Suq Al-Shoyokh",
+        "region_ar": "سوق الشيوخ",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Markaz Al-Chibayish",
+        "city_ar": "مركز الجبايش",
+        "region_en": "Al-Chibayish",
+        "region_ar": "الجبايش",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Markaz Al-Nasiriya",
+        "city_ar": "مركزالناصرية",
+        "region_en": "Al-Nasiriya",
+        "region_ar": "الناصرية",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Markaz Al-Rifai",
+        "city_ar": "مركز الرفاعي",
+        "region_en": "Al-Rifai",
+        "region_ar": "الرفاعي",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Markaz Al-Shatra",
+        "city_ar": "مركز الشطرة",
+        "region_en": "Al-Shatra",
+        "region_ar": "الشطرة",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Qalat Siker",
+        "city_ar": "قلعة السكر",
+        "region_en": "Al-Rifai",
+        "region_ar": "الرفاعي",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Said Dekhil",
+        "city_ar": "سيد خليل",
+        "region_en": "Al-Nasiriya",
+        "region_ar": "الناصرية",
+        "province_en": "Thi Qar",
+        "province_ar": "ذي قار"
+    },
+    {
+        "city_en": "Abu Dalf",
+        "city_ar": "ابو دلف",
+        "region_en": "Al-Daur",
+        "region_ar": "الدور",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Alam",
+        "city_ar": "العلم",
+        "region_en": "Tikrit",
+        "region_ar": "تكريت",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Dujeel",
+        "city_ar": "الدجيل",
+        "region_en": "Balad",
+        "region_ar": "بلد",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Duloeyah",
+        "city_ar": "الضلوعية",
+        "region_en": "Balad",
+        "region_ar": "بلد",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Esshaqi",
+        "city_ar": "الاسحاقي",
+        "region_en": "Balad",
+        "region_ar": "بلد",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Muotasim",
+        "city_ar": "المعتصم",
+        "region_en": "Samarra",
+        "region_ar": "سامراء",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Synia",
+        "city_ar": "الصينية",
+        "region_en": "Beygee",
+        "region_ar": "بيجي",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Tharthar",
+        "city_ar": "الثرثار",
+        "region_en": "Samarra",
+        "region_ar": "سامراء",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Ameraly",
+        "city_ar": "آمرلي",
+        "region_en": "Tooz Khurmato",
+        "region_ar": "طوز خورماتو",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Dijla",
+        "city_ar": "دجلة",
+        "region_en": "Samarra",
+        "region_ar": "سامراء",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Hamreen",
+        "city_ar": "حمرين",
+        "region_en": "Al-Daur",
+        "region_ar": "الدور",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Makkhoul",
+        "city_ar": "مكحول",
+        "region_en": "Beygee",
+        "region_ar": "بيجي",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Markaz Al-Shirqat",
+        "city_ar": "مركز الشرقاط",
+        "region_en": "Al-Shirqat",
+        "region_ar": "الشرقاط",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Markaz Beygee",
+        "city_ar": "مركز بيجي",
+        "region_en": "Beygee",
+        "region_ar": "بيجي",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Markaz Samarra",
+        "city_ar": "مركز سامراء",
+        "region_en": "Samarra",
+        "region_ar": "سامراء",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Markaz Tooz Khurmato",
+        "city_ar": "مركز طوز خورماتو",
+        "region_en": "Tooz Khurmato",
+        "region_ar": "طوز خورماتو",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Sulaiman Baig",
+        "city_ar": "سليمان بيك",
+        "region_en": "Tooz Khurmato",
+        "region_ar": "طوز خورماتو",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Um Al-Qura",
+        "city_ar": "ام القرى",
+        "region_en": "Tikrit",
+        "region_ar": "تكريت",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Yathreb",
+        "city_ar": "يثرب",
+        "region_en": "Balad",
+        "region_ar": "بلد",
+        "province_en": "Salah Al-Din",
+        "province_ar": "صلاح الدين"
+    },
+    {
+        "city_en": "Al-Hassainya",
+        "city_ar": "الحسينية",
+        "region_en": "Kerbela",
+        "region_ar": "كربلاء",
+        "province_en": "Kerbala",
+        "province_ar": "كربلاء"
+    },
+    {
+        "city_en": "Al-Jadwal Al-Ghrabi",
+        "city_ar": "الجدول الغربي",
+        "region_en": "Al-Hindiya",
+        "region_ar": "الهندية",
+        "province_en": "Kerbala",
+        "province_ar": "كربلاء"
+    },
+    {
+        "city_en": "Markaz Ain Al-Tamur",
+        "city_ar": "مركز عين التمر",
+        "region_en": "Ain Al-Tamur",
+        "region_ar": "عين التمر",
+        "province_en": "Kerbala",
+        "province_ar": "كربلاء"
+    },
+    {
+        "city_en": "Markaz Al-Hindiya",
+        "city_ar": "مركز الهندية",
+        "region_en": "Al-Hindiya",
+        "region_ar": "الهندية",
+        "province_en": "Kerbala",
+        "province_ar": "كربلاء"
+    },
+    {
+        "city_en": "Markaz Kerbela",
+        "city_ar": "مركز كربلاء",
+        "region_en": "Kerbela",
+        "region_ar": "كربلاء",
+        "province_en": "Kerbala",
+        "province_ar": "كربلاء"
+    },
+    {
+        "city_en": "Al-Abbasi",
+        "city_ar": "العباسية",
+        "region_en": "Al-Hawiga",
+        "region_ar": "الحويجة",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Al-Multaka",
+        "city_ar": "الملتقى",
+        "region_en": "Kirkuk",
+        "region_ar": "كركوك",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Al-Rashad",
+        "city_ar": "الرشاد",
+        "region_en": "Daquq",
+        "region_ar": "داقوق",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Al-Riyadh",
+        "city_ar": "الرياض",
+        "region_en": "Al-Hawiga",
+        "region_ar": "الحويجة",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Al-Zab",
+        "city_ar": "الزاب",
+        "region_en": "Al-Hawiga",
+        "region_ar": "الحويجة",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Altun Qupri",
+        "city_ar": "التون كوبري",
+        "region_en": "Dibis",
+        "region_ar": "دبس",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Lilan",
+        "city_ar": "ليلان",
+        "region_en": "Kirkuk",
+        "region_ar": "كركوك",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Markaz Al-Hawiga",
+        "city_ar": "مركز الحويجة",
+        "region_en": "Al-Hawiga",
+        "region_ar": "الحويجة",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Markaz Daquq",
+        "city_ar": "مركز داقوق",
+        "region_en": "Daquq",
+        "region_ar": "داقوق",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Markaz Dibis",
+        "city_ar": "مركز الدبس",
+        "region_en": "Dibis",
+        "region_ar": "دبس",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Markaz Kirkuk",
+        "city_ar": "مركز كركوك",
+        "region_en": "Kirkuk",
+        "region_ar": "كركوك",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Qura Hanjeer",
+        "city_ar": "قرة هنجير",
+        "region_en": "Kirkuk",
+        "region_ar": "كركوك",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Sarkran",
+        "city_ar": "سركران",
+        "region_en": "Dibis",
+        "region_ar": "دبس",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Shwan",
+        "city_ar": "شوان",
+        "region_en": "Kirkuk",
+        "region_ar": "كركوك",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Taza Khormato",
+        "city_ar": "تازة خورماتو",
+        "region_en": "Kirkuk",
+        "region_ar": "كركوك",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Yaijy",
+        "city_ar": "يايجي",
+        "region_en": "Kirkuk",
+        "region_ar": "كركوك",
+        "province_en": "Kirkuk",
+        "province_ar": "كركوك"
+    },
+    {
+        "city_en": "Al-Adel",
+        "city_ar": "العدل",
+        "region_en": "Al-Mejar Al-Kabir",
+        "region_ar": "المجر الكبير",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Al-Aziz",
+        "city_ar": "العزير",
+        "region_en": "Al-Mejar Al-Kabir",
+        "region_ar": "المجر الكبير",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Al-Msharah",
+        "city_ar": "المشرح",
+        "region_en": "Al-Kahla",
+        "region_ar": "الكحلاء",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Al-Salam",
+        "city_ar": "السلام",
+        "region_en": "Al-Maimouna",
+        "region_ar": "الميمونة",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Al-Teeb",
+        "city_ar": "الطيب",
+        "region_en": "Al-Amara",
+        "region_ar": "العمارة",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Ali Al-Sharki",
+        "city_ar": "علي الشرقي",
+        "region_en": "Ali Al-Gharbi",
+        "region_ar": "علي الغربي",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Beni Hasheem",
+        "city_ar": "بني هاشم",
+        "region_en": "Al-Kahla",
+        "region_ar": "الكحلاء",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Kumait",
+        "city_ar": "كميت",
+        "region_en": "Al-Amara",
+        "region_ar": "العمارة",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Markaz Al-Kahla",
+        "city_ar": "مركز الكحلاء",
+        "region_en": "Al-Kahla",
+        "region_ar": "الكحلاء",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Markaz Al-Maimouna",
+        "city_ar": "مركز الميمونة",
+        "region_en": "Al-Maimouna",
+        "region_ar": "الميمونة",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Markaz Ali Al-Gharbi",
+        "city_ar": "مركز علي الغربي",
+        "region_en": "Ali Al-Gharbi",
+        "region_ar": "علي الغربي",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Markaz Qalat Saleh",
+        "city_ar": "مركز قلعة صالح",
+        "region_en": "Qalat Saleh",
+        "region_ar": "قلعة صالح",
+        "province_en": "Maysan",
+        "province_ar": "ميسان"
+    },
+    {
+        "city_en": "Al-Ayadiya",
+        "city_ar": "العياضية",
+        "region_en": "Telafar",
+        "region_ar": "تلعفر",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Al-Muhamadath",
+        "city_ar": "المحمداث",
+        "region_en": "Al-Mosul",
+        "region_ar": "الموصل",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Al-Qahtanya",
+        "city_ar": "القحطانية",
+        "region_en": "Al-Baaj",
+        "region_ar": "البعاج",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Al-Qairawan",
+        "city_ar": "القيروان",
+        "region_en": "Sinjar",
+        "region_ar": "سنجار",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Al-Qayarra",
+        "city_ar": "القيارة",
+        "region_en": "Al-Mosul",
+        "region_ar": "الموصل",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Al-Qosh",
+        "city_ar": "القوش",
+        "region_en": "Tilkaef",
+        "region_ar": "تلكيف",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Al-Shamal",
+        "city_ar": "الشمال",
+        "region_en": "Sinjar",
+        "region_ar": "سنجار",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Atreesh",
+        "city_ar": "ئةتريش",
+        "region_en": "Al-Shikhan",
+        "region_ar": "الشيخان",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Bardarash",
+        "city_ar": "بردرش",
+        "region_en": "Aqra",
+        "region_ar": "عقرة",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Bartilla",
+        "city_ar": "برطلة",
+        "region_en": "Al-Hamdaniya",
+        "region_ar": "الحمدانية",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Bashiqa",
+        "city_ar": "بعشيقة",
+        "region_en": "Al-Mosul",
+        "region_ar": "الموصل",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Begeel",
+        "city_ar": "بجيل",
+        "region_en": "Aqra",
+        "region_ar": "عقرة",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Dinarta",
+        "city_ar": "دينارتة",
+        "region_en": "Aqra",
+        "region_ar": "عقرة",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Hammam Al-Alil",
+        "city_ar": "حمام العليل",
+        "region_en": "Al-Mosul",
+        "region_ar": "الموصل",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Kurdsein",
+        "city_ar": "كردسين",
+        "region_en": "Aqra",
+        "region_ar": "عقرة",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Al-Baaj",
+        "city_ar": "مركز البعاج",
+        "region_en": "Al-Baaj",
+        "region_ar": "البعاج",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Al-Hamdaniya",
+        "city_ar": "مركز الحمدانية",
+        "region_en": "Al-Hamdaniya",
+        "region_ar": "الحمدانية",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Al-Shikhan",
+        "city_ar": "مركز الشيخان",
+        "region_en": "Al-Shikhan",
+        "region_ar": "الشيخان",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Aqra",
+        "city_ar": "مركز عقرة",
+        "region_en": "Aqra",
+        "region_ar": "عقرة",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Hatra",
+        "city_ar": "مركز الحضر",
+        "region_en": "Al-Hatra",
+        "region_ar": "الحضر",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Sinjar",
+        "city_ar": "مركز سنجار",
+        "region_en": "Sinjar",
+        "region_ar": "سنجار",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Telafar",
+        "city_ar": "مركز تلعفر",
+        "region_en": "Telafar",
+        "region_ar": "تلعفر",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Markaz Tilkaef",
+        "city_ar": "مركز تلكيف",
+        "region_en": "Tilkaef",
+        "region_ar": "تلكيف",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Namroud",
+        "city_ar": "نمرود",
+        "region_en": "Al-Hamdaniya",
+        "region_ar": "الحمدانية",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Qasruk",
+        "city_ar": "قسروك",
+        "region_en": "Al-Shikhan",
+        "region_ar": "الشيخان",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Rabia",
+        "city_ar": "ربيعة",
+        "region_en": "Telafar",
+        "region_ar": "تلعفر",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Wana",
+        "city_ar": "وانة",
+        "region_en": "Tilkaef",
+        "region_ar": "تلكيف",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Zummar",
+        "city_ar": "زمار",
+        "region_en": "Telafar",
+        "region_ar": "تلعفر",
+        "province_en": "Ninewa",
+        "province_ar": "نينوى"
+    },
+    {
+        "city_en": "Al-Ahrar",
+        "city_ar": "الاحرار",
+        "region_en": "Al-Namaniya",
+        "region_ar": "النعمانية",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Al-Aziziya",
+        "city_ar": "العزيزية",
+        "region_en": "Al-Suwaira",
+        "region_ar": "الصويرة",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Al-Bashaer",
+        "city_ar": "البشائر",
+        "region_en": "Al-Hai",
+        "region_ar": "الحي",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Al-Hafriya",
+        "city_ar": "الحفرية",
+        "region_en": "Al-Suwaira",
+        "region_ar": "الصويرة",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Al-Mowafaqiya",
+        "city_ar": "الموفقية",
+        "region_en": "Al-Hai",
+        "region_ar": "الحي",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Al-Shehamiya",
+        "city_ar": "الشحيمية",
+        "region_en": "Al-Suwaira",
+        "region_ar": "الصويرة",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Al-Zubaidiya",
+        "city_ar": "الزبيدية",
+        "region_en": "Al-Suwaira",
+        "region_ar": "الصويرة",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Jassan",
+        "city_ar": "جصان",
+        "region_en": "Badra",
+        "region_ar": "بدرة",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Markaz Al-Kut",
+        "city_ar": "مركز الكوت",
+        "region_en": "Al-Kut",
+        "region_ar": "الكوت",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Markaz Al-Noamaniya",
+        "city_ar": "مركز النعمانية",
+        "region_en": "Al-Namaniya",
+        "region_ar": "النعمانية",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Markaz Al-Suwaira",
+        "city_ar": "مركز الصويرة",
+        "region_en": "Al-Suwaira",
+        "region_ar": "الصويرة",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Markaz Badra",
+        "city_ar": "مركز بدرة",
+        "region_en": "Badra",
+        "region_ar": "بدرة",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Shaekh Saad",
+        "city_ar": "شيخ سعد",
+        "region_en": "Al-Kut",
+        "region_ar": "الكوت",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    },
+    {
+        "city_en": "Wasit",
+        "city_ar": "واسط",
+        "region_en": "Al-Kut",
+        "region_ar": "الكوت",
+        "province_en": "Wassit",
+        "province_ar": "واسط"
+    }
+]
