@@ -94,7 +94,7 @@ class AuthService extends GetxService {
       final response = await _supabase.client.auth.signInWithOAuth(
         Provider.google,
         redirectTo: kIsWeb
-            ? 'http://localhost:5975'
+            ? 'http://localhost:15913'
             : 'tech.csitelites.transport.lines://login-callback',
       );
       print(response);
