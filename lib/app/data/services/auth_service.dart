@@ -18,19 +18,22 @@ class AuthService extends GetxService {
     isAuthenticated.value = value;
   }
 
+  Future getPorfile() async {
+    final userId = _supabase.client.auth.currentUser!.id;
+    final data = await _supabase.client
+        .from('porfiles')
+        .select('*')
+        .eq('id', userId)
+        .single();
+    return data;
+  }
+
   checkAuthentication() async {
     final user = _supabase.client.auth.currentUser;
     final session = _supabase.client.auth.currentSession;
-
+    final data = await getPorfile();
     if (user != null && session != null) {
-      final data = await _supabase.client
-          .from('porfiles')
-          .select('role')
-          .eq('id', user.id)
-          .single();
-
       final role = data['role'];
-      setIsAuthenticated(true);
       if (role == null || role.isEmpty) {
         Get.offNamed('/role');
       } else if (role == '1') {
@@ -38,6 +41,7 @@ class AuthService extends GetxService {
       } else if (role == '1') {
         Get.offNamed('/student/home');
       }
+      setIsAuthenticated(true);
     } else {
       setIsAuthenticated(false);
       Get.offNamed('/auth');
@@ -45,25 +49,19 @@ class AuthService extends GetxService {
   }
 
   Future signInWithGoogle() async {
-    try {
-      final response = await _supabase.client.auth.signInWithOAuth(
-        Provider.google,
-        redirectTo: kIsWeb
-            ? 'http://localhost:24954'
-            : 'tech.csitelites.transport.lines://login-callback',
-      );
-      print(response);
-      final Session? session = _supabase.client.auth.currentSession;
-      final User? user = _supabase.client.auth.currentUser;
-      if (user != null) {
-        return user.userMetadata;
-      } else {
-        return null;
-      }
-    } on AuthException catch (error) {
-      return error;
-    } catch (_) {
-      return Exception('Error');
+    var response = await _supabase.client.auth.signInWithOAuth(
+      Provider.google,
+      redirectTo: kIsWeb
+          ? 'http://localhost:24954'
+          : 'tech.csitelites.transport.lines://login-callback',
+    );
+    print('==================================');
+    print(response);
+    if (response) {
+      final data = await getPorfile();
+      return data;
+    } else {
+      return false;
     }
   }
 

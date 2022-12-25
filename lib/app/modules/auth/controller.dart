@@ -59,19 +59,7 @@ class AuthController extends GetxController {
   login() async {
     try {
       isLoading.value = true;
-      var data = await authService.signInWithGoogle();
-      if (data != null) {
-        late String role = data['role'];
-        if (role == 'driver') {
-          Get.offAllNamed('/driver/home');
-        } else if (role == 'student') {
-          Get.offAllNamed('/student/home');
-        } else {
-          Get.snackbar('خطأ', 'حدث خطأ ما');
-        }
-      }
-    } catch (e) {
-      Get.snackbar('خطأ', e.toString());
+      await authService.signInWithGoogle();
     } finally {
       isLoading.value = false;
     }
