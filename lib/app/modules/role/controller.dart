@@ -9,7 +9,10 @@ import 'package:student_transport_lines/app/modules/role/widgets/step2.dart';
 import 'package:student_transport_lines/app/modules/role/widgets/step3.dart';
 import 'package:student_transport_lines/app/modules/role/widgets/step4.dart';
 
+import '../../data/services/auth_service.dart';
+
 class RoleController extends GetxController {
+  final AuthService authService = AuthService();
   RxList steps = [
     const Step1(),
     const Step2(),
@@ -93,15 +96,24 @@ class RoleController extends GetxController {
   }
 
   Future<void> save() async {
-    // role.value == 0 => user , role.value == 1 => driver
-    // name.text => الاسم
-    // mobile.text => رقم الهاتف
-    // telegram.text => معرف التليجرام
-    // province.value => المحافظة
-    // city.value => المدينة
-    isLoading.value = true;
-    await Future.delayed(const Duration(seconds: 5));
-    print("Saved");
-    isLoading.value = false;
+    try {
+      isLoading.value = true;
+      final data = await authService.updatePorfile(
+        name.text,
+        mobile.text,
+        role.value,
+        city.value,
+        province.value,
+        telegram.text,
+      );
+
+      role.value == 0
+          ? Get.offAllNamed('/student/home')
+          : Get.offAllNamed('/driver/home');
+    } catch (e) {
+      print(e);
+    } finally {
+      isLoading.value = false;
+    }
   }
 }

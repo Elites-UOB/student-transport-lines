@@ -26,4 +26,14 @@ class HelperService extends GetxService {
     final data = await _supabase.client.from('colleges').select('id,name');
     return data;
   }
+
+  Future getPorfile() async {
+    final userId = _supabase.client.auth.currentUser!.id;
+    final data = await _supabase.client
+        .from('porfiles')
+        .select('*')
+        .eq('id', userId)
+        .single();
+    return data;
+  }
 }
