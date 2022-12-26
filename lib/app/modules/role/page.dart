@@ -24,6 +24,11 @@ class RolePage extends GetView<RoleController> {
         padding: EdgeInsets.symmetric(
             horizontal: sizew * 0.075, vertical: sizeh * 0.05),
         child: Column(children: [
+          
+          IconButton(onPressed: (){
+            Get.toNamed('/driver/home');
+          },
+              icon: Icon(Icons.cancel_outlined)),
           // Stepper
           Expanded(
             flex: 1,

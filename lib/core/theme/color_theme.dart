@@ -7,6 +7,8 @@ class Palette {
   //static const backgroundColor = Color(0xffF2F2FC);
   static const backgroundColor = Color(0xffffffff);
   static const whiteColor = Color(0xffffffff);
+  static const pink = Color(0xFFFFBFBF);
+  static const inpink = Color(0xFF9A1717);
   static const greyColor = Color(0x99F6F3F4); //
   static const greyColor2 = Color(0xffC6C6C6);
   static const greyColor3 = Color(0xff878787);
