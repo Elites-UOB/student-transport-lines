@@ -26,7 +26,7 @@ class DriverHomePage extends GetView<DriverHomeController> {
 
             //pic
             leading: Container(
-              padding:const EdgeInsets.only(right: 20,top: 5,bottom: 5),
+              padding: const EdgeInsets.only(right: 20, top: 5, bottom: 5),
               child: InkWell(
                 onTap: () {
                   Get.toNamed('/driver/profile');
@@ -40,7 +40,7 @@ class DriverHomePage extends GetView<DriverHomeController> {
                     ImgRadius: 30,
                     IconRadius: 8,
                     myColor: Palette.blueColor,
-                    myIcon:const Icon(
+                    myIcon: const Icon(
                       Icons.edit,
                       size: 10,
                     ),
@@ -48,27 +48,23 @@ class DriverHomePage extends GetView<DriverHomeController> {
                 ),
               ),
             ),
-            title:const Text(
-                'محمد علي',
-                style: Styles.normalBlack
-            ),
+            title: const Text('محمد علي', style: Styles.normalBlack),
           ),
           floatingActionButton: InkWell(
-            onTap: (){
+            onTap: () {
               Get.toNamed('/new/line');
             },
-            child:const CircleAvatar(
+            child: const CircleAvatar(
               backgroundColor: Palette.yellowColor,
-              child: Icon(Icons.add,color: Colors.black),
+              child: Icon(Icons.add, color: Colors.black),
             ),
           ),
-
           body: Padding(
-            padding:const  EdgeInsets.symmetric(horizontal:  MyPadding.KPadding,vertical: 10),
+            padding: const EdgeInsets.symmetric(
+                horizontal: MyPadding.KPadding, vertical: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-
                 //  خطوطي
                 const Text(
                   'خطوطي',
