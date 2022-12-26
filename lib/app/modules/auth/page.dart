@@ -31,14 +31,19 @@ class AuthPage extends GetView<AuthController> {
                 children: [
                   //text
                   Column(
-                    children: const [
-                      Text(
-                        'تطبيق الخطوط',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 40,
-                            fontFamily: 'Tajawal'),
+                    children:  [
+                      InkWell(
+                        onTap: (){
+                          Get.toNamed('/role');
+                        },
+                        child:const Text(
+                          'تطبيق الخطوط',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 40,
+                              fontFamily: 'Tajawal'),
+                        ),
                       ),
                       SizedBox(height: 8),
                       Text(

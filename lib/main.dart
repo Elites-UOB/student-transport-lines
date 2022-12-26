@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:student_transport_lines/core/values/config.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'app/modules/auth/page.dart';
 import 'app/modules/splash/binding.dart';
 import 'app/modules/splash/page.dart';
 import 'core/theme/app_theme.dart';
@@ -25,7 +26,7 @@ Future main() async {
     splitScreenMode: true,
     builder: (context, child) => GetMaterialApp(
       getPages: AppPages.pages,
-      home: SplashPage(),
+      home: AuthPage(),
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,
       themeMode: Themes().getThemeMode(),
