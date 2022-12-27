@@ -26,7 +26,7 @@ Future main() async {
     splitScreenMode: true,
     builder: (context, child) => GetMaterialApp(
       getPages: AppPages.pages,
-      home: AuthPage(),
+      home: SplashPage(),
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,
       themeMode: Themes().getThemeMode(),

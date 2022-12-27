@@ -31,14 +31,14 @@ class AuthService extends GetxService {
   checkAuthentication() async {
     final user = _supabase.client.auth.currentUser;
     final session = _supabase.client.auth.currentSession;
-    final data = await getPorfile();
     if (user != null && session != null) {
+      final data = await getPorfile();
       final role = data['role'];
       if (role == null || role.isEmpty) {
         Get.offNamed('/role');
       } else if (role == '1') {
         Get.offNamed('/driver/home');
-      } else if (role == '1') {
+      } else if (role == '0') {
         Get.offNamed('/student/home');
       }
       setIsAuthenticated(true);
@@ -55,7 +55,22 @@ class AuthService extends GetxService {
           ? 'http://localhost:24954'
           : 'tech.csitelites.transport.lines://login-callback',
     );
+
     if (response) {
+      Supabase.instance.client.auth.onAuthStateChange.listen((data) async {
+        final AuthChangeEvent event = data.event;
+        if (event == AuthChangeEvent.signedIn) {
+          final data = await getPorfile();
+          final role = data['role'];
+          if (role == null || role.isEmpty) {
+            Get.offNamed('/role');
+          } else if (role == '1') {
+            Get.offNamed('/driver/home');
+          } else if (role == '0') {
+            Get.offNamed('/student/home');
+          }
+        }
+      });
       return response;
     } else {
       return false;
@@ -78,8 +93,13 @@ class AuthService extends GetxService {
   }
 
   //signOut
-  Future<dynamic> signOut() async {
-    final response = await _supabase.client.auth.signOut();
-    return response;
+  Future signOut() async {
+    await _supabase.client.auth.signOut();
+    Supabase.instance.client.auth.onAuthStateChange.listen((data) async {
+      final AuthChangeEvent event = data.event;
+      if (event == AuthChangeEvent.signedOut) {
+        Get.offNamed('/auth');
+      }
+    });
   }
 }
