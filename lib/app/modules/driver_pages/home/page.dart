@@ -22,10 +22,13 @@ class DriverHomePage extends GetView<DriverHomeController> {
         textDirection: TextDirection.rtl,
         child: Obx(
           () => controller.porfiles.isEmpty
-              ? Center(
-                  child: SpinKitSpinningLines(
-                    color: Palette.blueColor,
-                    size: 70.sp,
+              ? Container(
+                  color: Palette.backgroundColor,
+                  child: Center(
+                    child: SpinKitSpinningLines(
+                      color: Palette.blueColor,
+                      size: 70.sp,
+                    ),
                   ),
                 )
               : Scaffold(
@@ -49,8 +52,6 @@ class DriverHomePage extends GetView<DriverHomeController> {
                                 ? Image.network(
                                     controller.porfiles[0]['avatar_url']
                                         .toString(),
-                                    height: 20,
-                                    width: 20,
                                   )
                                 : Image.asset('assets/images/person.png',
                                     height: 20, width: 20),
