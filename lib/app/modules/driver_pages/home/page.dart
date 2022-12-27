@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
+import 'package:skeletons/skeletons.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
 import 'package:student_transport_lines/core/theme/text_theme.dart';
 
@@ -22,15 +25,7 @@ class DriverHomePage extends GetView<DriverHomeController> {
         textDirection: TextDirection.rtl,
         child: Obx(
           () => controller.porfiles.isEmpty
-              ? Container(
-                  color: Palette.backgroundColor,
-                  child: Center(
-                    child: SpinKitSpinningLines(
-                      color: Palette.blueColor,
-                      size: 70.sp,
-                    ),
-                  ),
-                )
+              ? Skelton()
               : Scaffold(
                   backgroundColor: Palette.backgroundColor,
                   appBar: AppBar(
@@ -95,6 +90,125 @@ class DriverHomePage extends GetView<DriverHomeController> {
                     ),
                   ),
                 ),
+        ),
+      ),
+    );
+  }
+}
+
+class Skelton extends StatelessWidget {
+  const Skelton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Palette.backgroundColor,
+      appBar: AppBar(
+        backgroundColor: Palette.yellowColor,
+        leading: Container(
+          padding: const EdgeInsets.only(right: 20, top: 5, bottom: 5),
+          child: Container(
+            child: const SkeletonAvatar(
+              style: SkeletonAvatarStyle(
+                  shape: BoxShape.circle, width: 50, height: 50),
+            ),
+          ),
+        ),
+        title: SkeletonParagraph(
+          style: SkeletonParagraphStyle(
+            lines: 2,
+            spacing: 6,
+            lineStyle: SkeletonLineStyle(
+              randomLength: true,
+              height: 10,
+              borderRadius: BorderRadius.circular(8),
+              minLength: MediaQuery.of(context).size.width / 6,
+              maxLength: MediaQuery.of(context).size.width / 3,
+            ),
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          padding: const EdgeInsets.all(8.0),
+          decoration: const BoxDecoration(color: Colors.white),
+          child: SkeletonItem(
+              child: Column(
+            children: [
+              Row(
+                children: [
+                  const SizedBox(width: 8),
+                ],
+              ),
+              const SizedBox(height: 12),
+              SkeletonParagraph(
+                style: SkeletonParagraphStyle(
+                    lines: 2,
+                    spacing: 6,
+                    lineStyle: SkeletonLineStyle(
+                      randomLength: true,
+                      height: 10,
+                      borderRadius: BorderRadius.circular(8),
+                      minLength: MediaQuery.of(context).size.width / 2,
+                    )),
+              ),
+              SizedBox(height: 12),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(80)),
+                ),
+                child: SkeletonAvatar(
+                  style: SkeletonAvatarStyle(
+                    width: double.infinity,
+                    minHeight: MediaQuery.of(context).size.height / 8,
+                    maxHeight: MediaQuery.of(context).size.height / 7,
+                  ),
+                ),
+              ),
+              SizedBox(height: 12),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(80)),
+                ),
+                child: SkeletonAvatar(
+                  style: SkeletonAvatarStyle(
+                    width: double.infinity,
+                    minHeight: MediaQuery.of(context).size.height / 8,
+                    maxHeight: MediaQuery.of(context).size.height / 7,
+                  ),
+                ),
+              ),
+              SizedBox(height: 12),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(80)),
+                ),
+                child: SkeletonAvatar(
+                  style: SkeletonAvatarStyle(
+                    width: double.infinity,
+                    minHeight: MediaQuery.of(context).size.height / 8,
+                    maxHeight: MediaQuery.of(context).size.height / 7,
+                  ),
+                ),
+              ),
+              SizedBox(height: 12),
+              Container(
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(80)),
+                ),
+                child: SkeletonAvatar(
+                  style: SkeletonAvatarStyle(
+                    width: double.infinity,
+                    minHeight: MediaQuery.of(context).size.height / 8,
+                    maxHeight: MediaQuery.of(context).size.height / 7,
+                  ),
+                ),
+              ),
+            ],
+          )),
         ),
       ),
     );
