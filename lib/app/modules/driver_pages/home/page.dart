@@ -48,7 +48,8 @@ class DriverHomePage extends GetView<DriverHomeController> {
                 ),
               ),
             ),
-            title: const Text('محمد علي', style: Styles.normalBlack),
+            title: Text(controller.porfiles[0]['full_name'],
+                style: Styles.normalBlack),
           ),
           floatingActionButton: InkWell(
             onTap: () {
