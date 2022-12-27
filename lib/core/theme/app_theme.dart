@@ -3,29 +3,11 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class Themes {
-  static ThemeData darkTheme = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: Color(0xff1e1e1e),
-    appBarTheme: AppBarTheme(
-      backgroundColor: Color(0xff1e1e1e),
-      elevation: 0,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: Color(0xff1e1e1e),
-      selectedItemColor: Colors.white,
-      unselectedItemColor: Colors.white54,
-    ),
+  static ThemeData darkTheme = ThemeData(
+    fontFamily: "Tajawal",
   );
-  static ThemeData lightTheme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor: Color(0xffF6F3F4),
-    appBarTheme: AppBarTheme(
-      backgroundColor: Color(0xffF6F3F4),
-      elevation: 0,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: Color(0xffF6F3F4),
-      selectedItemColor: Colors.black,
-      unselectedItemColor: Colors.black54,
-    ),
+  static ThemeData lightTheme = ThemeData(
+    fontFamily: "Tajawal",
   );
 
   final _getStorage = GetStorage();
