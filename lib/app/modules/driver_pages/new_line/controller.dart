@@ -28,6 +28,12 @@ class NewLineController extends GetxController {
   RxList colleges = [].obs;
   RxList universities = [].obs;
 
+  RxString college = ''.obs;
+  Object university = {
+    'id': 0,
+    'name': '',
+  };
+
   @override
   void onInit() async {
     await fatch();
@@ -37,6 +43,11 @@ class NewLineController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+  }
+
+  void getColleges(id) async {
+    colleges.value =
+        universities.where((e) => e['id'] == id).map((e) => null).toList();
   }
 
   //Add New Line
@@ -77,7 +88,11 @@ class NewLineController extends GetxController {
     final collegesData = await HelperService().getColleges();
     cities.value = citiesData;
     provinces.value = provincesData;
+
     universities.value = universitiesData;
+    print('=================universities===================');
+    print(universities);
+
     colleges.value = collegesData;
   }
 }

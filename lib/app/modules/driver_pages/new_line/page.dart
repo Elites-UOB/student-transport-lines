@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:student_transport_lines/app/modules/driver_pages/new_line/controller.dart';
@@ -16,135 +17,129 @@ class NewLinePage extends GetView<NewLineController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Directionality(
-        textDirection:TextDirection.rtl,
+        textDirection: TextDirection.rtl,
         child: Scaffold(
           backgroundColor: Palette.backgroundColor,
           appBar: AppBar(
             backgroundColor: Palette.yellowColor,
-
-            leading:Container(
+            leading: Container(
               padding: EdgeInsets.only(right: 30),
-              child: IconButton(onPressed: (){
-                Navigator.pop(context);
-              },
-                  icon:const Icon(Icons.arrow_back_sharp,
+              child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(
+                    Icons.arrow_back_sharp,
                     color: Palette.blackColor,
                     size: 22,
-                  ) ),
+                  )),
             ),
-
-            title:const Text(
-                'اضافة خط جديد',
+            title: const Text(
+              'اضافة خط جديد',
               style: Styles.normalBlack,
-
             ),
-
           ),
           body: Padding(
-            padding:const  EdgeInsets.symmetric(horizontal:  MyPadding.KPadding,vertical: 10),
+            padding: const EdgeInsets.symmetric(
+                horizontal: MyPadding.KPadding, vertical: 10),
             child: SingleChildScrollView(
               child: Obx(
                 () => Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    Column(
+                      children: [
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        dropdownstud(
+                          headtext: 'الكلية',
+                          hinttext: 'مجمع كليات الكرمة',
+                          item: controller.colleges.value,
+                          controller: TextEditingController(),
+                          // width: 20
+                        ),
 
-                   Column(
-                     children: [
-                       dropdownstud(
-                         headtext: 'الجامعة',
-                         hinttext: 'جامعة البصرة',
-                         item: controller.universities.value,
-                         controller: TextEditingController(),
-                         // width: 20
-                       ),
+                        const SizedBox(
+                          height: 20,
+                        ),
 
-                       const SizedBox(height: 20,),
+                        dropdownstud(
+                          headtext: 'الدراسة',
+                          hinttext: 'مسائي',
+                          item: const [
+                            {'id': 1, 'name': 'صباحي'},
+                            {'id': 2, 'name': 'مسائي'}
+                          ],
+                          controller: TextEditingController(),
+                          // width: 20
+                        ),
 
-                       dropdownstud(
-                         headtext: 'الكلية',
-                         hinttext: 'مجمع كليات الكرمة',
-                         item: controller.colleges.value,
-                         controller: TextEditingController(),
-                         // width: 20
-                       ),
+                        const SizedBox(
+                          height: 20,
+                        ),
 
-                       SizedBox(height: 20,),
+                        //نوع السيارة
+                        dropdownstud(
+                          headtext: 'نوع السيارة',
+                          hinttext: 'تكسي',
+                          item: const [],
+                          controller: TextEditingController(),
+                        ),
 
-                       dropdownstud(
-                         headtext: 'الدراسة',
-                         hinttext: 'مسائي',
-                         item:const [
-                           {'id': 1, 'name': 'صباحي'},
-                           {'id': 2, 'name': 'مسائي'}
-                         ],
-                         controller: TextEditingController(),
-                         // width: 20
-                       ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        //  موديل السيارة
+                        SizedBox(
+                          width: double.infinity,
+                          child: textFiled(
+                            controller: controller.carModel,
+                            headtext: 'موديل السيارة',
+                            hinttext: 'اكسنت 2019',
+                          ),
+                        ),
 
-                       SizedBox(height: 20,),
+                        const SizedBox(
+                          height: 20,
+                        ),
 
-                       //نوع السيارة
-                       dropdownstud(
-                         headtext: 'نوع السيارة',
-                         hinttext: 'تكسي',
-                         item:const [],
-                         controller: TextEditingController(),
-                         // width: 20
-                       ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SizedBox(
+                              width: 100.w,
+                              child: textFiled(
+                                controller: controller.carPassCount,
+                                headtext: 'عدد المقاعد',
+                                hinttext: '4',
+                              ),
+                            ),
+                            SizedBox(
+                              width: 100.w,
+                              child: textFiled(
+                                controller: controller.passCount,
+                                headtext: 'عدد الشاغر',
+                                hinttext: '2',
+                              ),
+                            ),
+                            SizedBox(
+                              width: 100.w,
+                              child: textFiled(
+                                controller: controller.price,
+                                headtext: 'الكلفة',
+                                hinttext: '100',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
 
-                       SizedBox(height: 20,),
-
-                       //موديل السيارة
-                       dropdownstud(
-                         headtext: 'موديل السيارة',
-                         hinttext: 'سوناتا',
-                         item:const [],
-                         controller: TextEditingController(),
-                         // width: 20
-                       ),
-
-
-                       SizedBox(height: 20,),
-
-                       Row(
-                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                         children: [
-                           SizedBox(
-                             width: 100,
-                             child: textFiled(
-                               controller: controller.carPassCount,
-                               headtext: 'عدد المقاعد',
-                               hinttext: '4',
-                             ),
-                           ),
-                           SizedBox(
-                             width: 100,
-                             child: textFiled(
-                               controller: controller.passCount,
-                               headtext: 'عدد الشاغر',
-                               hinttext: '2',
-                             ),
-                           ),
-                           SizedBox(
-                             width: 100,
-                             child: textFiled(
-                               controller: controller.price,
-                               headtext: 'الكلفة',
-                               hinttext: '100',
-                             ),
-                           ),
-                         ],
-                       ),
-
-                     ],
-                   ),
-
-
-                   // SizedBox(height: ),
-                    //حفظ التعديلات
+                    // حفظ التعديلات
                     Padding(
                       padding: EdgeInsets.only(
-                          top:MediaQuery.of(context).padding.top *5),
+                          top: MediaQuery.of(context).padding.top * 5),
                       child: Column(
                         children: [
                           InkWell(
@@ -152,8 +147,7 @@ class NewLinePage extends GetView<NewLineController> {
                               controller.addNewLine();
                             },
                             child: Container(
-                              padding: EdgeInsets.symmetric(vertical: 5),
-
+                              padding: const EdgeInsets.symmetric(vertical: 5),
                               decoration: BoxDecoration(
                                   color: Palette.yellowColor,
                                   borderRadius: BorderRadius.circular(10)),
@@ -166,9 +160,8 @@ class NewLinePage extends GetView<NewLineController> {
                                     : const Text(
                                         'اضافة ',
                                         textAlign: TextAlign.center,
-                                        style:Styles.normalBlack,
-
-                                ),
+                                        style: Styles.normalBlack,
+                                      ),
                               ),
                             ),
                           ),
