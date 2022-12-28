@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:student_transport_lines/core/theme/padding.dart';
 import '../../../../core/theme/color_theme.dart';
 import '../../../../core/theme/text_theme.dart';
@@ -23,39 +24,47 @@ class StudentProfilePage extends GetView<StudentProfileController> {
         body: Directionality(
           textDirection: TextDirection.rtl,
           child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      //name and date
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text('حسن خالد ابو الخط', style: Styles.boldblue),
-                          Text('2022/08/12',
-                              textAlign: TextAlign.right,
-                              style: Styles.hintText)
-                        ],
-                      ),
-
-                      //pic
-                      IconButton(
-                          onPressed: (() => authController.logout()),
-                          icon: Icon(Icons.logout))
-                    ],
-                  ),
-                  const SizedBox(height: 40),
-                  const Text(
-                    'الملف الشخصي',
-                    style: Styles.hintTextbold,
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal:15),
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                // HEADER
+                Container(
+                    height: 60.h,
+                    color: Palette.yellowColor,
+                    margin: EdgeInsets.only(top: 28.h),
+                    padding: EdgeInsets.only(bottom: 10.h, right: 15.w),
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        //pic
+                        IconButton(
+                            onPressed: (() => authController.logout()),
+                            icon: Icon(
+                              Icons.arrow_back,
+                              size: 17.w,
+                            )),
+                        SizedBox(width: 10.w),
+                        Text(
+                          'الملف الشخصي',
+                          style: GoogleFonts.tajawal(
+                            textStyle: TextStyle(
+                                color: Palette.blackColor,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17.w),
+                          ),
+                          // style: TextStyle(
+                          //     color: Palette.blackColor,
+                          //     fontSize: 19.w,
+                          //     fontFamily: "Tajawal",
+                          //     fontWeight: FontWeight.w900),
+                        ),
+                      ],
+                    )),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15),
                     height: 528.h,
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -174,10 +183,8 @@ class StudentProfilePage extends GetView<StudentProfileController> {
                       ),
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
+                ),
+              ])),
         ),
       ),
     );
