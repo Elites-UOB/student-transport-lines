@@ -6,6 +6,7 @@ import '../../../data/services/user_service.dart';
 class DriverHomeController extends GetxController {
   final UserService userService = UserService();
   RxList porfiles = [].obs;
+  RxBool isExpanded = true.obs;
 
   @override
   void onInit() async {

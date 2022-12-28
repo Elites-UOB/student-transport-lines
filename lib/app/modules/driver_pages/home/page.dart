@@ -1,17 +1,12 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:skeletons/skeletons.dart';
 import 'package:student_transport_lines/core/theme/color_theme.dart';
 import 'package:student_transport_lines/core/theme/text_theme.dart';
-
 import '../../../../core/theme/padding.dart';
 import '../../../utils/widgets/profilePicS.dart';
 import 'controller.dart';
-import 'widgets/addNewLine.dart';
+import 'widgets/line_card.dart';
 
 class DriverHomePage extends GetView<DriverHomeController> {
   const DriverHomePage({super.key});
@@ -85,7 +80,7 @@ class DriverHomePage extends GetView<DriverHomeController> {
                           style: Styles.boldBlack,
                         ),
 
-                        addNewLine(),
+                        LineCard(),
                       ],
                     ),
                   ),
