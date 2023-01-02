@@ -4,7 +4,9 @@
    <application
         android:label="خطوط النقل الجامعية"
         android:name="${applicationName}"
-        android:icon="@mipmap/launcher_icon">
+        android:icon="@mipmap/launcher_icon"
+        android:usesCleartextTraffic="true"
+        >
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -13,6 +15,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
+           
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
@@ -26,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
             <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="tech.csitelites.transport.lines" android:host="login-callback"/>
