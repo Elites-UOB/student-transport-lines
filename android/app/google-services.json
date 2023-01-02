@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "739558691321",
+    "project_id": "student-transport-lines",
+    "storage_bucket": "student-transport-lines.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739558691321:android:f1ee568cb81056e370ad28",
+        "android_client_info": {
+          "package_name": "tech.csitelites.transport.lines"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739558691321-4rfj6hitsj3e7rraicurhhpml5aegpbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1wZM35TnmIsUxZamdry8Q8O9O3FISmbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739558691321-4rfj6hitsj3e7rraicurhhpml5aegpbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

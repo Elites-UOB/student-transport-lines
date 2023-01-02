@@ -14,25 +14,29 @@ import 'routes/routes.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   await GetStorage.init();
   await Supabase.initialize(
     url: Config.SUPABASE_URL,
     anonKey: Config.SUPABASE_KEY,
   );
 
-  runApp(ScreenUtilInit(
-    designSize: const Size(360, 690),
-    minTextAdapt: true,
-    splitScreenMode: true,
-    builder: (context, child) => GetMaterialApp(
-      getPages: AppPages.pages,
-      home: SplashPage(),
-      theme: Themes.lightTheme,
-      darkTheme: Themes.darkTheme,
-      themeMode: Themes().getThemeMode(),
-      initialBinding: SplashBinding(),
-      initialRoute: Routes.Splash,
-      debugShowCheckedModeBanner: false,
+  runApp(
+    ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => GetMaterialApp(
+        getPages: AppPages.pages,
+        home: SplashPage(),
+        theme: Themes.lightTheme,
+        darkTheme: Themes.darkTheme,
+        themeMode: Themes().getThemeMode(),
+        initialBinding: SplashBinding(),
+        initialRoute: Routes.Splash,
+        debugShowCheckedModeBanner: false,
+      ),
     ),
-  ));
+  );
+  // await FirebaseMessaging.instance.subscribeToTopic('all');
 }
