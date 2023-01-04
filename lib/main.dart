@@ -17,9 +17,11 @@ Future main() async {
   // await Firebase.initializeApp();
   await GetStorage.init();
   await Supabase.initialize(
-    url: Config.SUPABASE_URL,
-    anonKey: Config.SUPABASE_KEY,
-  );
+      url: Config.SUPABASE_URL,
+      anonKey: Config.SUPABASE_KEY,
+      authCallbackUrlHostname: 'login-callback', // optional
+      debug: true // optional
+      );
 
   runApp(
     ScreenUtilInit(

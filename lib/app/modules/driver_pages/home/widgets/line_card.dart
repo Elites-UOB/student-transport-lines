@@ -10,210 +10,209 @@ class LineCard extends GetWidget<DriverHomeController> {
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      child: ListView(
-        physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-        children: [
-          Obx(
-            () => InkWell(
-              child: Dismissible(
-                key: UniqueKey(),
-                direction: DismissDirection.horizontal,
-                onDismissed: (DismissDirection direction) {
-                  log('Dismissed with direction $direction');
-                  if (direction == DismissDirection.endToStart) {
-                    // Your deletion logic goes here.
-                  }
-                },
-                confirmDismiss: (DismissDirection direction) async {
-                  final confirmed = await showDialog<bool>(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: const Align(
-                            alignment: Alignment.centerRight,
-                            child: Text('هل أنت متأكد من الحذف؟')),
-                        actions: [
-                          TextButton(
-                            onPressed: () => Navigator.pop(context, false),
-                            child: const Text('No'),
-                          ),
-                          TextButton(
-                            onPressed: () => Navigator.pop(context, true),
-                            child: const Text('Yes'),
-                          )
-                        ],
-                      );
-                    },
-                  );
-                  log('Deletion confirmed: $confirmed');
-                  return confirmed;
-                },
-                background: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Align(
-                    alignment: Alignment.centerRight,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Icon(Icons.delete_forever, color: Colors.white),
-                    ),
-                  ),
-                ),
-
-                //edit
-                secondaryBackground: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Icon(Icons.edit, color: Colors.white),
-                    ),
-                  ),
-                ),
-
-                //widget
-                child: InkWell(
-                  highlightColor: Colors.transparent,
-                  splashColor: Colors.transparent,
-                  onTap: () {
-                    controller.isExpanded.value = !controller.isExpanded.value;
-                  },
-                  child: AnimatedContainer(
-                    margin: EdgeInsets.symmetric(
-                      horizontal: controller.isExpanded.value ? 0 : 0,
-                      vertical: 0,
-                    ),
-                    padding: EdgeInsets.only(
-                        top: 20, right: 20, left: 20, bottom: 10),
-                    height: controller.isExpanded.value ? 80 : 330,
-                    curve: Curves.fastLinearToSlowEaseIn,
-                    duration: Duration(milliseconds: 1200),
-                    decoration: BoxDecoration(
-                        //color: Color(0xffFF5050),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(controller.isExpanded.value ? 20 : 0),
+      child: Obx(
+        () => ListView.builder(
+          physics: BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
+          itemCount: controller.lines.value.length,
+          itemBuilder: (context, index) => InkWell(
+            child: Dismissible(
+              key: UniqueKey(),
+              direction: DismissDirection.horizontal,
+              onDismissed: (DismissDirection direction) {
+                log('Dismissed with direction $direction');
+                if (direction == DismissDirection.endToStart) {
+                  // Your deletion logic goes here.
+                }
+              },
+              confirmDismiss: (DismissDirection direction) async {
+                final confirmed = await showDialog<bool>(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text('هل أنت متأكد من الحذف؟')),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, false),
+                          child: const Text('No'),
                         ),
-                        border: Border.all(color: Colors.grey)),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: const [
-                                    Text(
-                                      'الحيانية',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Icon(
-                                      Icons.arrow_forward_outlined,
-                                      size: 18,
-                                    ),
-                                    Text(
-                                      'جامعة البصرة، كرمة علي',
-                                      style: TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      padding: EdgeInsets.all(2),
-                                      height: 20,
-                                      width: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                          border: Border.all(
-                                              width: 1, color: Colors.grey),
-                                          color: Colors.white),
-                                      child: const Text('40 أ.د.ع',
-                                          style: TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.bold)),
-                                    ),
-                                    SizedBox(
-                                      width: 10,
-                                    ),
-                                    Container(
-                                      alignment: Alignment.center,
-                                      height: 20,
-                                      width: 50,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                          border: Border.all(
-                                              width: 1, color: Palette.pink),
-                                          color: Palette.pink),
-                                      child: const Text(
-                                        'ممتلئ',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                            color: Palette.inpink),
-                                      ),
-                                    )
-                                  ],
-                                )
-                              ],
-                            ),
-                            Icon(
-                              controller.isExpanded.value
-                                  ? Icons.keyboard_arrow_down
-                                  : Icons.keyboard_arrow_up,
-                              color: Colors.grey,
-                              size: 27,
-                            ),
-                          ],
-                        ),
-                        controller.isExpanded.value
-                            ? SizedBox()
-                            : SizedBox(height: 20),
-                        AnimatedCrossFade(
-                          firstChild: Text(
-                            '',
-                            style: TextStyle(
-                              fontSize: 0,
-                            ),
-                          ),
-                          secondChild: Text(
-                            Sentence,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15.7,
-                            ),
-                          ),
-                          crossFadeState: controller.isExpanded.value
-                              ? CrossFadeState.showFirst
-                              : CrossFadeState.showSecond,
-                          duration: Duration(milliseconds: 1200),
-                          reverseDuration: Duration.zero,
-                          sizeCurve: Curves.fastLinearToSlowEaseIn,
-                        ),
+                        TextButton(
+                          onPressed: () => Navigator.pop(context, true),
+                          child: const Text('Yes'),
+                        )
                       ],
-                    ),
+                    );
+                  },
+                );
+                log('Deletion confirmed: $confirmed');
+                return confirmed;
+              },
+              background: Container(
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Icon(Icons.delete_forever, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              //edit
+              secondaryBackground: Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Icon(Icons.edit, color: Colors.white),
+                  ),
+                ),
+              ),
+
+              //widget
+              child: InkWell(
+                highlightColor: Colors.transparent,
+                splashColor: Colors.transparent,
+                onTap: () {
+                  controller.isExpanded.value = !controller.isExpanded.value;
+                },
+                child: AnimatedContainer(
+                  margin: EdgeInsets.symmetric(
+                    horizontal: controller.isExpanded.value ? 0 : 0,
+                    vertical: 0,
+                  ),
+                  padding:
+                      EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 10),
+                  height: controller.isExpanded.value ? 80 : 330,
+                  curve: Curves.fastLinearToSlowEaseIn,
+                  duration: Duration(milliseconds: 1200),
+                  decoration: BoxDecoration(
+                      //color: Color(0xffFF5050),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(controller.isExpanded.value ? 20 : 0),
+                      ),
+                      border: Border.all(color: Colors.grey)),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: const [
+                                  Text(
+                                    'الحيانية',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_outlined,
+                                    size: 18,
+                                  ),
+                                  Text(
+                                    'جامعة البصرة، كرمة علي',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.all(2),
+                                    height: 20,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        border: Border.all(
+                                            width: 1, color: Colors.grey),
+                                        color: Colors.white),
+                                    child: const Text('40 أ.د.ع',
+                                        style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.bold)),
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Container(
+                                    alignment: Alignment.center,
+                                    height: 20,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        border: Border.all(
+                                            width: 1, color: Palette.pink),
+                                        color: Palette.pink),
+                                    child: const Text(
+                                      'ممتلئ',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: Palette.inpink),
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                          Icon(
+                            controller.isExpanded.value
+                                ? Icons.keyboard_arrow_down
+                                : Icons.keyboard_arrow_up,
+                            color: Colors.grey,
+                            size: 27,
+                          ),
+                        ],
+                      ),
+                      controller.isExpanded.value
+                          ? SizedBox()
+                          : SizedBox(height: 20),
+                      AnimatedCrossFade(
+                        firstChild: Text(
+                          '',
+                          style: TextStyle(
+                            fontSize: 0,
+                          ),
+                        ),
+                        secondChild: Text(
+                          Sentence,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15.7,
+                          ),
+                        ),
+                        crossFadeState: controller.isExpanded.value
+                            ? CrossFadeState.showFirst
+                            : CrossFadeState.showSecond,
+                        duration: Duration(milliseconds: 1200),
+                        reverseDuration: Duration.zero,
+                        sizeCurve: Curves.fastLinearToSlowEaseIn,
+                      ),
+                    ],
                   ),
                 ),
               ),
             ),
           ),
-        ],
+        ),
       ),
     );
   }

@@ -19,72 +19,67 @@ class DriverHomePage extends GetView<DriverHomeController> {
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Obx(
-          () => controller.porfiles.isEmpty
-              ? Skelton()
-              : Scaffold(
-                  backgroundColor: Palette.backgroundColor,
-                  appBar: AppBar(
-                    backgroundColor: Palette.yellowColor,
+          () => Scaffold(
+            backgroundColor: Palette.backgroundColor,
+            appBar: AppBar(
+              backgroundColor: Palette.yellowColor,
 
-                    //pic
-                    leading: Container(
-                      padding:
-                          const EdgeInsets.only(right: 20, top: 5, bottom: 5),
-                      child: InkWell(
-                        onTap: () {
-                          Get.toNamed('/driver/profile');
-                        },
-                        child: Container(
-                          // padding:const EdgeInsets.all(8),
+              //pic
+              leading: Container(
+                padding: const EdgeInsets.only(right: 20, top: 5, bottom: 5),
+                child: InkWell(
+                  onTap: () {
+                    Get.toNamed('/driver/profile');
+                  },
+                  child: Container(
+                    // padding:const EdgeInsets.all(8),
 
-                          child: ProfilePicS(
-                            img: controller.porfiles[0]['avatar_url'] != null
-                                ? Image.network(
-                                    controller.porfiles[0]['avatar_url']
-                                        .toString(),
-                                  )
-                                : Image.asset('assets/images/person.png',
-                                    height: 20, width: 20),
-                            ImgRadius: 30,
-                            IconRadius: 8,
-                            myColor: Palette.blueColor,
-                            myIcon: const Icon(
-                              Icons.edit,
-                              size: 10,
-                            ),
-                          ),
-                        ),
+                    child: ProfilePicS(
+                      img: controller.porfiles.length > 0
+                          ? Image.network(
+                              controller.porfiles[0]['avatar_url'].toString(),
+                            )
+                          : Image.asset('assets/images/person.png',
+                              height: 20, width: 20),
+                      ImgRadius: 30,
+                      IconRadius: 8,
+                      myColor: Palette.blueColor,
+                      myIcon: const Icon(
+                        Icons.edit,
+                        size: 10,
                       ),
-                    ),
-                    title: Text(controller.porfiles[0]['full_name'],
-                        style: Styles.normalBlack),
-                  ),
-                  floatingActionButton: InkWell(
-                    onTap: () {
-                      Get.toNamed('/new/line');
-                    },
-                    child: const CircleAvatar(
-                      backgroundColor: Palette.yellowColor,
-                      child: Icon(Icons.add, color: Colors.black),
-                    ),
-                  ),
-                  body: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: MyPadding.KPadding, vertical: 10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //  خطوطي
-                        const Text(
-                          'خطوطي',
-                          style: Styles.boldBlack,
-                        ),
-
-                        LineCard(),
-                      ],
                     ),
                   ),
                 ),
+              ),
+              title: Text('asd', style: Styles.normalBlack),
+            ),
+            floatingActionButton: InkWell(
+              onTap: () {
+                Get.toNamed('/new/line');
+              },
+              child: const CircleAvatar(
+                backgroundColor: Palette.yellowColor,
+                child: Icon(Icons.add, color: Colors.black),
+              ),
+            ),
+            body: Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: MyPadding.KPadding, vertical: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //  خطوطي
+                  const Text(
+                    'خطوطي',
+                    style: Styles.boldBlack,
+                  ),
+
+                  LineCard(),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );

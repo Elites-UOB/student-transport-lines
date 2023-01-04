@@ -66,12 +66,8 @@ class LineService extends GetxService {
   }
 
   //Get All Lines
-  Future getLines() async {
-    final data = await _supabase
-        .from('lines')
-        .select(
-            "car_model,state,type,price,pass_count,car_pass_count,profiles(id,full_name,avatar_url,phone,telegarm),colleges(name),universities(name))")
-        .eq('state', 'true');
+  Future getLines([String? id]) async {
+    final data = await _supabase.from('lines').select("*").eq('state', 'true');
     return data;
   }
 }
