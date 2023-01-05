@@ -25,7 +25,7 @@ class RolePage extends GetView<RoleController> {
             children: [
               IconButton(
                   onPressed: () {
-                    Get.toNamed('/driver/home');
+                    Get.toNamed('/student/home');
                   },
                   icon: Icon(Icons.cancel_outlined)),
               // Stepper

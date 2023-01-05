@@ -87,9 +87,10 @@ class LineCard extends GetWidget<DriverHomeController> {
                   controller.isExpanded.value = !controller.isExpanded.value;
                 },
                 child: AnimatedContainer(
+
                   margin: EdgeInsets.symmetric(
                     horizontal: controller.isExpanded.value ? 0 : 0,
-                    vertical: 0,
+                    vertical: 8,
                   ),
                   padding:
                       EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 10),
@@ -99,11 +100,12 @@ class LineCard extends GetWidget<DriverHomeController> {
                   decoration: BoxDecoration(
                       //color: Color(0xffFF5050),
                       borderRadius: BorderRadius.all(
-                        Radius.circular(controller.isExpanded.value ? 20 : 0),
+                        Radius.circular(controller.isExpanded.value ? 20 : 20),
                       ),
                       border: Border.all(color: Colors.grey)),
                   child: Column(
                     children: [
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -206,6 +208,7 @@ class LineCard extends GetWidget<DriverHomeController> {
                         reverseDuration: Duration.zero,
                         sizeCurve: Curves.fastLinearToSlowEaseIn,
                       ),
+
                     ],
                   ),
                 ),

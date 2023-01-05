@@ -5,6 +5,7 @@ class StudentHomeController extends GetxController {
   final LineService linService = LineService();
   RxList lines = [].obs;
   RxBool isLoading = false.obs;
+  RxBool isExpanded = true.obs;
 
   @override
   void onInit() async {

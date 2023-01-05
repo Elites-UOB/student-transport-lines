@@ -75,6 +75,8 @@ class DriverHomePage extends GetView<DriverHomeController> {
                     style: Styles.boldBlack,
                   ),
 
+                  const SizedBox(height: 10),
+
                   LineCard(),
                 ],
               ),
