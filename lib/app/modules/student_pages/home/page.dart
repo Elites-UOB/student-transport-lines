@@ -79,6 +79,7 @@ class StudentHomePage extends GetView<StudentHomeController> {
                   //   ),
 
                   Container(
+                    height: 50,
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
                          border: Border.all(
